@@ -5,19 +5,31 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 export default function Preloader() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2500);
-    return () => clearTimeout(timer);
+    // Only show preloader on first entry per session
+    const hasSeen = sessionStorage.getItem("purecare_preloader_seen");
+    if (!hasSeen) {
+      setLoading(true);
+      sessionStorage.setItem("purecare_preloader_seen", "true");
+      const timer = setTimeout(() => setLoading(false), 900);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = loading ? "hidden" : "";
+    if (loading) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
     return () => {
       document.body.style.overflow = "";
     };
   }, [loading]);
+
+  if (!loading) return null;
 
   return (
     <AnimatePresence>
@@ -25,8 +37,8 @@ export default function Preloader() {
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center"
+          transition={{ duration: 0.35, ease: "easeInOut" }}
+          className="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center pointer-events-none"
         >
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-64 h-64 bg-blue-primary/10 rounded-full blur-[100px]" />
           <div className="absolute bottom-1/3 left-1/2 -translate-x-1/2 w-48 h-48 bg-red-primary/8 rounded-full blur-[80px]" />
@@ -34,7 +46,7 @@ export default function Preloader() {
           <div className="relative w-48 h-48 sm:w-60 sm:h-60 mb-6">
             <motion.div
               animate={{ rotate: 360 }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 1.2, repeat: Infinity, ease: "linear" }}
               className="absolute inset-0 rounded-full border-[3px] border-transparent"
               style={{
                 borderTopColor: "#188ed7",
@@ -43,7 +55,7 @@ export default function Preloader() {
             />
             <motion.div
               animate={{ rotate: -360 }}
-              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
               className="absolute inset-4 sm:inset-5 rounded-full border-[3px] border-transparent"
               style={{
                 borderBottomColor: "#df0a16",
@@ -54,7 +66,7 @@ export default function Preloader() {
               <motion.div
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
+                transition={{ delay: 0.1, type: "spring", stiffness: 200 }}
               >
                 <Image
                   src="/pure-care-logo2.png"
@@ -71,13 +83,13 @@ export default function Preloader() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 0.2 }}
             className="mt-4 w-40 sm:w-48 h-0.5 bg-slate-200 rounded-full overflow-hidden"
           >
             <motion.div
               initial={{ x: "-100%" }}
               animate={{ x: "100%" }}
-              transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 0.8, repeat: Infinity, ease: "easeInOut" }}
               className="h-full w-1/2 bg-gradient-to-r from-transparent via-blue-primary to-transparent rounded-full"
             />
           </motion.div>

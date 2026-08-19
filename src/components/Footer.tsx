@@ -16,10 +16,10 @@ import {
 } from "react-icons/fa";
 
 const serviceLinks = [
-  "Exterior Detailing",
-  "Interior Detailing",
-  "Paint Protection Services",
-  "Additional Detailing Services",
+  { href: "/services/exterior", label: "Exterior Detailing" },
+  { href: "/services/interior", label: "Interior Detailing" },
+  { href: "/services#protection", label: "Paint Protection Services" },
+  { href: "/services#additional", label: "Additional Detailing Services" },
 ];
 
 const quickLinks = [
@@ -47,7 +47,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
           {/* Logo & Description */}
           <div className="sm:col-span-2 lg:col-span-1 space-y-4">
-            <Link href="/">
+            <Link href="/" prefetch={true}>
               <Image
                 src="/pure-care-logo2.png"
                 alt="Pure Care Auto Accessories"
@@ -86,6 +86,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    prefetch={true}
                     className="text-slate-600 hover:text-red-primary transition-colors text-sm flex items-center gap-2 group min-h-[36px] sm:min-h-0"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-primary/50 group-hover:bg-red-primary transition-colors shrink-0" />
@@ -103,13 +104,14 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 sm:space-y-3">
               {serviceLinks.map((service) => (
-                <li key={service}>
+                <li key={service.label}>
                   <Link
-                    href="/services"
+                    href={service.href}
+                    prefetch={true}
                     className="text-slate-600 hover:text-red-primary transition-colors text-sm flex items-center gap-2 group min-h-[36px] sm:min-h-0"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-red-primary/50 group-hover:bg-red-primary transition-colors shrink-0" />
-                    {service}
+                    {service.label}
                   </Link>
                 </li>
               ))}

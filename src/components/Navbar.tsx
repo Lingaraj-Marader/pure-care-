@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaChevronDown,
@@ -107,13 +107,11 @@ export default function Navbar() {
   const [activeCategoryKey, setActiveCategoryKey] = useState(categories[0].key);
 
   const pathname = usePathname();
-  const router = useRouter();
 
   const activeCategory =
     categories.find((c) => c.key === activeCategoryKey) ?? categories[0];
 
-  const handleNavigate = (href: string) => {
-    router.push(href);
+  const closeMenus = () => {
     setServicesDropdownOpen(false);
     setMobileMenuOpen(false);
     setMobileServicesOpen(false);
@@ -140,11 +138,16 @@ export default function Navbar() {
     };
   }, [mobileMenuOpen]);
 
+  // Close menus automatically whenever pathname changes
+  useEffect(() => {
+    closeMenus();
+  }, [pathname]);
+
   return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-white/90 backdrop-blur-md shadow-lg shadow-slate-200"
@@ -153,7 +156,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
         <div className="flex items-center justify-between h-20 sm:h-24">
-          <Link href="/" className="shrink-0">
+          <Link href="/" prefetch={true} className="shrink-0" onClick={closeMenus}>
             <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -190,6 +193,8 @@ export default function Navbar() {
                   >
                     <Link
                       href="/services"
+                      prefetch={true}
+                      onClick={closeMenus}
                       className={`relative flex items-center gap-1 px-2.5 lg:px-3 xl:px-4 py-2 text-xs lg:text-sm font-medium transition-colors group ${
                         isActive
                           ? "text-blue-primary"
@@ -218,7 +223,7 @@ export default function Navbar() {
                           initial={{ opacity: 0, y: 8 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 8 }}
-                          transition={{ duration: 0.2 }}
+                          transition={{ duration: 0.15 }}
                           className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50"
                         >
                           <div className="w-[600px] max-w-[calc(100vw-2rem)] rounded-2xl bg-white border border-slate-200 shadow-xl shadow-slate-300/50 overflow-hidden">
@@ -229,10 +234,8 @@ export default function Navbar() {
                                   <Link
                                     key={cat.key}
                                     href={`/services/${cat.key}`}
-                                    onClick={(e) => {
-                                      e.preventDefault();
-                                      handleNavigate(`/services/${cat.key}`);
-                                    }}
+                                    prefetch={true}
+                                    onClick={closeMenus}
                                     onMouseEnter={() =>
                                       setActiveCategoryKey(cat.key)
                                     }
@@ -256,7 +259,7 @@ export default function Navbar() {
                                   key={activeCategoryKey}
                                   initial={{ opacity: 0 }}
                                   animate={{ opacity: 1 }}
-                                  transition={{ duration: 0.15 }}
+                                  transition={{ duration: 0.12 }}
                                   className="space-y-0.5 flex-1"
                                 >
                                   {activeCategory.subServices.map((sub) => (
@@ -266,15 +269,8 @@ export default function Navbar() {
                                           activeCategory.key,
                                           sub.slug
                                         )}
-                                        onClick={(e) => {
-                                          e.preventDefault();
-                                          handleNavigate(
-                                            getSubServiceUrl(
-                                              activeCategory.key,
-                                              sub.slug
-                                            )
-                                          );
-                                        }}
+                                        prefetch={true}
+                                        onClick={closeMenus}
                                         className="block rounded-lg px-3 py-2 text-xs text-slate-600 hover:text-red-primary hover:bg-red-primary/5 transition-colors leading-snug"
                                       >
                                         {sub.name}
@@ -284,12 +280,8 @@ export default function Navbar() {
                                 </motion.ul>
                                 <Link
                                   href={`/services/${activeCategory.key}`}
-                                  onClick={(e) => {
-                                    e.preventDefault();
-                                    handleNavigate(
-                                      `/services/${activeCategory.key}`
-                                    );
-                                  }}
+                                  prefetch={true}
+                                  onClick={closeMenus}
                                   className="mt-2 pt-2.5 border-t border-slate-100 flex items-center justify-center gap-1.5 text-xs font-semibold text-blue-primary hover:text-red-primary transition-colors"
                                 >
                                   View all {activeCategory.title} →
@@ -308,6 +300,8 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  prefetch={true}
+                  onClick={closeMenus}
                   className={`relative px-2.5 lg:px-3 xl:px-4 py-2 text-xs lg:text-sm font-medium transition-colors group ${
                     isActive
                       ? "text-blue-primary"
@@ -328,6 +322,8 @@ export default function Navbar() {
 
             <Link
               href="/contact"
+              prefetch={true}
+              onClick={closeMenus}
               className="ml-2 lg:ml-3 px-4 lg:px-5 py-2 bg-gradient-to-r from-blue-primary to-blue-dark text-white text-xs lg:text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-red-primary/30 hover:from-red-primary hover:to-red-dark transition-all duration-300"
             >
               Get Quote
@@ -371,7 +367,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.25 }}
             className="md:hidden bg-white/95 backdrop-blur-md border-t border-slate-200 overflow-hidden max-h-[calc(100dvh-5rem)]"
           >
             <div className="px-4 py-4 sm:py-6 space-y-1 overflow-y-auto">
@@ -387,7 +383,7 @@ export default function Navbar() {
                       key={link.href}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.05 * idx }}
+                      transition={{ delay: 0.04 * idx }}
                     >
                       <button
                         onClick={() => setMobileServicesOpen((prev) => !prev)}
@@ -412,7 +408,7 @@ export default function Navbar() {
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.25 }}
+                            transition={{ duration: 0.2 }}
                             className="overflow-hidden"
                           >
                             <div className="pl-2 py-1 space-y-2">
@@ -420,10 +416,8 @@ export default function Navbar() {
                                 <div key={cat.key}>
                                   <Link
                                     href={`/services/${cat.key}`}
-                                    onClick={(e) => {
-                                      e.preventDefault();
-                                      handleNavigate(`/services/${cat.key}`);
-                                    }}
+                                    prefetch={true}
+                                    onClick={closeMenus}
                                     className="block px-4 py-2 text-sm font-semibold text-slate-900 rounded-lg hover:text-red-primary hover:bg-red-primary/5 transition-colors"
                                   >
                                     {cat.title}
@@ -436,12 +430,8 @@ export default function Navbar() {
                                           cat.key,
                                           sub.slug
                                         )}
-                                        onClick={(e) => {
-                                          e.preventDefault();
-                                          handleNavigate(
-                                            getSubServiceUrl(cat.key, sub.slug)
-                                          );
-                                        }}
+                                        prefetch={true}
+                                        onClick={closeMenus}
                                         className="block px-3 py-1.5 text-xs text-slate-600 rounded-md hover:text-red-primary hover:bg-red-primary/5 transition-colors"
                                       >
                                         {sub.name}
@@ -452,10 +442,8 @@ export default function Navbar() {
                               ))}
                               <Link
                                 href="/services"
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  handleNavigate("/services");
-                                }}
+                                prefetch={true}
+                                onClick={closeMenus}
                                 className="block px-4 py-2 text-sm font-semibold text-blue-primary hover:text-red-primary transition-colors"
                               >
                                 View all services →
@@ -473,14 +461,12 @@ export default function Navbar() {
                     key={link.href}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.05 * idx }}
+                    transition={{ delay: 0.04 * idx }}
                   >
                     <Link
                       href={link.href}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleNavigate(link.href);
-                      }}
+                      prefetch={true}
+                      onClick={closeMenus}
                       className={`block px-4 py-3 text-base rounded-lg transition-all min-h-[44px] flex items-center ${
                         isActive
                           ? "text-blue-primary bg-blue-primary/5 border-l-2 border-blue-primary"
@@ -496,7 +482,7 @@ export default function Navbar() {
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.05 * navLinks.length }}
+                transition={{ delay: 0.04 * navLinks.length }}
                 className="pt-4 border-t border-slate-200 mt-3"
               >
                 <p className="text-slate-500 text-xs uppercase tracking-widest mb-3 px-4">
