@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && node scripts/copy-static.js",
-    "start": "next start",
-    "start:standalone": "node .next/standalone/server.js",
+    "start": "node server.js",
+    "next-start": "next start",
     "lint": "next lint"
   },
   "engines": {
