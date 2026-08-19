@@ -53,7 +53,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10" />
             <div className="absolute inset-0 flex flex-col justify-end p-5 sm:p-8 md:p-12">
-              <div className="max-w-7xl mx-auto w-full">
+              <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 w-full">
                 <span className="block text-white/80 text-[10px] sm:text-sm font-semibold tracking-widest uppercase mb-1 sm:mb-2">
                   Pure Care Services
                 </span>
@@ -70,7 +70,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
 
         {/* Intro & Book WhatsApp */}
         <section className="py-6 sm:py-8">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
             <nav className="flex items-center gap-2 text-xs sm:text-sm text-slate-500 mb-4 sm:mb-6 flex-wrap">
               <Link
                 href="/services"
@@ -102,7 +102,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
 
         {/* All Subservices in this category */}
         <section className="pb-8 sm:pb-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
             <div className="section-divider mb-8 sm:mb-10" />
             <FadeIn className="mb-6 sm:mb-8">
               <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900">
@@ -322,7 +322,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
         {/* Gallery Section */}
         {gallery.length > 0 && (
           <section className="py-6 sm:py-8 md:py-12">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
               <div className="section-divider mb-8 sm:mb-10" />
               <FadeIn className="text-center mb-6 sm:mb-8">
                 <span className="text-blue-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">

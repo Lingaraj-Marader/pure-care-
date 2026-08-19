@@ -21,7 +21,7 @@ export default function AboutPage() {
       {/* 1. Header Hero */}
       <section className="relative pt-24 sm:pt-28 md:pt-32 pb-8 sm:pb-10 md:pb-14 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(79,195,247,0.12),_transparent_50%)]" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ export default function AboutPage() {
 
       {/* 2. Who We Are */}
       <section className="py-8 sm:py-10 md:py-14">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             <FadeIn direction="left">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 sm:mb-6">
@@ -127,7 +127,7 @@ export default function AboutPage() {
       {/* 3. Mission Section */}
       <section className="py-8 sm:py-10 md:py-14">
         <div className="section-divider mb-8 sm:mb-10 md:mb-14" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <FadeIn className="text-center mb-6 sm:mb-8 md:mb-10">
             <span className="text-blue-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">
               Our Mission
@@ -169,7 +169,7 @@ export default function AboutPage() {
       {/* 4. Showcase Banner Image */}
       <section className="py-8 sm:py-10 md:py-14">
         <div className="section-divider mb-8 sm:mb-10 md:mb-14" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <FadeIn>
             <div className="relative w-full aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg">
               <Image
@@ -187,7 +187,7 @@ export default function AboutPage() {
       {/* 5. Values Section */}
       <section className="py-8 sm:py-10 md:py-14">
         <div className="section-divider mb-8 sm:mb-10 md:mb-14" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <FadeIn className="text-center mb-6 sm:mb-8 md:mb-10">
             <span className="text-red-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">
               Our Values
@@ -285,7 +285,7 @@ export default function AboutPage() {
       {/* 7. Team Section */}
       <section className="py-8 sm:py-10 md:py-14">
         <div className="section-divider mb-8 sm:mb-10 md:mb-14" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <FadeIn className="text-center mb-6 sm:mb-8 md:mb-10">
             <span className="text-blue-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">
               Our Team

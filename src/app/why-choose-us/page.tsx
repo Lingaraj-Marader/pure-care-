@@ -23,7 +23,7 @@ export default function WhyChooseUsPage() {
       <section className="relative pt-24 sm:pt-28 md:pt-32 pb-8 sm:pb-10 md:pb-14 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(79,195,247,0.12),_transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(239,68,68,0.08),_transparent_50%)]" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ export default function WhyChooseUsPage() {
 
       {/* 2. Strengths Section */}
       <section className="py-8 sm:py-10 md:py-14">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <FadeIn className="text-center mb-6 sm:mb-8 md:mb-10">
             <span className="text-blue-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">
               Our Strengths
@@ -87,7 +87,7 @@ export default function WhyChooseUsPage() {
       {/* 3. Numbers Section */}
       <section className="py-8 sm:py-10 md:py-14">
         <div className="section-divider mb-8 sm:mb-10 md:mb-14" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <FadeIn className="text-center mb-6 sm:mb-8 md:mb-10">
             <span className="text-red-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">
               Our Numbers
@@ -162,7 +162,7 @@ export default function WhyChooseUsPage() {
       {/* 5. Testimonials Section */}
       <section className="py-8 sm:py-10 md:py-14">
         <div className="section-divider mb-8 sm:mb-10 md:mb-14" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <FadeIn className="text-center mb-6 sm:mb-8 md:mb-10">
             <span className="text-red-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">
               Testimonials

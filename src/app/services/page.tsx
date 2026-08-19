@@ -18,7 +18,7 @@ export default function ServicesPage() {
       {/* 1. Header Hero & Category Quick Jump */}
       <section className="relative pt-24 sm:pt-28 md:pt-32 pb-8 sm:pb-10 md:pb-14 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(79,195,247,0.12),_transparent_50%)]" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export default function ServicesPage() {
 
       {/* 2. All Categories Breakdown */}
       <section className="py-8 sm:py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <div className="space-y-14 sm:space-y-20 md:space-y-24">
             {categories.map((cat, catIdx) => {
               const isEven = catIdx % 2 === 0;

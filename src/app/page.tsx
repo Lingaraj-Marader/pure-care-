@@ -206,7 +206,7 @@ export default function HomePage() {
       {/* 2. Hero Header & Stats */}
       <section className="py-8 sm:py-10 md:py-14 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(24,142,215,0.06),_transparent_55%)]" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-10 xl:px-14 text-center">
           <motion.span
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -283,7 +283,7 @@ export default function HomePage() {
       {/* 3. About Section */}
       <section className="py-8 sm:py-12 md:py-16 relative">
         <div className="section-divider mb-8 sm:mb-10 md:mb-14" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             <FadeIn direction="left">
               <span className="text-blue-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">
@@ -363,7 +363,7 @@ export default function HomePage() {
       {/* 4. Services Section */}
       <section className="py-8 sm:py-12 md:py-16 relative">
         <div className="section-divider mb-8 sm:mb-10 md:mb-14" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <FadeIn className="text-center mb-6 sm:mb-8 md:mb-10">
             <span className="text-blue-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">
               What We Offer
@@ -421,7 +421,7 @@ export default function HomePage() {
       {/* 5. Products Section */}
       <section className="py-8 sm:py-12 md:py-16 relative">
         <div className="section-divider mb-8 sm:mb-10 md:mb-14" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <FadeIn className="text-center mb-6 sm:mb-8 md:mb-10">
             <span className="text-red-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">
               What We Use
@@ -495,7 +495,7 @@ export default function HomePage() {
       {/* 6. Why Choose Us Section */}
       <section className="py-8 sm:py-12 md:py-16 relative">
         <div className="section-divider mb-8 sm:mb-10 md:mb-14" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <FadeIn className="text-center mb-6 sm:mb-8 md:mb-10">
             <span className="text-blue-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">
               Why Us
@@ -544,7 +544,7 @@ export default function HomePage() {
       {/* 7. Blog & Insights Section */}
       <section className="py-8 sm:py-12 md:py-16 relative">
         <div className="section-divider mb-8 sm:mb-10 md:mb-14" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <FadeIn className="text-center mb-6 sm:mb-8 md:mb-10">
             <span className="text-blue-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">
               Blog & Tips
@@ -609,7 +609,7 @@ export default function HomePage() {
 
       {/* 8. Call to Action Banner */}
       <section className="py-8 sm:py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <FadeIn>
             <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-r from-blue-primary via-blue-dark to-slate-900 text-white p-6 sm:p-10 md:p-14 text-center overflow-hidden shadow-xl">
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(223,10,22,0.15),_transparent_70%)]" />
