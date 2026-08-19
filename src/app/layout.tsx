@@ -23,11 +23,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="antialiased">
-      <body className="min-h-screen flex flex-col bg-white text-slate-900">
+    <html lang="en" className="antialiased w-full">
+      <body className="min-h-screen flex flex-col bg-white text-slate-900 overflow-x-hidden w-full m-0 p-0">
         <Preloader />
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 w-full">{children}</main>
         <Footer />
         <FloatingWidgets />
         <ConsultationModal />

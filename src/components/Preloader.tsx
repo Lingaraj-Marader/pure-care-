@@ -5,17 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 export default function Preloader() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Only show preloader on first entry per session
-    const hasSeen = sessionStorage.getItem("purecare_preloader_seen");
-    if (!hasSeen) {
-      setLoading(true);
-      sessionStorage.setItem("purecare_preloader_seen", "true");
-      const timer = setTimeout(() => setLoading(false), 900);
-      return () => clearTimeout(timer);
-    }
+    const timer = setTimeout(() => setLoading(false), 800);
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -28,8 +22,6 @@ export default function Preloader() {
       document.body.style.overflow = "";
     };
   }, [loading]);
-
-  if (!loading) return null;
 
   return (
     <AnimatePresence>

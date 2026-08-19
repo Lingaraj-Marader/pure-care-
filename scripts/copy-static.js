@@ -18,15 +18,16 @@ function copyFolderSync(from, to) {
   }
 }
 
-const standalonePath = path.join(__dirname, ".next", "standalone");
+const rootDir = path.join(__dirname, "..");
+const standalonePath = path.join(rootDir, ".next", "standalone");
 
 if (fs.existsSync(standalonePath)) {
   copyFolderSync(
-    path.join(__dirname, "public"),
+    path.join(rootDir, "public"),
     path.join(standalonePath, "public")
   );
   copyFolderSync(
-    path.join(__dirname, ".next", "static"),
+    path.join(rootDir, ".next", "static"),
     path.join(standalonePath, ".next", "static")
   );
   console.log("✓ Successfully copied static assets to .next/standalone for production");

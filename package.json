@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node copy-static.js",
-    "start": "node server.js",
-    "next-start": "next start",
+    "build": "next build && node scripts/copy-static.js",
+    "start": "next start",
+    "start:standalone": "node .next/standalone/server.js",
     "lint": "next lint"
   },
   "engines": {
