@@ -43,7 +43,7 @@ const footerSocials = [
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-b from-slate-50 to-slate-100 border-t border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-16">
+      <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 py-10 sm:py-12 lg:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
           {/* Logo & Description */}
           <div className="sm:col-span-2 lg:col-span-1 space-y-4">

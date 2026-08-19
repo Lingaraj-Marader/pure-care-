@@ -154,7 +154,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+      <div className="w-full px-3 sm:px-6 lg:px-10 xl:px-14">
         <div className="flex items-center justify-between h-20 sm:h-24">
           <Link href="/" prefetch={true} className="shrink-0" onClick={closeMenus}>
             <motion.div
