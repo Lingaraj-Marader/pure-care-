@@ -120,7 +120,7 @@ export default function WhyChooseUsPage() {
       {/* 4. Process Section */}
       <section className="py-8 sm:py-10 md:py-14">
         <div className="section-divider mb-8 sm:mb-10 md:mb-14" />
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <FadeIn className="text-center mb-6 sm:mb-8 md:mb-10">
             <span className="text-blue-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">
               How We Work
@@ -208,7 +208,7 @@ export default function WhyChooseUsPage() {
       {/* 6. Promise & CTA Section */}
       <section className="py-8 sm:py-10 md:py-14">
         <div className="section-divider mb-8 sm:mb-10 md:mb-14" />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <FadeIn>
             <div className="text-center p-6 sm:p-10 md:p-12 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-blue-primary/10 to-red-primary/10 border border-slate-200">
               <FaHandshake className="text-4xl sm:text-5xl text-blue-primary mx-auto mb-4 sm:mb-6" />

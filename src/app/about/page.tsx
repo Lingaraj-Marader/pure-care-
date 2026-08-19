@@ -221,9 +221,9 @@ export default function AboutPage() {
       </section>
 
       {/* 6. Timeline Section */}
-      <section className="py-8 sm:py-10 md:py-14">
+      <section className="py-8 sm:py-12 md:py-16">
         <div className="section-divider mb-8 sm:mb-10 md:mb-14" />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <FadeIn className="text-center mb-6 sm:mb-8 md:mb-10">
             <span className="text-blue-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">
               Our Journey
@@ -324,7 +324,7 @@ export default function AboutPage() {
       {/* 8. Visit Our Showroom Info */}
       <section className="py-8 sm:py-10 md:py-14">
         <div className="section-divider mb-8 sm:mb-10 md:mb-14" />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 text-center">
           <FadeIn>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-4 sm:mb-6">
               Visit Our Showroom

@@ -248,7 +248,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
 
         {/* Content Section */}
         <section className="py-6 sm:py-8 md:py-10">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
             <nav className="flex items-center gap-2 text-xs sm:text-sm text-slate-500 mb-5 sm:mb-7 flex-wrap">
               <Link
                 href="/services"

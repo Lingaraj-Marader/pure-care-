@@ -76,7 +76,7 @@ export default function BlogPage() {
       {/* 3. Featured Articles Section */}
       <section className="py-8 sm:py-12 md:py-16">
         <div className="section-divider mb-6 sm:mb-8 md:mb-10" />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <FadeIn className="text-center mb-6 sm:mb-8 md:mb-10">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
               Featured <span className="gradient-text-blue">Articles</span>
