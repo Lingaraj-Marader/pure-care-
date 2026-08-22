@@ -61,7 +61,7 @@ const socialLinks = [
   },
   {
     icon: FaInstagram,
-    href: "https://www.instagram.com",
+    href: "https://www.instagram.com/purecaresharjah?igsi=MWJ0enZsem94OTN1dg%3D%3D&utm_source=qr",
     label: "Instagram",
     color: "hover:text-red-primary",
     size: "text-lg lg:text-xl",
@@ -73,13 +73,13 @@ const socialLinks = [
     color: "hover:text-red-primary",
     size: "text-sm lg:text-base",
   },
-  {
-    icon: FaYoutube,
-    href: "https://www.youtube.com",
-    label: "YouTube",
-    color: "hover:text-red-primary",
-    size: "text-sm lg:text-base",
-  },
+  // {
+  //   icon: FaYoutube,
+  //   href: "https://www.youtube.com",
+  //   label: "YouTube",
+  //   color: "hover:text-red-primary",
+  //   size: "text-sm lg:text-base",
+  // },
   {
     icon: FaLinkedinIn,
     href: "https://www.linkedin.com",
@@ -89,7 +89,7 @@ const socialLinks = [
   },
   {
     icon: FaTiktok,
-    href: "https://www.tiktok.com",
+    href: "https://vt.tiktok.com/ZSVD4NByh/",
     label: "TikTok",
     color: "hover:text-red-primary",
     size: "text-sm lg:text-base",
@@ -162,11 +162,11 @@ export default function Navbar() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Image
-                src="/pure-care-logo2-wide.png"
+                src="/purecare-logo.png"
                 alt="Pure Care Auto Accessories"
-                width={942}
-                height={436}
-                className="h-16 sm:h-20 w-auto"
+                width={1563}
+                height={1563}
+                className="h-14 sm:h-16 w-auto object-contain"
                 priority
               />
             </motion.div>

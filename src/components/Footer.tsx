@@ -33,11 +33,14 @@ const quickLinks = [
 
 const footerSocials = [
   { icon: FaWhatsapp, href: "https://wa.me/971586368849" },
-  { icon: FaInstagram, href: "https://www.instagram.com" },
+  {
+    icon: FaInstagram,
+    href: "https://www.instagram.com/purecaresharjah?igsi=MWJ0enZsem94OTN1dg%3D%3D&utm_source=qr",
+  },
   { icon: FaFacebookF, href: "https://www.facebook.com" },
-  { icon: FaYoutube, href: "https://www.youtube.com" },
+  // { icon: FaYoutube, href: "https://www.youtube.com" },
   { icon: FaLinkedinIn, href: "https://www.linkedin.com" },
-  { icon: FaTiktok, href: "https://www.tiktok.com" },
+  { icon: FaTiktok, href: "https://vt.tiktok.com/ZSVD4NByh/" },
 ];
 
 export default function Footer() {
@@ -49,11 +52,11 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-1 space-y-4">
             <Link href="/" prefetch={true}>
               <Image
-                src="/pure-care-logo2.png"
+                src="/purecare-logo.png"
                 alt="Pure Care Auto Accessories"
                 width={512}
                 height={512}
-                className="h-24 sm:h-28 w-auto"
+                className="h-20 sm:h-24 w-auto object-contain"
               />
             </Link>
             <p className="text-slate-600 text-sm leading-relaxed max-w-xs">

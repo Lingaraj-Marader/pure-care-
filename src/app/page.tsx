@@ -338,11 +338,11 @@ export default function HomePage() {
                 <div className="relative h-full rounded-2xl sm:rounded-3xl overflow-hidden gradient-border bg-gradient-to-br from-slate-50 to-white shadow-sm flex items-center justify-center">
                   <div className="text-center p-6 sm:p-8">
                     <Image
-                      src="/pure-care-logo2.png"
+                      src="/purecare-logo.png"
                       alt="Pure Care"
                       width={512}
                       height={512}
-                      className="w-40 sm:w-52 md:w-64 h-auto mx-auto mb-4 sm:mb-6"
+                      className="w-40 sm:w-52 md:w-64 h-auto mx-auto mb-4 sm:mb-6 object-contain"
                     />
                     <div className="mt-4 sm:mt-6 space-y-1 sm:space-y-2">
                       <p className="text-blue-primary text-xs sm:text-sm flex items-center justify-center gap-1">

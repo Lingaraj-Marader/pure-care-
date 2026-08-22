@@ -34,3 +34,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw local source assets (over GitHub 100MB limit)
+images and videos/
+PURECARE LOGO (2).png
+public/purecare-logo-transparent.png

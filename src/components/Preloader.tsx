@@ -61,11 +61,11 @@ export default function Preloader() {
                 transition={{ delay: 0.1, type: "spring", stiffness: 200 }}
               >
                 <Image
-                  src="/pure-care-logo2.png"
+                  src="/purecare-logo.png"
                   alt="Pure Care"
                   width={512}
                   height={512}
-                  className="w-28 sm:w-40 h-auto"
+                  className="w-28 sm:w-40 h-auto object-contain"
                   priority
                 />
               </motion.div>

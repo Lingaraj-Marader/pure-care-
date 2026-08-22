@@ -28,7 +28,7 @@ const socialLinks = [
   {
     icon: FaInstagram,
     label: "Instagram",
-    href: "https://www.instagram.com",
+    href: "https://www.instagram.com/purecaresharjah?igsi=MWJ0enZsem94OTN1dg%3D%3D&utm_source=qr",
     color:
       "hover:bg-red-primary/5 hover:border-red-primary/50 hover:text-red-primary",
   },
@@ -39,13 +39,13 @@ const socialLinks = [
     color:
       "hover:bg-red-primary/5 hover:border-red-primary/50 hover:text-red-primary",
   },
-  {
-    icon: FaYoutube,
-    label: "YouTube",
-    href: "https://www.youtube.com",
-    color:
-      "hover:bg-red-primary/5 hover:border-red-primary/50 hover:text-red-primary",
-  },
+  // {
+  //   icon: FaYoutube,
+  //   label: "YouTube",
+  //   href: "https://www.youtube.com",
+  //   color:
+  //     "hover:bg-red-primary/5 hover:border-red-primary/50 hover:text-red-primary",
+  // },
   {
     icon: FaLinkedinIn,
     label: "LinkedIn",
@@ -56,7 +56,7 @@ const socialLinks = [
   {
     icon: FaTiktok,
     label: "TikTok",
-    href: "https://www.tiktok.com",
+    href: "https://vt.tiktok.com/ZSVD4NByh/",
     color:
       "hover:bg-red-primary/5 hover:border-red-primary/50 hover:text-red-primary",
   },
