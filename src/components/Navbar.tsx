@@ -164,9 +164,9 @@ export default function Navbar() {
               <Image
                 src="/purecare-logo.png"
                 alt="Pure Care Auto Accessories"
-                width={1563}
-                height={1563}
-                className="h-14 sm:h-16 w-auto object-contain"
+                width={1469}
+                height={559}
+                className="h-12 sm:h-14 lg:h-16 w-auto object-contain"
                 priority
               />
             </motion.div>

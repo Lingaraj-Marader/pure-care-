@@ -340,9 +340,9 @@ export default function HomePage() {
                     <Image
                       src="/purecare-logo.png"
                       alt="Pure Care"
-                      width={512}
-                      height={512}
-                      className="w-40 sm:w-52 md:w-64 h-auto mx-auto mb-4 sm:mb-6 object-contain"
+                      width={1469}
+                      height={559}
+                      className="w-48 sm:w-60 md:w-72 h-auto mx-auto mb-4 sm:mb-6 object-contain"
                     />
                     <div className="mt-4 sm:mt-6 space-y-1 sm:space-y-2">
                       <p className="text-blue-primary text-xs sm:text-sm flex items-center justify-center gap-1">

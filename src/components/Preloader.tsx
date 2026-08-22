@@ -63,9 +63,9 @@ export default function Preloader() {
                 <Image
                   src="/purecare-logo.png"
                   alt="Pure Care"
-                  width={512}
-                  height={512}
-                  className="w-28 sm:w-40 h-auto object-contain"
+                  width={1469}
+                  height={559}
+                  className="w-32 sm:w-44 h-auto object-contain"
                   priority
                 />
               </motion.div>
