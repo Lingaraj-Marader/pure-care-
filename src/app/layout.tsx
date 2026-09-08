@@ -7,11 +7,11 @@ import FloatingWidgets from "@/components/FloatingWidgets";
 import ConsultationModal from "@/components/ConsultationModal";
 
 export const metadata: Metadata = {
-  title: "Pure Care Auto Accessories | Premium Car Care in the UAE",
+  title: "Pure Care Auto Accessories | Premium Car Care for the Middle East Climate",
   description:
-    "Pure Care Auto Accessories TR. L.L.C — Premium car detailing, ceramic coating, PPF, paint protection and auto accessories services across the UAE. Contact: +971 58 636 8849",
+    "Pure Care Auto Accessories TR. L.L.C — Premium car detailing, ceramic coating, PPF, paint protection and auto accessories services engineered for the Middle East climate. Contact: +971 58 636 8849 / +971 52 165 2323",
   keywords:
-    "car detailing UAE, ceramic coating UAE, PPF UAE, paint protection UAE, car polish UAE, interior detailing UAE, auto accessories UAE, pure care, car wrapping UAE, car tinting UAE",
+    "car detailing Middle East climate, ceramic coating Middle East climate, PPF Middle East climate, paint protection Middle East climate, car polish, interior detailing, auto accessories, pure care, car wrapping, car tinting",
   icons: {
     icon: "/favicon.ico",
   },

@@ -10,7 +10,8 @@ export const galleryCategories: string[] = [
   "Videos",
   "Exterior Detailing",
   "Interior Detailing",
-  "Paint Protection Services",
+  "Paint Protection Film (PPF)",
+  "Seat Upholstery",
   "Additional Detailing Services",
 ];
 
@@ -84,43 +85,43 @@ export const galleryItems: GalleryItem[] = [
   {
     src: "/services/Seat-Covers.jpg",
     title: "Seat Shampoo & Upholstery Care",
-    category: "Interior Detailing",
+    category: "Seat Upholstery",
     type: "image",
   },
   {
     src: "/services/Carpet-Flooring.jpg",
     title: "Interior Deep Carpet Cleaning",
-    category: "Interior Detailing",
+    category: "Seat Upholstery",
     type: "image",
   },
   {
     src: "/services/Ceiling.jpg",
     title: "Headliner & Cabin Detailing",
-    category: "Interior Detailing",
+    category: "Seat Upholstery",
     type: "image",
   },
   {
     src: "/services/Plastic-Flooring.jpg",
     title: "Dashboard & Console Protection",
-    category: "Interior Detailing",
+    category: "Seat Upholstery",
     type: "image",
   },
   {
     src: "/services/Ceramic-Coating.jpg",
     title: "Ceramic Coating Application",
-    category: "Paint Protection Services",
+    category: "Paint Protection Film (PPF)",
     type: "image",
   },
   {
     src: "/services/PPF-CAR.jpg",
     title: "Full Body PPF Installation",
-    category: "Paint Protection Services",
+    category: "Paint Protection Film (PPF)",
     type: "image",
   },
   {
     src: "/services/Graphene-Coating.jpg",
     title: "Graphene Coating Protection",
-    category: "Paint Protection Services",
+    category: "Paint Protection Film (PPF)",
     type: "image",
   },
   {

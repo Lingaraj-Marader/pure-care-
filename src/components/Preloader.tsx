@@ -1,15 +1,51 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+
+const steps = [
+  {
+    word: "Clean",
+    label: "01. Clean",
+    color: "text-blue-primary",
+    bg: "bg-blue-primary/10",
+    border: "border-blue-primary/30",
+    glow: "rgba(24, 142, 215, 0.18)",
+  },
+  {
+    word: "Protect",
+    label: "02. Protect",
+    color: "text-red-primary",
+    bg: "bg-red-primary/10",
+    border: "border-red-primary/30",
+    glow: "rgba(223, 10, 22, 0.18)",
+  },
+  {
+    word: "Restore",
+    label: "03. Restore",
+    color: "text-emerald-500",
+    bg: "bg-emerald-500/10",
+    border: "border-emerald-500/30",
+    glow: "rgba(16, 185, 129, 0.18)",
+  },
+];
 
 export default function Preloader() {
   const [loading, setLoading] = useState(true);
+  const [currentStep, setCurrentStep] = useState(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 800);
-    return () => clearTimeout(timer);
+    // Generous durations to comfortably showcase logo and sequential animation
+    const t1 = setTimeout(() => setCurrentStep(1), 1200);
+    const t2 = setTimeout(() => setCurrentStep(2), 2400);
+    const t3 = setTimeout(() => setLoading(false), 3800);
+
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+      clearTimeout(t3);
+    };
   }, []);
 
   useEffect(() => {
@@ -23,68 +59,114 @@ export default function Preloader() {
     };
   }, [loading]);
 
+  const active = steps[currentStep] ?? steps[0];
+
   return (
     <AnimatePresence>
       {loading && (
         <motion.div
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.35, ease: "easeInOut" }}
-          className="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center pointer-events-none"
+          exit={{ opacity: 0, scale: 0.98 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          className="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center pointer-events-none select-none"
         >
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-64 h-64 bg-blue-primary/10 rounded-full blur-[100px]" />
-          <div className="absolute bottom-1/3 left-1/2 -translate-x-1/2 w-48 h-48 bg-red-primary/8 rounded-full blur-[80px]" />
-
-          <div className="relative w-48 h-48 sm:w-60 sm:h-60 mb-6">
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 1.2, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-0 rounded-full border-[3px] border-transparent"
-              style={{
-                borderTopColor: "#188ed7",
-                borderRightColor: "rgba(24, 142, 215, 0.3)",
-              }}
-            />
-            <motion.div
-              animate={{ rotate: -360 }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-4 sm:inset-5 rounded-full border-[3px] border-transparent"
-              style={{
-                borderBottomColor: "#df0a16",
-                borderLeftColor: "rgba(223, 10, 22, 0.3)",
-              }}
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <motion.div
-                initial={{ scale: 0, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.1, type: "spring", stiffness: 200 }}
-              >
-                <Image
-                  src="/purecare-logo.png"
-                  alt="Pure Care"
-                  width={1469}
-                  height={559}
-                  className="w-32 sm:w-44 h-auto object-contain"
-                  priority
-                />
-              </motion.div>
-            </div>
-          </div>
-
+          {/* Dynamic Ambient Background Glow based on current step */}
           <motion.div
+            key={active.word + "-glow"}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="mt-4 w-40 sm:w-48 h-0.5 bg-slate-200 rounded-full overflow-hidden"
+            transition={{ duration: 0.5 }}
+            className="absolute inset-0 flex items-center justify-center pointer-events-none"
           >
-            <motion.div
-              initial={{ x: "-100%" }}
-              animate={{ x: "100%" }}
-              transition={{ duration: 0.8, repeat: Infinity, ease: "easeInOut" }}
-              className="h-full w-1/2 bg-gradient-to-r from-transparent via-blue-primary to-transparent rounded-full"
+            <div
+              className="w-80 sm:w-96 md:w-[460px] h-80 sm:h-96 md:h-[460px] rounded-full blur-[120px] transition-all duration-700"
+              style={{ backgroundColor: active.glow }}
             />
           </motion.div>
+
+          <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-lg w-full">
+            {/* Pure Care Official Logo */}
+            <motion.div
+              initial={{ opacity: 0, y: -25, scale: 0.92 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="mb-6 sm:mb-8"
+            >
+              <Image
+                src="/purecare-logo.png"
+                alt="Pure Care Auto Accessories"
+                width={1469}
+                height={559}
+                className="h-16 sm:h-20 md:h-24 w-auto object-contain drop-shadow-sm"
+                priority
+              />
+            </motion.div>
+
+            {/* Serial Animated Words: Clean -> Protect -> Restore */}
+            <div className="h-20 sm:h-24 md:h-28 flex items-center justify-center w-full overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={active.word}
+                  initial={{ opacity: 0, y: 40, scale: 0.85 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -35, scale: 0.9 }}
+                  transition={{
+                    duration: 0.45,
+                    type: "spring",
+                    stiffness: 220,
+                    damping: 22,
+                  }}
+                  className={`text-4xl sm:text-6xl md:text-7xl font-black tracking-tight ${active.color}`}
+                >
+                  {active.word}
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* Series Steps Progression Indicators */}
+            <div className="flex items-center justify-center gap-2 sm:gap-3 mt-4 sm:mt-6">
+              {steps.map((s, idx) => {
+                const isCurrent = idx === currentStep;
+                const isPast = idx < currentStep;
+
+                return (
+                  <motion.div
+                    key={s.word}
+                    animate={{
+                      scale: isCurrent ? 1.06 : 1,
+                    }}
+                    transition={{ duration: 0.3 }}
+                    className={`px-3 sm:px-4 py-1.5 rounded-full text-xs font-bold transition-all duration-300 border ${
+                      isCurrent
+                        ? `${s.bg} ${s.color} ${s.border} shadow-sm`
+                        : isPast
+                        ? "bg-slate-100 text-slate-600 border-slate-200"
+                        : "bg-slate-50 text-slate-300 border-slate-100"
+                    }`}
+                  >
+                    {s.label}
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            {/* Animated Progress Bar */}
+            <div className="mt-8 sm:mt-10 w-48 sm:w-60 h-1.5 bg-slate-100 rounded-full overflow-hidden relative">
+              <motion.div
+                initial={{ width: "0%" }}
+                animate={{
+                  width:
+                    currentStep === 0
+                      ? "33%"
+                      : currentStep === 1
+                      ? "66%"
+                      : "100%",
+                }}
+                transition={{ duration: 0.7, ease: "easeInOut" }}
+                className="h-full bg-gradient-to-r from-blue-primary via-red-primary to-emerald-500 rounded-full"
+              />
+            </div>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>

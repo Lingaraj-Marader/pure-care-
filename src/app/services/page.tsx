@@ -32,9 +32,10 @@ export default function ServicesPage() {
               Premium <span className="gradient-text">Pure Care</span> Services
             </h1>
             <p className="text-slate-600 text-sm sm:text-base md:text-lg max-w-3xl mx-auto px-2">
-              Four comprehensive detailing categories — exterior, interior, paint
-              protection and finishing services — engineered to transform, protect
-              and maintain your vehicle in the UAE&apos;s climate.
+              Five comprehensive auto care categories — exterior detailing, interior
+              detailing, paint protection film (PPF), seat upholstery, and additional
+              detailing services — engineered to transform, protect and maintain
+              your vehicle in the Middle East climate.
             </p>
           </motion.div>
 

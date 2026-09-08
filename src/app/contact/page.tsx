@@ -345,7 +345,7 @@ export default function ContactPage() {
                     Pure Care Auto Accessories
                   </h3>
                   <p className="text-slate-600 text-xs sm:text-sm mb-3 sm:mb-4">
-                    TR. L.L.C — Restore. Protect. Beautify.
+                    TR. L.L.C — Clean. Protect. Restore.
                   </p>
                   <div className="space-y-1.5 sm:space-y-2">
                     <a
@@ -356,11 +356,11 @@ export default function ContactPage() {
                       +971 58 636 8849
                     </a>
                     <a
-                      href="tel:+971529488821"
+                      href="tel:+971521652323"
                       className="flex items-center gap-2 text-slate-700 text-xs sm:text-sm hover:text-red-primary transition-colors min-h-[36px] sm:min-h-0"
                     >
                       <FaPhoneAlt className="text-blue-primary shrink-0" />
-                      +971 52 948 8821
+                      +971 52 165 2323
                     </a>
                     <a
                       href="mailto:purecareautoacs@gmail.com"

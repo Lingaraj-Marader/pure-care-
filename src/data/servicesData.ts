@@ -2,7 +2,6 @@ import { IconType } from "react-icons";
 import {
   FaSoap,
   FaHandSparkles,
-  FaTools,
   FaShieldAlt,
   FaLightbulb,
   FaStar,
@@ -14,8 +13,18 @@ import {
   FaTint,
   FaBroom,
   FaSun,
+  FaMagic,
 } from "react-icons/fa";
-import { MdLocalCarWash, MdWeekend, MdDashboard } from "react-icons/md";
+import {
+  MdLocalCarWash,
+  MdWeekend,
+  MdDashboard,
+  MdEventSeat,
+  MdAirlineSeatReclineExtra,
+  MdAutoFixHigh,
+  MdColorLens,
+  MdLayers,
+} from "react-icons/md";
 
 export interface SubService {
   name: string;
@@ -54,10 +63,10 @@ export const categories: ServiceCategory[] = [
     icon: MdLocalCarWash,
     emoji: "🚗",
     title: "Exterior Detailing",
-    tagline: "Showroom shine built to survive UAE heat and dust",
+    tagline: "Showroom shine built to survive Middle East climate heat and dust",
     intro:
-      "Our exterior detailing restores and protects every painted surface, from a careful hand wash to long-lasting ceramic coating. Engineered for the UAE's relentless sun, heat and dust, it keeps your car looking showroom-fresh.",
-    image: `${n}/machine-polishing/1.png`,
+      "Our exterior detailing restores and protects every painted surface, from a careful hand wash to long-lasting ceramic coating. Engineered for the Middle East climate's relentless sun, heat and dust, it keeps your car looking showroom-fresh.",
+    image: "/services/Car-Polish.jpg",
     color: "from-blue-primary to-blue-dark",
     accent: "text-blue-primary",
     hoverBorder: "hover:border-red-primary/50",
@@ -109,7 +118,7 @@ export const categories: ServiceCategory[] = [
         ],
       },
       {
-        icon: FaTools,
+        icon: FaMagic,
         name: "Machine Polishing & Paint Correction",
         blurb: "Erases swirls, scratches and oxidation to restore deep, mirror-like factory gloss.",
         image: `${n}/machine-polishing/2.png`,
@@ -141,7 +150,7 @@ export const categories: ServiceCategory[] = [
         bannerW: 1584,
         bannerH: 672,
         description:
-          "Lock in that fresh finish with a protective layer of premium wax or synthetic paint sealant. This hydrophobic barrier shields your paint from UV, dust and water spots, makes future washing easier and keeps your car glossy for months even in the harsh UAE climate.",
+          "Lock in that fresh finish with a protective layer of premium wax or synthetic paint sealant. This hydrophobic barrier shields your paint from UV, dust and water spots, makes future washing easier and keeps your car glossy for months even in the harsh Middle East climate.",
         features: [
           "UV & water-spot protection",
           "Hydrophobic, easy-clean surface",
@@ -204,12 +213,12 @@ export const categories: ServiceCategory[] = [
   },
   {
     key: "interior",
-    icon: FaBroom,
+    icon: MdEventSeat,
     emoji: "🧼",
     title: "Interior Detailing",
     tagline: "A cabin that feels showroom-fresh again",
     intro:
-      "UAE heat and fine dust work their way into every surface of your cabin. Our interior detailing lifts out embedded grime, sanitizes the surfaces you touch daily, and restores a clean, fresh interior you notice the moment you step in.",
+      "Middle East climate heat and fine dust work their way into every surface of your cabin. Our interior detailing lifts out embedded grime, sanitizes the surfaces you touch daily, and restores a clean, fresh interior you notice the moment you step in.",
     image: `${a}/seat-shampooing/3.png`,
     color: "from-emerald-500 to-emerald-700",
     accent: "text-emerald-600",
@@ -225,7 +234,7 @@ export const categories: ServiceCategory[] = [
         bannerW: 1584,
         bannerH: 672,
         description:
-          "The UAE's fine dust and sand work into every seam, vent and carpet fibre. Our deep vacuum service extracts embedded dirt, sand and debris from carpets, mats, seats, boot and the crevices most quick-cleans miss — the essential first step to a genuinely fresh cabin.",
+          "The Middle East climate's fine dust and sand work into every seam, vent and carpet fibre. Our deep vacuum service extracts embedded dirt, sand and debris from carpets, mats, seats, boot and the crevices most quick-cleans miss — the essential first step to a genuinely fresh cabin.",
         features: [
           "Extracts embedded sand & dust",
           "Seats, carpets, boot & crevices",
@@ -342,46 +351,101 @@ export const categories: ServiceCategory[] = [
     key: "protection",
     icon: FaShieldAlt,
     emoji: "🛡️",
-    title: "Paint Protection Services",
-    tagline: "Real defence against heat, sun and desert grit",
+    title: "Paint Protection Film (PPF)",
+    tagline: "Wrapping, PPF, and related protection solutions",
     intro:
-      "The UAE's relentless heat, UV and airborne grit wear down factory paint fast. Our layered protection systems guard every panel, preserving depth, shine and resale value for years.",
-    image: "/services/Ceramic-Coating.jpg",
+      "The Middle East climate's relentless heat, UV and airborne grit wear down factory paint fast. Our layered protection systems — including self-healing PPF, vinyl wrapping, ceramic and graphene coatings — guard every panel, preserving depth, shine and resale value for years.",
+    image: "/services/PPF-CAR.jpg",
     color: "from-red-primary to-red-dark",
     accent: "text-red-primary",
     hoverBorder: "hover:border-red-primary/50",
     subServices: [
       {
+        icon: FaShieldAlt,
+        name: "Paint Protection Film (PPF)",
+        blurb: "Self-healing TPU film absorbs rock chips and road debris, keeping panels flawless underneath.",
+        image: "/services/PPF-CAR.jpg",
+      },
+      {
+        icon: MdColorLens,
+        name: "Vinyl Vehicle Wrapping",
+        blurb: "Complete color-change vinyl wraps in gloss, matte, satin and chrome finishes.",
+        image: "/services/Wrapping.jpg",
+      },
+      {
         icon: FaStar,
         name: "Ceramic Coating",
         blurb: "Hydrophobic ceramic layer locks in gloss and repels dust, water and contaminants for years.",
-      },
-      {
-        icon: FaShieldAlt,
-        name: "Paint Protection Film (PPF)",
-        blurb: "Self-healing film absorbs rock chips and road debris, keeping panels flawless underneath.",
-      },
-      {
-        icon: FaTools,
-        name: "Scratch Removal & Swirl Correction",
-        blurb: "Machine polishing erases scratches and swirl marks, restoring deep, mirror-clear reflections.",
+        image: "/services/Ceramic-Coating.jpg",
       },
       {
         icon: FaSun,
-        name: "Long-Lasting UV Protection",
-        blurb: "Blocks harsh Gulf sun to prevent fading, oxidation and dull, chalky paintwork.",
+        name: "Graphene Coating Protection",
+        blurb: "Next-generation graphene matrix providing extreme heat dissipation and anti-spotting defence.",
+        image: "/services/Graphene-Coating.jpg",
+      },
+      {
+        icon: MdAutoFixHigh,
+        name: "Scratch Removal & Swirl Correction",
+        blurb: "Machine polishing erases scratches and swirl marks, restoring deep, mirror-clear reflections.",
+        image: `${n}/machine-polishing/1.png`,
+      },
+    ],
+  },
+  {
+    key: "upholstery",
+    icon: MdAirlineSeatReclineExtra,
+    emoji: "💺",
+    title: "Seat Upholstery",
+    tagline: "Custom seat stitching, ready-made seat covers, floor mats, and more",
+    intro:
+      "Transform your vehicle's interior aesthetics and comfort with our custom upholstery craftsmanship. From precision diamond stitching and tailor-fitted seat covers to luxury floor mats and ceiling lining, we deliver comfort and style engineered to endure.",
+    image: "/services/Seat-Covers.jpg",
+    color: "from-purple-500 to-purple-700",
+    accent: "text-purple-600",
+    hoverBorder: "hover:border-red-primary/50",
+    subServices: [
+      {
+        icon: MdAirlineSeatReclineExtra,
+        name: "Custom Seat Stitching",
+        blurb: "Bespoke leather stitching, diamond quilting and personalized interior tailoring.",
+        image: "/services/Seat-Covers.jpg",
+      },
+      {
+        icon: MdEventSeat,
+        name: "Ready-Made Seat Covers",
+        blurb: "Durable, perfectly contoured seat covers for all vehicle makes and models.",
+        image: "/services/Seat-Covers.jpg",
+      },
+      {
+        icon: MdWeekend,
+        name: "3D / 5D & 7D Floor Mats",
+        blurb: "Custom-molded all-weather floor mats engineered for maximum dirt and spill protection.",
+        image: "/services/Carpet-Flooring.jpg",
+      },
+      {
+        icon: MdLayers,
+        name: "Carpet & Plastic Flooring",
+        blurb: "Durable protective flooring layers that make cleaning effortless and safeguard cabin carpets.",
+        image: "/services/Plastic-Flooring.jpg",
+      },
+      {
+        icon: FaCar,
+        name: "Ceiling & Roof Lining",
+        blurb: "Re-upholstery, sagging fabric restoration and premium Alcantara roof lining upgrades.",
+        image: "/services/Ceiling.jpg",
       },
     ],
   },
   {
     key: "additional",
-    icon: FaTools,
+    icon: MdAutoFixHigh,
     emoji: "🛞",
     title: "Additional Detailing Services",
     tagline: "The finishing touches that complete every detail",
     intro:
-      "Targeted treatments that tackle the areas everyday washes overlook. From engine bays to cabin air, we finish your car to a standard the UAE heat and dust cannot fake.",
-    image: "/services/Car-Tinting.jpg",
+      "Targeted treatments that tackle the areas everyday washes overlook. From engine bays to cabin air, we finish your car to a standard the Middle East climate heat and dust cannot fake.",
+    image: "/services/Car-Detailing.jpg",
     color: "from-amber-500 to-amber-700",
     accent: "text-amber-600",
     hoverBorder: "hover:border-red-primary/50",
@@ -390,21 +454,25 @@ export const categories: ServiceCategory[] = [
         icon: FaCar,
         name: "Engine Bay Cleaning",
         blurb: "Degrease and dress your engine bay, clearing built-up dust for cooler running and cleaner inspections.",
+        image: "/services/Car-Accessories.png",
       },
       {
         icon: FaCog,
         name: "Alloy Wheel Detailing",
         blurb: "Deep-clean and seal every wheel, lifting baked-on brake dust and restoring a mirror finish.",
+        image: "/services/Car-Detailing.jpg",
       },
       {
         icon: FaTint,
-        name: "Window Polishing",
+        name: "Window Polishing & Tinting",
         blurb: "Removes hard-water spots and haze from every pane for crystal clarity and safer night driving.",
+        image: "/services/Car-Tinting.jpg",
       },
       {
         icon: FaSprayCan,
         name: "Car Sanitization & Disinfection",
         blurb: "Eliminates bacteria, allergens and stale odours, leaving your cabin fresh, hygienic and family-safe.",
+        image: `${a}/odor/1.png`,
       },
     ],
   },

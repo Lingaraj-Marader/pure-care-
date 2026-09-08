@@ -7,11 +7,11 @@ import {
   FaMapMarkerAlt,
   FaPhoneAlt,
   FaEnvelope,
-  FaCar,
-  FaTools,
-  FaUsers,
-  FaStar,
+  FaCarSide,
+  FaSmile,
+  FaAward,
 } from "react-icons/fa";
+import { MdMiscellaneousServices } from "react-icons/md";
 import FadeIn from "@/components/FadeIn";
 import { missionItems, values, timeline, team } from "@/data/aboutData";
 
@@ -36,9 +36,9 @@ export default function AboutPage() {
               <span className="gradient-text">Pure Care</span>
             </h1>
             <p className="text-slate-600 text-sm sm:text-base md:text-lg max-w-3xl mx-auto px-2">
-              From a small workshop to the UAE&apos;s most trusted auto care
-              provider, discover the journey, values, and people behind Pure
-              Care Auto Accessories.
+              From a small workshop to the Middle East climate&apos;s most trusted
+              auto care provider, discover the journey, values, and people behind
+              Pure Care Auto Accessories.
             </p>
           </motion.div>
         </div>
@@ -54,9 +54,9 @@ export default function AboutPage() {
               </h2>
               <p className="text-slate-600 text-sm sm:text-base mb-3 sm:mb-4 leading-relaxed">
                 Pure Care Auto Accessories TR. L.L.C is a premier car care and
-                auto accessories company based in the UAE. We have been serving
-                car enthusiasts and everyday vehicle owners with top-notch auto
-                care services for over a decade.
+                auto accessories company engineered for the Middle East climate.
+                We have been serving car enthusiasts and everyday vehicle owners
+                with top-notch auto care services for over a decade.
               </p>
               <p className="text-slate-600 text-sm sm:text-base mb-3 sm:mb-4 leading-relaxed">
                 Our state-of-the-art facility at 6 Sheikh Sultan, Bin Saqr Al
@@ -68,14 +68,14 @@ export default function AboutPage() {
                 We believe every vehicle deserves premium care, regardless of
                 make or model. Our team of skilled technicians is trained to
                 deliver flawless results every single time, making us the
-                preferred choice for car owners across the UAE.
+                preferred choice for car owners across the Middle East climate.
               </p>
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 {[
                   "12+ Services",
-                  "2000+ Cars Serviced",
+                  "1000+ Cars Serviced",
                   "10+ Years Experience",
-                  "100% Satisfaction",
+                  "10000+ Happy Clients",
                 ].map((item) => (
                   <div
                     key={item}
@@ -94,10 +94,10 @@ export default function AboutPage() {
                 <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-br from-slate-50 to-white border border-slate-200 shadow-sm p-6 sm:p-8 md:p-10">
                   <div className="grid grid-cols-2 gap-4 sm:gap-6">
                     {[
-                      { icon: FaCar, value: "2000+", label: "Cars Serviced" },
-                      { icon: FaTools, value: "12+", label: "Services" },
-                      { icon: FaUsers, value: "1500+", label: "Happy Clients" },
-                      { icon: FaStar, value: "10+", label: "Years" },
+                      { icon: FaCarSide, value: "1000+", label: "Cars Serviced" },
+                      { icon: MdMiscellaneousServices, value: "12+", label: "Services" },
+                      { icon: FaSmile, value: "10000+", label: "Happy Clients" },
+                      { icon: FaAward, value: "10+", label: "Years" },
                     ].map((st, idx) => (
                       <motion.div
                         key={st.label}
@@ -133,11 +133,12 @@ export default function AboutPage() {
               Our Mission
             </span>
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mt-2 sm:mt-3 mb-3 sm:mb-4">
-              Restore. <span className="gradient-text">Protect.</span> Beautify.
+              Clean. <span className="gradient-text">Protect.</span> Restore.
             </h2>
             <p className="text-slate-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2">
-              Three words define everything we do at Pure Care — and every
-              vehicle that leaves our workshop has been through all three.
+              Three pillars define everything we do at Pure Care — clean,
+              protect, and restore every vehicle to perfection in the Middle
+              East climate.
             </p>
           </FadeIn>
 
@@ -166,19 +167,50 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 4. Showcase Banner Image */}
+      {/* 4. Showcase Banner Images */}
       <section className="py-8 sm:py-10 md:py-14">
         <div className="section-divider mb-8 sm:mb-10 md:mb-14" />
         <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <FadeIn>
-            <div className="relative w-full aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg">
-              <Image
-                src="/showcase/2.png"
-                alt="Pure Care Auto — premium car care services in the UAE"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1280px) 100vw, 1280px"
-              />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+              <div className="md:col-span-2 relative aspect-[16/10] md:aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg group">
+                <Image
+                  src="/gallery/purecare-showcase-2.jpg"
+                  alt="Pure Care Auto — State of the art facility"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 66vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-4 sm:p-6">
+                  <span className="text-white font-bold text-sm sm:text-base">Our State-of-the-Art Facility</span>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-1 gap-4 sm:gap-6">
+                <div className="relative aspect-[16/10] rounded-xl sm:rounded-2xl overflow-hidden border border-slate-200 shadow-md group">
+                  <Image
+                    src="/services/PPF-CAR.jpg"
+                    alt="Pure Care Auto — PPF Installation"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3 sm:p-4">
+                    <span className="text-white font-bold text-xs sm:text-sm">PPF & Paint Protection</span>
+                  </div>
+                </div>
+                <div className="relative aspect-[16/10] rounded-xl sm:rounded-2xl overflow-hidden border border-slate-200 shadow-md group">
+                  <Image
+                    src="/gallery/purecare-showcase-1.jpg"
+                    alt="Pure Care Auto — Custom Interior & Detailing"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3 sm:p-4">
+                    <span className="text-white font-bold text-xs sm:text-sm">Luxury Interior & Detailing</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </FadeIn>
         </div>
@@ -336,7 +368,13 @@ export default function AboutPage() {
               </span>
               <span className="flex items-center gap-2">
                 <FaPhoneAlt className="text-blue-primary shrink-0" />
-                +971 58 636 8849
+                <a href="tel:+971586368849" className="hover:text-red-primary transition-colors">
+                  +971 58 636 8849
+                </a>
+                <span className="text-slate-300">/</span>
+                <a href="tel:+971521652323" className="hover:text-red-primary transition-colors">
+                  +971 52 165 2323
+                </a>
               </span>
               <span className="flex items-center gap-2 break-all">
                 <FaEnvelope className="text-blue-primary shrink-0" />

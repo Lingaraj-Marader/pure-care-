@@ -38,7 +38,7 @@ export default function WhyChooseUsPage() {
             </h1>
             <p className="text-slate-600 text-sm sm:text-base md:text-lg max-w-3xl mx-auto px-2">
               We go above and beyond to ensure every vehicle receives the highest
-              standard of care and attention. Here&apos;s what makes us the UAE&apos;s
+              standard of care and attention. Here&apos;s what makes us the Middle East climate&apos;s
               most trusted auto care provider.
             </p>
           </motion.div>

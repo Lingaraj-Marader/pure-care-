@@ -18,7 +18,8 @@ import {
 const serviceLinks = [
   { href: "/services/exterior", label: "Exterior Detailing" },
   { href: "/services/interior", label: "Interior Detailing" },
-  { href: "/services#protection", label: "Paint Protection Services" },
+  { href: "/services#protection", label: "Paint Protection Film (PPF)" },
+  { href: "/services#upholstery", label: "Seat Upholstery" },
   { href: "/services#additional", label: "Additional Detailing Services" },
 ];
 
@@ -60,7 +61,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-slate-600 text-sm leading-relaxed max-w-xs">
-              Premium car care and auto accessories services across the UAE.
+              Premium car care and auto accessories services tailored for the Middle East climate.
               Transform your vehicle with our expert team and top-quality products.
             </p>
             <div className="flex gap-3">
@@ -130,7 +131,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <FaMapMarkerAlt className="text-red-primary mt-1 shrink-0" />
                 <span className="text-slate-600 text-sm break-words">
-                  6 Sheikh Sultan, Bin Saqr Al Qasimi Street, Sharjah - UAE
+                  6 Sheikh Sultan, Bin Saqr Al Qasimi Street, Sharjah
                 </span>
               </li>
               <li>
@@ -144,11 +145,11 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+971529488821"
+                  href="tel:+971521652323"
                   className="flex items-center gap-3 text-slate-600 hover:text-red-primary transition-colors text-sm min-h-[36px] sm:min-h-0"
                 >
                   <FaPhoneAlt className="text-blue-primary shrink-0" />
-                  +971 52 948 8821
+                  +971 52 165 2323
                 </a>
               </li>
               <li>
@@ -164,8 +165,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright and Bottom */}
-        <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-slate-200 flex flex-col items-center gap-3 sm:gap-4 md:flex-row md:justify-between">
+        {/* Bottom Bar */}
+        <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-xs sm:text-sm text-center">
             © {new Date().getFullYear()} Pure Care Auto Accessories TR. L.L.C.
             All rights reserved. Powered by{" "}
@@ -179,7 +180,7 @@ export default function Footer() {
             </a>
           </p>
           <p className="text-slate-400 text-xs text-center">
-            Restore. Protect. Beautify.
+            Clean. Protect. Restore.
           </p>
         </div>
       </div>

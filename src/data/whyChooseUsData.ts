@@ -3,7 +3,7 @@ import {
   FaStar,
   FaUsers,
   FaShieldAlt,
-  FaTools,
+  FaCogs,
   FaHeart,
   FaClock,
   FaGem,
@@ -63,7 +63,7 @@ export const strengths: StrengthItem[] = [
     hoverText: "group-hover:text-red-primary",
   },
   {
-    icon: FaTools,
+    icon: FaCogs,
     title: "Latest Technology",
     desc: "We invest in cutting-edge tools, equipment, and techniques to deliver flawless results that exceed industry standards.",
     color: "from-emerald-500 to-emerald-700",
@@ -105,10 +105,10 @@ export const strengths: StrengthItem[] = [
 ];
 
 export const stats: StatItem[] = [
-  { value: "2000+", label: "Vehicles Serviced" },
+  { value: "1000+", label: "Vehicles Serviced" },
   { value: "10+", label: "Years Experience" },
   { value: "12+", label: "Specialized Services" },
-  { value: "1500+", label: "Happy Customers" },
+  { value: "10000+", label: "Happy Customers" },
   { value: "100%", label: "Satisfaction Rate" },
   { value: "50+", label: "Premium Brands" },
 ];

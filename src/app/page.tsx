@@ -8,7 +8,6 @@ import {
   FaShieldAlt,
   FaStar,
   FaUsers,
-  FaTools,
   FaWhatsapp,
   FaArrowRight,
   FaCheckCircle,
@@ -23,6 +22,9 @@ import {
   MdLayers,
   MdWeekend,
   MdLocalCarWash,
+  MdEventSeat,
+  MdAirlineSeatReclineExtra,
+  MdAutoFixHigh,
 } from "react-icons/md";
 import HeroSlider from "@/components/HeroSlider";
 import FadeIn from "@/components/FadeIn";
@@ -36,103 +38,110 @@ const homeServices = [
     link: "/services/exterior",
   },
   {
-    icon: MdDirectionsCar,
+    icon: MdEventSeat,
     title: "Interior Detailing",
     desc: "Deep vacuum, steam sanitization, seat shampooing, dashboard care and odor removal for a fresh, hygienic cabin.",
-    image: "/services/interior-detailing/dashboard-console/1.png",
+    image: "/services/interior-detailing/seat-shampooing/3.png",
     link: "/services/interior",
   },
   {
     icon: FaShieldAlt,
-    title: "Paint Protection Services",
-    desc: "Ceramic coating, PPF, scratch and swirl correction and long-lasting UV protection that guard your paint for years.",
-    image: "/services/Ceramic-Coating.jpg",
+    title: "Paint Protection Film (PPF)",
+    desc: "Wrapping, PPF, and related protection solutions — shielding your vehicle against rock chips, scratches, and harsh sun.",
+    image: "/services/PPF-CAR.jpg",
     link: "/services#protection",
   },
   {
-    icon: MdBuild,
+    icon: MdAirlineSeatReclineExtra,
+    title: "Seat Upholstery",
+    desc: "Custom seat stitching, ready-made seat covers, floor mats, and more — bespoke craftsmanship and superior comfort.",
+    image: "/services/Seat-Covers.jpg",
+    link: "/services#upholstery",
+  },
+  {
+    icon: MdAutoFixHigh,
     title: "Additional Detailing Services",
     desc: "Engine bay cleaning, alloy wheel detailing, window polishing and full sanitization to finish every detail.",
-    image: "/services/Car-Tinting.jpg",
+    image: "/services/Car-Detailing.jpg",
     link: "/services#additional",
   },
 ];
 
 const stats = [
-  { value: "2000+", label: "Cars Serviced" },
+  { value: "1000+", label: "Cars Serviced" },
   { value: "15+", label: "Services" },
-  { value: "100%", label: "Satisfaction" },
+  { value: "10000+", label: "Happy Clients" },
   { value: "10+", label: "Years Experience" },
 ];
 
 const homeProducts = [
   {
-    title: "Ceramic Coating Products",
-    icon: FaStar,
-    image: "/products/1.png",
-    items: ["Gtechniq Crystal Serum", "Ceramic Pro 9H", "IGL Coatings Kenzo"],
-    color: "from-red-primary to-red-dark",
+    title: "Window Tinting Films",
+    icon: MdLayers,
+    image: "/products/window-tinting-films.png",
+    items: ["Ray Shield Window Tinting", "AutoCool Window Tinting", "3M Crystalline"],
+    color: "from-blue-primary to-blue-dark",
     hoverBorder: "hover:border-red-primary/50",
     hoverText: "group-hover:text-red-primary",
-    price: "From AED 1,500",
+    price: "From AED 249",
   },
   {
-    title: "PPF Films",
+    title: "PPF (Paint Protection Film)",
     icon: FaShieldAlt,
-    image: "/products/6.png",
-    items: ["XPEL Ultimate Plus", "3M Scotchgard Pro", "SunTek Ultra PPF"],
+    image: "/services/PPF-CAR.jpg",
+    items: ["Onyx PPF", "Ray Shield PPF", "XPEL Ultimate Plus"],
     color: "from-emerald-500 to-emerald-700",
     hoverBorder: "hover:border-red-primary/50",
     hoverText: "group-hover:text-red-primary",
-    price: "From AED 3,000",
+    price: "From AED 2,999",
+  },
+  {
+    title: "Ceramic Coating (Onyx/Tactium/Sonax)",
+    icon: FaStar,
+    image: "/services/Ceramic-Coating.jpg",
+    items: ["Onyx Ceramic", "Tactium Ceramic", "Sonax Ceramic"],
+    color: "from-red-primary to-red-dark",
+    hoverBorder: "hover:border-red-primary/50",
+    hoverText: "group-hover:text-red-primary",
+    price: "From AED 599",
+  },
+  {
+    title: "Car Detailing (3mm)",
+    icon: MdLocalCarWash,
+    image: "/services/Car-Detailing.jpg",
+    items: [
+      "3mm Multi-Stage Detailing",
+      "Deep Interior Decontamination",
+      "Protective Finish & Sealant",
+    ],
+    color: "from-yellow-500 to-orange-500",
+    hoverBorder: "hover:border-red-primary/50",
+    hoverText: "group-hover:text-red-primary",
+    price: "From AED 149",
+  },
+  {
+    title: "Seat Upholstery & Accessories",
+    icon: MdAirlineSeatReclineExtra,
+    image: "/services/Seat-Covers.jpg",
+    items: ["Custom Seat Stitching", "Ready-Made Covers", "3D/5D Floor Mats"],
+    color: "from-amber-500 to-amber-700",
+    hoverBorder: "hover:border-red-primary/50",
+    hoverText: "group-hover:text-red-primary",
+    price: "From AED 249",
   },
   {
     title: "Vinyl Wraps",
     icon: MdColorLens,
-    image: "/products/4.png",
+    image: "/products/vinyl-wraps.png",
     items: [
       "3M 2080 Series",
       "Avery Dennison Supreme",
-      "Chrome & Special Effects",
+      "Chrome & Specialty Wraps",
     ],
     color: "from-purple-500 to-purple-700",
     hoverBorder: "hover:border-red-primary/50",
     hoverText: "group-hover:text-red-primary",
     price: "From AED 2,500",
-  },
-  {
-    title: "Window Tinting Films",
-    icon: MdLayers,
-    image: "/products/3.png",
-    items: ["3M Crystalline Series", "Llumar CTX Series", "SunTek CXP Carbon"],
-    color: "from-blue-primary to-blue-dark",
-    hoverBorder: "hover:border-red-primary/50",
-    hoverText: "group-hover:text-red-primary",
-    price: "From AED 450",
-  },
-  {
-    title: "Interior Accessories",
-    icon: MdWeekend,
-    image: "/products/7.png",
-    items: ["Custom Seat Covers", "3D/5D Floor Mats", "Ambient Lighting Kits"],
-    color: "from-amber-500 to-amber-700",
-    hoverBorder: "hover:border-red-primary/50",
-    hoverText: "group-hover:text-red-primary",
-    price: "From AED 50",
-  },
-  {
-    title: "Car Care Products",
-    icon: MdLocalCarWash,
-    image: "/products/5.png",
-    items: [
-      "Meguiar's Professional",
-      "Chemical Guys Collection",
-      "Sonax Professional",
-    ],
-    color: "from-yellow-500 to-orange-500",
-    hoverBorder: "hover:border-red-primary/50",
-    hoverText: "group-hover:text-red-primary",
-    price: "Various",
   },
 ];
 
@@ -156,9 +165,9 @@ const homeBlogs = [
     color: "from-blue-primary to-blue-dark",
   },
   {
-    title: "Top 5 Benefits of Professional Car Tinting in UAE",
+    title: "Top 5 Benefits of Professional Car Tinting in Middle East Climate",
     excerpt:
-      "Living in the UAE means dealing with extreme heat. Discover how professional window tinting can protect you and your vehicle's interior.",
+      "Living in the Middle East climate means dealing with extreme heat. Discover how professional window tinting can protect you and your vehicle's interior.",
     category: "Car Tinting",
     date: "March 5, 2026",
     readTime: "6 min read",
@@ -183,7 +192,7 @@ const whyChoosePreview = [
     desc: "All our services come with warranty for your complete peace of mind.",
   },
   {
-    icon: FaTools,
+    icon: MdBuild,
     title: "Latest Technology",
     desc: "We use cutting-edge tools and techniques for flawless results.",
   },
@@ -214,7 +223,7 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-blue-primary/10 border border-blue-primary/20 text-blue-primary text-xs sm:text-sm font-medium mb-4 sm:mb-5"
           >
-            UAE&apos;s Premium Pure Care
+            Middle East Climate&apos;s Premium Pure Care
           </motion.span>
 
           <motion.h1
@@ -290,12 +299,12 @@ export default function HomePage() {
                 About Pure Care
               </span>
               <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mt-2 sm:mt-3 mb-4 sm:mb-6">
-                UAE&apos;s Trusted{" "}
+                Middle East Climate&apos;s Trusted{" "}
                 <span className="gradient-text-red">Pure Care</span> Experts
               </h2>
               <p className="text-slate-600 text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed">
                 Pure Care Auto Accessories TR. L.L.C is a leading car care
-                service provider based in the UAE. We specialize in transforming
+                service provider built for the Middle East climate. We specialize in transforming
                 and protecting vehicles with our comprehensive range of services
                 including car tinting, wrapping, polishing, ceramic coating,
                 PPF, and much more.
@@ -346,7 +355,7 @@ export default function HomePage() {
                     />
                     <div className="mt-4 sm:mt-6 space-y-1 sm:space-y-2">
                       <p className="text-blue-primary text-xs sm:text-sm flex items-center justify-center gap-1">
-                        <FaMapMarkerAlt /> UAE
+                        <FaMapMarkerAlt /> Middle East Climate
                       </p>
                       <p className="text-slate-600 text-xs sm:text-sm">
                         Since 2014
@@ -554,7 +563,7 @@ export default function HomePage() {
             </h2>
             <p className="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto px-2">
               Expert tips and guides to help you protect and maintain your
-              vehicle in the UAE climate.
+              vehicle in the Middle East climate.
             </p>
           </FadeIn>
 

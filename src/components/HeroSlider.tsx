@@ -8,7 +8,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const bannerSlides = [
   {
     src: "/banner/banner-image.png",
-    alt: "Pure Care — Your Car. Our Obsession. Premium ceramic coating & window tinting in the UAE",
+    alt: "Pure Care — Your Car. Our Obsession. Premium ceramic coating & window tinting in the Middle East climate",
   },
   {
     src: "/banner/banner-image2.png",

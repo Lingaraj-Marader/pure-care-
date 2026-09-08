@@ -20,7 +20,7 @@ export const contactCards: ContactCard[] = [
   {
     icon: FaPhoneAlt,
     title: "Phone",
-    details: ["+971 58 636 8849", "+971 52 948 8821"],
+    details: ["+971 58 636 8849", "+971 52 165 2323"],
     link: "tel:+971586368849",
     color: "from-blue-primary to-blue-dark",
     hoverBorder: "hover:border-red-primary/50",
@@ -29,7 +29,7 @@ export const contactCards: ContactCard[] = [
   {
     icon: FaWhatsapp,
     title: "WhatsApp",
-    details: ["+971 58 636 8849"],
+    details: ["+971 58 636 8849", "+971 52 165 2323"],
     link: "https://wa.me/971586368849",
     color: "from-green-500 to-green-600",
     hoverBorder: "hover:border-green-500/40",
@@ -48,7 +48,7 @@ export const contactCards: ContactCard[] = [
     icon: FaMapMarkerAlt,
     title: "Location",
     details: ["6 Sheikh Sultan, Bin Saqr", "Al Qasimi St, Sharjah"],
-    link: "https://maps.google.com/?q=6+Sheikh+Sultan+Bin+Saqr+Al+Qasimi+Street+Sharjah+UAE",
+    link: "https://maps.google.com/?q=6+Sheikh+Sultan+Bin+Saqr+Al+Qasimi+Street+Sharjah",
     color: "from-amber-500 to-amber-700",
     hoverBorder: "hover:border-red-primary/50",
     hoverText: "group-hover:text-red-primary",
