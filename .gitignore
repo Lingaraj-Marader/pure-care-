@@ -8,7 +8,7 @@
 /coverage
 
 # next.js
-/.next/
+/.next/cache/
 /out/
 
 # production
@@ -17,6 +17,7 @@
 # misc
 .DS_Store
 *.pem
+*.zip
 
 # debug logs
 npm-debug.log*
