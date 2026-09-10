@@ -88,7 +88,7 @@ const homeProducts = [
   {
     title: "PPF (Paint Protection Film)",
     icon: FaShieldAlt,
-    image: "/services/PPF-CAR.jpg",
+    image: "/products/ppf.png",
     items: ["Onyx PPF", "Ray Shield PPF", "XPEL Ultimate Plus"],
     color: "from-emerald-500 to-emerald-700",
     hoverBorder: "hover:border-red-primary/50",

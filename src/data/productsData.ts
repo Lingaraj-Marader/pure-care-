@@ -51,7 +51,7 @@ export const productsData: ProductCategory[] = [
   {
     title: "PPF (Paint Protection Film)",
     icon: FaShieldAlt,
-    image: "/products/6.png",
+    image: "/products/ppf.png",
     description:
       "Self-healing paint protection films shielding your vehicle against rock chips, road grit, and scratches.",
     color: "from-emerald-500 to-emerald-700",
