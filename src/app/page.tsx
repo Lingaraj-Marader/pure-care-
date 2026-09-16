@@ -343,21 +343,21 @@ export default function HomePage() {
 
             <FadeIn direction="right">
               <div className="relative aspect-square max-w-[280px] sm:max-w-sm md:max-w-md mx-auto">
-                <div className="absolute inset-0 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-sky-500/20 to-blue-600/20 blur-3xl" />
-                <div className="relative h-full rounded-2xl sm:rounded-3xl overflow-hidden gradient-border bg-gradient-to-br from-[#0a1638] via-[#0d1d49] to-[#060c20] border border-sky-500/25 shadow-2xl shadow-navy-950/70 flex items-center justify-center">
-                  <div className="text-center p-6 sm:p-8">
+                <div className="absolute inset-0 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-sky-400/30 via-blue-500/20 to-sky-600/30 blur-3xl" />
+                <div className="relative h-full rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-br from-white via-slate-50 to-sky-50/80 border-2 border-sky-300/60 shadow-[0_20px_60px_-15px_rgba(14,165,233,0.3)] flex items-center justify-center transition-transform hover:scale-[1.01] duration-300">
+                  <div className="text-center p-6 sm:p-8 w-full flex flex-col items-center justify-center">
                     <Image
                       src="/purecare-logo.png"
-                      alt="Pure Care"
+                      alt="Pure Care Auto Accessories"
                       width={1469}
                       height={559}
-                      className="w-48 sm:w-60 md:w-72 h-auto mx-auto mb-4 sm:mb-6 object-contain drop-shadow-[0_4px_20px_rgba(56,189,248,0.3)]"
+                      className="w-52 sm:w-64 md:w-76 h-auto mx-auto mb-4 sm:mb-6 object-contain drop-shadow-sm"
                     />
-                    <div className="mt-4 sm:mt-6 space-y-1 sm:space-y-2">
-                      <p className="text-sky-300 text-xs sm:text-sm flex items-center justify-center gap-1 font-medium">
-                        <FaMapMarkerAlt /> Middle East Climate
+                    <div className="mt-2 sm:mt-4 space-y-1 sm:space-y-1.5">
+                      <p className="text-sky-700 text-xs sm:text-sm flex items-center justify-center gap-1.5 font-bold tracking-wide">
+                        <FaMapMarkerAlt className="text-sky-600" /> Middle East Climate
                       </p>
-                      <p className="text-slate-400 text-xs sm:text-sm">
+                      <p className="text-slate-500 text-xs sm:text-sm font-semibold">
                         Since 2014
                       </p>
                     </div>

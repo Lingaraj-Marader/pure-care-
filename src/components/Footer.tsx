@@ -53,14 +53,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
           {/* Logo & Description */}
           <div className="sm:col-span-2 lg:col-span-1 space-y-4">
-            <Link href="/" prefetch={true}>
-              <Image
-                src="/purecare-logo.png"
-                alt="Pure Care Auto Accessories"
-                width={1469}
-                height={559}
-                className="h-16 sm:h-20 w-auto object-contain drop-shadow-md"
-              />
+            <Link href="/" prefetch={true} className="inline-block group">
+              <div className="bg-white px-4 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl shadow-lg shadow-black/25 border border-white/20 transition-all duration-300 group-hover:shadow-sky-500/30 group-hover:scale-105 inline-flex items-center justify-center">
+                <Image
+                  src="/purecare-logo.png"
+                  alt="Pure Care Auto Accessories"
+                  width={1469}
+                  height={559}
+                  className="h-12 sm:h-14 w-auto object-contain"
+                />
+              </div>
             </Link>
             <p className="text-slate-300 text-sm leading-relaxed max-w-xs">
               Premium car care and auto accessories services tailored for the Middle East climate.

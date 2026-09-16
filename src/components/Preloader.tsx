@@ -91,14 +91,16 @@ export default function Preloader() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="mb-6 sm:mb-8"
             >
-              <Image
-                src="/purecare-logo.png"
-                alt="Pure Care Auto Accessories"
-                width={1469}
-                height={559}
-                className="h-16 sm:h-20 md:h-24 w-auto object-contain drop-shadow-[0_4px_20px_rgba(24,142,215,0.4)]"
-                priority
-              />
+              <div className="bg-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-2xl shadow-2xl shadow-sky-500/30 border border-white/40 inline-flex items-center justify-center">
+                <Image
+                  src="/purecare-logo.png"
+                  alt="Pure Care Auto Accessories"
+                  width={1469}
+                  height={559}
+                  className="h-12 sm:h-16 md:h-18 w-auto object-contain"
+                  priority
+                />
+              </div>
             </motion.div>
 
             {/* Serial Animated Words: Clean -> Protect -> Restore */}
