@@ -8,26 +8,26 @@ const steps = [
   {
     word: "Clean",
     label: "01. Clean",
-    color: "text-blue-primary",
-    bg: "bg-blue-primary/10",
-    border: "border-blue-primary/30",
-    glow: "rgba(24, 142, 215, 0.18)",
+    color: "text-sky-400",
+    bg: "bg-sky-500/15",
+    border: "border-sky-400/40",
+    glow: "rgba(56, 189, 248, 0.25)",
   },
   {
     word: "Protect",
     label: "02. Protect",
     color: "text-red-primary",
-    bg: "bg-red-primary/10",
-    border: "border-red-primary/30",
-    glow: "rgba(223, 10, 22, 0.18)",
+    bg: "bg-red-primary/15",
+    border: "border-red-primary/40",
+    glow: "rgba(223, 10, 22, 0.25)",
   },
   {
     word: "Restore",
     label: "03. Restore",
-    color: "text-emerald-500",
-    bg: "bg-emerald-500/10",
-    border: "border-emerald-500/30",
-    glow: "rgba(16, 185, 129, 0.18)",
+    color: "text-cyan-400",
+    bg: "bg-cyan-500/15",
+    border: "border-cyan-400/40",
+    glow: "rgba(6, 182, 212, 0.25)",
   },
 ];
 
@@ -36,7 +36,6 @@ export default function Preloader() {
   const [currentStep, setCurrentStep] = useState(0);
 
   useEffect(() => {
-    // Generous durations to comfortably showcase logo and sequential animation
     const t1 = setTimeout(() => setCurrentStep(1), 1200);
     const t2 = setTimeout(() => setCurrentStep(2), 2400);
     const t3 = setTimeout(() => setLoading(false), 3800);
@@ -68,7 +67,7 @@ export default function Preloader() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 0.98 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center pointer-events-none select-none"
+          className="fixed inset-0 z-[100] bg-[#070f26] flex flex-col items-center justify-center pointer-events-none select-none"
         >
           {/* Dynamic Ambient Background Glow based on current step */}
           <motion.div
@@ -79,7 +78,7 @@ export default function Preloader() {
             className="absolute inset-0 flex items-center justify-center pointer-events-none"
           >
             <div
-              className="w-80 sm:w-96 md:w-[460px] h-80 sm:h-96 md:h-[460px] rounded-full blur-[120px] transition-all duration-700"
+              className="w-80 sm:w-96 md:w-[460px] h-80 sm:h-96 md:h-[460px] rounded-full blur-[130px] transition-all duration-700"
               style={{ backgroundColor: active.glow }}
             />
           </motion.div>
@@ -97,7 +96,7 @@ export default function Preloader() {
                 alt="Pure Care Auto Accessories"
                 width={1469}
                 height={559}
-                className="h-16 sm:h-20 md:h-24 w-auto object-contain drop-shadow-sm"
+                className="h-16 sm:h-20 md:h-24 w-auto object-contain drop-shadow-[0_4px_20px_rgba(24,142,215,0.4)]"
                 priority
               />
             </motion.div>
@@ -116,7 +115,7 @@ export default function Preloader() {
                     stiffness: 220,
                     damping: 22,
                   }}
-                  className={`text-4xl sm:text-6xl md:text-7xl font-black tracking-tight ${active.color}`}
+                  className={`text-4xl sm:text-6xl md:text-7xl font-black tracking-tight ${active.color} drop-shadow-md`}
                 >
                   {active.word}
                 </motion.div>
@@ -138,10 +137,10 @@ export default function Preloader() {
                     transition={{ duration: 0.3 }}
                     className={`px-3 sm:px-4 py-1.5 rounded-full text-xs font-bold transition-all duration-300 border ${
                       isCurrent
-                        ? `${s.bg} ${s.color} ${s.border} shadow-sm`
+                        ? `${s.bg} ${s.color} ${s.border} shadow-lg shadow-sky-500/20`
                         : isPast
-                        ? "bg-slate-100 text-slate-600 border-slate-200"
-                        : "bg-slate-50 text-slate-300 border-slate-100"
+                        ? "bg-[#0d1c44] text-slate-300 border-sky-500/20"
+                        : "bg-[#07112c] text-slate-500 border-sky-900/30"
                     }`}
                   >
                     {s.label}
@@ -151,7 +150,7 @@ export default function Preloader() {
             </div>
 
             {/* Animated Progress Bar */}
-            <div className="mt-8 sm:mt-10 w-48 sm:w-60 h-1.5 bg-slate-100 rounded-full overflow-hidden relative">
+            <div className="mt-8 sm:mt-10 w-48 sm:w-60 h-1.5 bg-[#0d1d49] rounded-full overflow-hidden relative border border-sky-500/20">
               <motion.div
                 initial={{ width: "0%" }}
                 animate={{
@@ -163,7 +162,7 @@ export default function Preloader() {
                       : "100%",
                 }}
                 transition={{ duration: 0.7, ease: "easeInOut" }}
-                className="h-full bg-gradient-to-r from-blue-primary via-red-primary to-emerald-500 rounded-full"
+                className="h-full bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-400 rounded-full shadow-[0_0_12px_rgba(56,189,248,0.8)]"
               />
             </div>
           </div>

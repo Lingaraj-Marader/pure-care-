@@ -3,21 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
+  --background: #070f26;
+  --foreground: #f8fafc;
   --blue-primary: #188ed7;
-  --blue-dark: #1270a8;
-  --blue-glow: #188ed7;
+  --blue-dark: #0f5d93;
+  --blue-glow: #38bdf8;
   --red-primary: #df0a16;
   --red-dark: #b80812;
-  --surface: #f8fafc;
-  --border: #e2e8f0;
+  --surface: #0a1638;
+  --surface-hover: #102254;
+  --border: rgba(56, 189, 248, 0.2);
 }
 
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: #188ed7 #eef2f6;
+  scrollbar-color: #188ed7 #060d21;
 }
 
 html,
@@ -31,19 +32,25 @@ body {
 }
 
 body {
-  color: #0f172a;
-  background-color: #ffffff;
+  color: #f1f5f9;
+  background-color: #070f26;
+  background-image: 
+    radial-gradient(at 15% 15%, rgba(14, 165, 233, 0.15) 0px, transparent 55%),
+    radial-gradient(at 85% 25%, rgba(30, 58, 138, 0.25) 0px, transparent 60%),
+    radial-gradient(at 50% 85%, rgba(2, 132, 199, 0.12) 0px, transparent 55%),
+    linear-gradient(to bottom, #070f26, #050b1d);
+  background-attachment: fixed;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* Custom Scrollbar matching original website */
+/* Custom Scrollbar for blue automotive UI */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #eef2f6;
+  background: #050b1d;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -52,24 +59,24 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #df0a16;
+  background: #38bdf8;
 }
 
-/* Custom pure-care classes */
+/* Custom pure-care luxury classes */
 .card-hover {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glow-blue {
-  box-shadow: 0 8px 24px rgba(24, 142, 215, 0.2);
+  box-shadow: 0 8px 30px rgba(24, 142, 215, 0.3);
 }
 
 .glow-blue-text {
-  text-shadow: none;
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
 }
 
 .glow-red {
-  box-shadow: 0 8px 24px rgba(223, 10, 22, 0.2);
+  box-shadow: 0 8px 24px rgba(223, 10, 22, 0.25);
 }
 
 .gradient-border {
@@ -80,21 +87,21 @@ body {
 
 .gradient-text {
   -webkit-text-fill-color: transparent;
-  background: linear-gradient(135deg, #188ed7, #df0a16);
+  background: linear-gradient(135deg, #38bdf8, #188ed7, #df0a16);
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 .gradient-text-blue {
   -webkit-text-fill-color: transparent;
-  background: linear-gradient(135deg, #188ed7, #1270a8);
+  background: linear-gradient(135deg, #67e8f9, #38bdf8, #188ed7);
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 .gradient-text-red {
   -webkit-text-fill-color: transparent;
-  background: linear-gradient(135deg, #df0a16, #b80812);
+  background: linear-gradient(135deg, #f87171, #df0a16, #b80812);
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -104,15 +111,16 @@ body {
 }
 
 .section-divider {
-  background: linear-gradient(90deg, transparent, #188ed7, transparent);
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.4), transparent);
   height: 1px;
 }
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(24, 142, 215, 0.25);
+    box-shadow: 0 0 20px rgba(24, 142, 215, 0.35);
   }
   50% {
-    box-shadow: 0 0 34px rgba(24, 142, 215, 0.45);
+    box-shadow: 0 0 36px rgba(56, 189, 248, 0.65);
   }
 }
+

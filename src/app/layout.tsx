@@ -24,10 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="antialiased w-full">
-      <body className="min-h-screen flex flex-col bg-white text-slate-900 overflow-x-hidden w-full m-0 p-0">
+      <body className="min-h-screen flex flex-col bg-[#070f26] text-slate-100 overflow-x-hidden w-full m-0 p-0 selection:bg-sky-500 selection:text-white relative">
         <Preloader />
         <Navbar />
-        <main className="flex-1 w-full">{children}</main>
+        <main className="flex-1 w-full relative z-10">{children}</main>
         <Footer />
         <FloatingWidgets />
         <ConsultationModal />
@@ -35,3 +35,4 @@ export default function RootLayout({
     </html>
   );
 }
+

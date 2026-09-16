@@ -11,15 +11,24 @@ const config: Config = {
     extend: {
       colors: {
         "blue-primary": "#188ed7",
-        "blue-dark": "#1270a8",
-        "blue-glow": "#188ed7",
+        "blue-dark": "#0f5d93",
+        "blue-glow": "#38bdf8",
         "red-primary": "#df0a16",
         "red-dark": "#b80812",
+        navy: {
+          950: "#030816",
+          900: "#070f26",
+          850: "#0a1638",
+          800: "#0d1d49",
+          750: "#11265e",
+          700: "#163175",
+          600: "#1f439c",
+        },
       },
       keyframes: {
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(24, 142, 215, 0.25)" },
-          "50%": { boxShadow: "0 0 34px rgba(24, 142, 215, 0.45)" },
+          "0%, 100%": { boxShadow: "0 0 25px rgba(24, 142, 215, 0.35)" },
+          "50%": { boxShadow: "0 0 40px rgba(56, 189, 248, 0.6)" },
         },
         float: {
           "0%, 100%": { transform: "translateY(0)" },
@@ -40,3 +49,4 @@ const config: Config = {
 };
 
 export default config;
+

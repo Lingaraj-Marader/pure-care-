@@ -10,7 +10,6 @@ import {
   FaWhatsapp,
   FaInstagram,
   FaFacebookF,
-  FaYoutube,
   FaLinkedinIn,
   FaTiktok,
 } from "react-icons/fa";
@@ -56,42 +55,35 @@ const socialLinks = [
     icon: FaWhatsapp,
     href: "https://wa.me/971586368849",
     label: "WhatsApp",
-    color: "hover:text-green-600",
+    color: "hover:text-green-600 hover:border-green-400 hover:bg-green-50",
     size: "text-lg lg:text-xl",
   },
   {
     icon: FaInstagram,
     href: "https://www.instagram.com/purecaresharjah?igsi=MWJ0enZsem94OTN1dg%3D%3D&utm_source=qr",
     label: "Instagram",
-    color: "hover:text-red-primary",
+    color: "hover:text-pink-600 hover:border-pink-400 hover:bg-pink-50",
     size: "text-lg lg:text-xl",
   },
   {
     icon: FaFacebookF,
     href: "https://www.facebook.com",
     label: "Facebook",
-    color: "hover:text-red-primary",
+    color: "hover:text-blue-600 hover:border-blue-400 hover:bg-blue-50",
     size: "text-sm lg:text-base",
   },
-  // {
-  //   icon: FaYoutube,
-  //   href: "https://www.youtube.com",
-  //   label: "YouTube",
-  //   color: "hover:text-red-primary",
-  //   size: "text-sm lg:text-base",
-  // },
   {
     icon: FaLinkedinIn,
     href: "https://www.linkedin.com",
     label: "LinkedIn",
-    color: "hover:text-red-primary",
+    color: "hover:text-blue-700 hover:border-blue-500 hover:bg-blue-50",
     size: "text-sm lg:text-base",
   },
   {
     icon: FaTiktok,
     href: "https://vt.tiktok.com/ZSVD4NByh/",
     label: "TikTok",
-    color: "hover:text-red-primary",
+    color: "hover:text-slate-900 hover:border-slate-400 hover:bg-slate-100",
     size: "text-sm lg:text-base",
   },
 ];
@@ -150,15 +142,15 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/90 backdrop-blur-md shadow-lg shadow-slate-200"
-          : "bg-transparent"
+          ? "bg-white/95 backdrop-blur-md shadow-lg shadow-black/5 border-b border-slate-200"
+          : "bg-white shadow-md border-b border-slate-200"
       }`}
     >
       <div className="w-full px-3 sm:px-6 lg:px-10 xl:px-14">
         <div className="flex items-center justify-between h-20 sm:h-24">
           <Link href="/" prefetch={true} className="shrink-0" onClick={closeMenus}>
             <motion.div
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.03 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Image
@@ -197,21 +189,21 @@ export default function Navbar() {
                       onClick={closeMenus}
                       className={`relative flex items-center gap-1 px-2.5 lg:px-3 xl:px-4 py-2 text-xs lg:text-sm font-medium transition-colors group ${
                         isActive
-                          ? "text-blue-primary"
-                          : "text-slate-700 hover:text-red-primary"
+                          ? "text-blue-600 font-bold"
+                          : "text-slate-700 hover:text-blue-600"
                       }`}
                     >
                       {link.label}
                       <FaChevronDown
                         className={`text-[9px] transition-transform duration-300 ${
-                          servicesDropdownOpen ? "rotate-180" : ""
+                          servicesDropdownOpen ? "rotate-180 text-blue-600" : "text-slate-400 group-hover:text-blue-600"
                         }`}
                       />
                       <span
-                        className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-blue-primary transition-all duration-300 ${
+                        className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-blue-600 transition-all duration-300 ${
                           isActive
-                            ? "w-3/4"
-                            : "w-0 group-hover:w-3/4 group-hover:bg-red-primary"
+                            ? "w-3/4 shadow-sm shadow-blue-500/40"
+                            : "w-0 group-hover:w-3/4"
                         }`}
                       />
                     </Link>
@@ -226,10 +218,10 @@ export default function Navbar() {
                           transition={{ duration: 0.15 }}
                           className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50"
                         >
-                          <div className="w-[600px] max-w-[calc(100vw-2rem)] rounded-2xl bg-white border border-slate-200 shadow-xl shadow-slate-300/50 overflow-hidden">
+                          <div className="w-[600px] max-w-[calc(100vw-2rem)] rounded-2xl bg-white shadow-2xl border border-slate-200 overflow-hidden">
                             <div className="flex">
                               {/* Categories column */}
-                              <div className="w-[46%] bg-slate-50 border-r border-slate-100 p-2 space-y-0.5">
+                              <div className="w-[46%] bg-slate-50 border-r border-slate-200 p-2 space-y-0.5">
                                 {categories.map((cat) => (
                                   <Link
                                     key={cat.key}
@@ -239,10 +231,10 @@ export default function Navbar() {
                                     onMouseEnter={() =>
                                       setActiveCategoryKey(cat.key)
                                     }
-                                    className={`block px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors ${
+                                    className={`block px-3 py-2.5 rounded-lg text-sm font-semibold transition-all ${
                                       activeCategoryKey === cat.key
-                                        ? "bg-white text-red-primary shadow-sm"
-                                        : "text-slate-700 hover:text-red-primary"
+                                        ? "bg-blue-50 text-blue-700 border border-blue-200 shadow-sm"
+                                        : "text-slate-700 hover:text-blue-600 hover:bg-slate-100"
                                     }`}
                                   >
                                     {cat.title}
@@ -251,8 +243,8 @@ export default function Navbar() {
                               </div>
 
                               {/* Subservices column */}
-                              <div className="w-[54%] p-3 flex flex-col">
-                                <p className="px-2 mb-1.5 text-[10px] font-semibold uppercase tracking-widest text-slate-400">
+                              <div className="w-[54%] p-3 flex flex-col bg-white">
+                                <p className="px-2 mb-1.5 text-[10px] font-semibold uppercase tracking-widest text-blue-600">
                                   {activeCategory.title}
                                 </p>
                                 <motion.ul
@@ -271,7 +263,7 @@ export default function Navbar() {
                                         )}
                                         prefetch={true}
                                         onClick={closeMenus}
-                                        className="block rounded-lg px-3 py-2 text-xs text-slate-600 hover:text-red-primary hover:bg-red-primary/5 transition-colors leading-snug"
+                                        className="block rounded-lg px-3 py-2 text-xs text-slate-700 hover:text-blue-700 hover:bg-blue-50 transition-colors leading-snug font-medium"
                                       >
                                         {sub.name}
                                       </Link>
@@ -282,7 +274,7 @@ export default function Navbar() {
                                   href={`/services/${activeCategory.key}`}
                                   prefetch={true}
                                   onClick={closeMenus}
-                                  className="mt-2 pt-2.5 border-t border-slate-100 flex items-center justify-center gap-1.5 text-xs font-semibold text-blue-primary hover:text-red-primary transition-colors"
+                                  className="mt-2 pt-2.5 border-t border-slate-100 flex items-center justify-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800 transition-colors"
                                 >
                                   View all {activeCategory.title} →
                                 </Link>
@@ -304,16 +296,16 @@ export default function Navbar() {
                   onClick={closeMenus}
                   className={`relative px-2.5 lg:px-3 xl:px-4 py-2 text-xs lg:text-sm font-medium transition-colors group ${
                     isActive
-                      ? "text-blue-primary"
-                      : "text-slate-700 hover:text-red-primary"
+                      ? "text-blue-600 font-bold"
+                      : "text-slate-700 hover:text-blue-600"
                   }`}
                 >
                   {link.label}
                   <span
-                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-blue-primary transition-all duration-300 ${
+                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-blue-600 transition-all duration-300 ${
                       isActive
-                        ? "w-3/4"
-                        : "w-0 group-hover:w-3/4 group-hover:bg-red-primary"
+                        ? "w-3/4 shadow-sm shadow-blue-500/40"
+                        : "w-0 group-hover:w-3/4"
                     }`}
                   />
                 </Link>
@@ -324,7 +316,7 @@ export default function Navbar() {
               href="/contact"
               prefetch={true}
               onClick={closeMenus}
-              className="ml-2 lg:ml-3 px-4 lg:px-5 py-2 bg-gradient-to-r from-blue-primary to-blue-dark text-white text-xs lg:text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-red-primary/30 hover:from-red-primary hover:to-red-dark transition-all duration-300"
+              className="ml-2 lg:ml-3 px-4 lg:px-5 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-xs lg:text-sm font-semibold rounded-full shadow-md hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
             >
               Get Quote
             </Link>
@@ -337,7 +329,7 @@ export default function Navbar() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-9 h-9 flex items-center justify-center text-slate-600 ${color} transition-colors rounded-full hover:bg-red-primary/5`}
+                  className={`w-8 h-8 lg:w-9 lg:h-9 flex items-center justify-center text-slate-600 rounded-full bg-slate-100 border border-slate-200 transition-all ${color}`}
                   title={label}
                 >
                   <Icon className={size} />
@@ -352,7 +344,7 @@ export default function Navbar() {
               setMobileMenuOpen((prev) => !prev);
               setMobileServicesOpen(false);
             }}
-            className="md:hidden text-2xl text-slate-900 p-2 -mr-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
+            className="md:hidden text-2xl text-slate-800 hover:text-blue-600 p-2 -mr-2 min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <CloseIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
@@ -368,7 +360,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden bg-white/95 backdrop-blur-md border-t border-slate-200 overflow-hidden max-h-[calc(100dvh-5rem)]"
+            className="md:hidden bg-white/98 backdrop-blur-xl border-t border-slate-200 overflow-hidden max-h-[calc(100dvh-5rem)] shadow-2xl"
           >
             <div className="px-4 py-4 sm:py-6 space-y-1 overflow-y-auto">
               {navLinks.map((link, idx) => {
@@ -387,17 +379,17 @@ export default function Navbar() {
                     >
                       <button
                         onClick={() => setMobileServicesOpen((prev) => !prev)}
-                        className={`w-full flex items-center justify-between px-4 py-3 text-base rounded-lg transition-all min-h-[44px] ${
+                        className={`w-full flex items-center justify-between px-4 py-3 text-base rounded-xl transition-all min-h-[44px] ${
                           isActive
-                            ? "text-blue-primary bg-blue-primary/5 border-l-2 border-blue-primary"
-                            : "text-slate-700 hover:text-red-primary hover:bg-red-primary/5"
+                            ? "text-blue-600 bg-blue-50 border-l-4 border-blue-600 font-semibold"
+                            : "text-slate-700 hover:text-blue-600 hover:bg-slate-50"
                         }`}
                         aria-expanded={mobileServicesOpen}
                       >
                         <span>Services</span>
                         <FaChevronDown
                           className={`text-xs transition-transform duration-300 ${
-                            mobileServicesOpen ? "rotate-180" : ""
+                            mobileServicesOpen ? "rotate-180 text-blue-600" : "text-slate-400"
                           }`}
                         />
                       </button>
@@ -418,11 +410,11 @@ export default function Navbar() {
                                     href={`/services/${cat.key}`}
                                     prefetch={true}
                                     onClick={closeMenus}
-                                    className="block px-4 py-2 text-sm font-semibold text-slate-900 rounded-lg hover:text-red-primary hover:bg-red-primary/5 transition-colors"
+                                    className="block px-4 py-2 text-sm font-semibold text-slate-900 rounded-lg hover:text-blue-600 hover:bg-blue-50 transition-colors"
                                   >
                                     {cat.title}
                                   </Link>
-                                  <div className="pl-3 border-l border-slate-100 ml-4">
+                                  <div className="pl-3 border-l border-slate-200 ml-4">
                                     {cat.subServices.map((sub) => (
                                       <Link
                                         key={sub.name}
@@ -432,7 +424,7 @@ export default function Navbar() {
                                         )}
                                         prefetch={true}
                                         onClick={closeMenus}
-                                        className="block px-3 py-1.5 text-xs text-slate-600 rounded-md hover:text-red-primary hover:bg-red-primary/5 transition-colors"
+                                        className="block px-3 py-1.5 text-xs text-slate-600 rounded-md hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium"
                                       >
                                         {sub.name}
                                       </Link>
@@ -444,7 +436,7 @@ export default function Navbar() {
                                 href="/services"
                                 prefetch={true}
                                 onClick={closeMenus}
-                                className="block px-4 py-2 text-sm font-semibold text-blue-primary hover:text-red-primary transition-colors"
+                                className="block px-4 py-2 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors"
                               >
                                 View all services →
                               </Link>
@@ -467,10 +459,10 @@ export default function Navbar() {
                       href={link.href}
                       prefetch={true}
                       onClick={closeMenus}
-                      className={`block px-4 py-3 text-base rounded-lg transition-all min-h-[44px] flex items-center ${
+                      className={`block px-4 py-3 text-base rounded-xl transition-all min-h-[44px] flex items-center ${
                         isActive
-                          ? "text-blue-primary bg-blue-primary/5 border-l-2 border-blue-primary"
-                          : "text-slate-700 hover:text-red-primary hover:bg-red-primary/5"
+                          ? "text-blue-600 bg-blue-50 border-l-4 border-blue-600 font-semibold"
+                          : "text-slate-700 hover:text-blue-600 hover:bg-slate-50"
                       }`}
                     >
                       {link.label}
@@ -485,7 +477,7 @@ export default function Navbar() {
                 transition={{ delay: 0.04 * navLinks.length }}
                 className="pt-4 border-t border-slate-200 mt-3"
               >
-                <p className="text-slate-500 text-xs uppercase tracking-widest mb-3 px-4">
+                <p className="text-slate-500 text-xs uppercase tracking-widest mb-3 px-4 font-semibold">
                   Follow Us
                 </p>
                 <div className="flex items-center gap-2 px-4">
@@ -495,7 +487,7 @@ export default function Navbar() {
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-10 h-10 flex items-center justify-center text-slate-600 ${color} transition-colors rounded-full bg-slate-100 border border-slate-200`}
+                      className={`w-10 h-10 flex items-center justify-center text-slate-600 transition-colors rounded-full bg-slate-100 border border-slate-200 ${color}`}
                       title={label}
                     >
                       <Icon className="text-sm" />

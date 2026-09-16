@@ -10,7 +10,7 @@ export default function BlogPage() {
     <>
       {/* 1. Header Hero */}
       <section className="relative pt-24 sm:pt-28 md:pt-32 pb-8 sm:pb-10 md:pb-14 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(79,195,247,0.12),_transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(56,189,248,0.15),_transparent_60%)]" />
         <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -18,13 +18,13 @@ export default function BlogPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-blue-primary/10 border border-blue-primary/20 text-blue-primary text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+            <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-sky-500/15 border border-sky-400/30 text-sky-300 text-xs sm:text-sm font-semibold mb-4 sm:mb-6 shadow-sm">
               Blog & Tips
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-4 sm:mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 sm:mb-6">
               Pure Care <span className="gradient-text-blue">Insights</span>
             </h1>
-            <p className="text-slate-600 text-sm sm:text-base md:text-lg max-w-3xl mx-auto px-2">
+            <p className="text-slate-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto px-2">
               Expert tips, guides, and insights to help you make the best
               decisions for your vehicle&apos;s care and protection.
             </p>
@@ -40,26 +40,26 @@ export default function BlogPage() {
               <FadeIn key={post.title} delay={0.08 * idx}>
                 <motion.article
                   whileHover={{ y: -8 }}
-                  className="h-full flex flex-col rounded-xl sm:rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-red-primary/50 hover:shadow-md transition-all overflow-hidden group"
+                  className="h-full flex flex-col rounded-xl sm:rounded-2xl bg-[#0a1638]/85 backdrop-blur-md border border-sky-500/20 shadow-lg shadow-navy-950/60 hover:border-sky-400/50 hover:shadow-xl hover:shadow-sky-500/20 transition-all overflow-hidden group"
                 >
                   <div
                     className={`h-36 sm:h-44 md:h-48 bg-gradient-to-br ${post.color} flex items-center justify-center relative overflow-hidden`}
                   >
-                    <div className="absolute inset-0 bg-black/30" />
+                    <div className="absolute inset-0 bg-black/40" />
                     <h3 className="relative z-10 text-white text-sm sm:text-base md:text-xl font-bold px-4 sm:px-6 text-center leading-snug sm:leading-tight">
                       {post.title}
                     </h3>
                   </div>
                   <div className="flex-1 p-4 sm:p-5 md:p-6 flex flex-col">
                     <div className="flex items-center gap-3 sm:gap-4 mb-2 sm:mb-3 text-[10px] sm:text-xs">
-                      <span className="flex items-center gap-1 text-blue-primary">
+                      <span className="flex items-center gap-1 text-sky-400 font-medium">
                         <FaTag /> {post.category}
                       </span>
-                      <span className="flex items-center gap-1 text-slate-500">
+                      <span className="flex items-center gap-1 text-slate-400">
                         <FaClock /> {post.readTime}
                       </span>
                     </div>
-                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed flex-1 mb-3 sm:mb-4 line-clamp-3 sm:line-clamp-none">
+                    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed flex-1 mb-3 sm:mb-4 line-clamp-3 sm:line-clamp-none">
                       {post.excerpt}
                     </p>
                     <span className="text-slate-400 text-[10px] sm:text-xs">
@@ -78,7 +78,7 @@ export default function BlogPage() {
         <div className="section-divider mb-6 sm:mb-8 md:mb-10" />
         <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <FadeIn className="text-center mb-6 sm:mb-8 md:mb-10">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
               Featured <span className="gradient-text-blue">Articles</span>
             </h2>
           </FadeIn>
@@ -86,30 +86,30 @@ export default function BlogPage() {
           <div className="space-y-8 sm:space-y-12 md:space-y-16">
             {blogPosts.slice(0, 3).map((article, idx) => (
               <FadeIn key={article.title}>
-                <article className="p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl bg-white border border-slate-200 shadow-sm">
+                <article className="p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl bg-[#0a1638]/85 backdrop-blur-md border border-sky-500/20 shadow-lg shadow-navy-950/60">
                   <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3 sm:mb-4 text-xs sm:text-sm">
                     <span
-                      className={`px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-gradient-to-r ${article.color} text-white text-[10px] sm:text-xs font-medium`}
+                      className={`px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-gradient-to-r ${article.color} text-white text-[10px] sm:text-xs font-semibold shadow-sm`}
                     >
                       {article.category}
                     </span>
-                    <span className="text-slate-500 text-[10px] sm:text-xs">
+                    <span className="text-slate-400 text-[10px] sm:text-xs">
                       {article.date}
                     </span>
-                    <span className="text-slate-500 text-[10px] sm:text-xs">
+                    <span className="text-slate-400 text-[10px] sm:text-xs">
                       {article.readTime}
                     </span>
                   </div>
 
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-extrabold text-slate-900 mb-3 sm:mb-4">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-extrabold text-white mb-3 sm:mb-4">
                     {article.title}
                   </h3>
 
-                  <div className="space-y-2 sm:space-y-3">
+                  <div className="space-y-2.5 sm:space-y-3.5">
                     {article.content.map((paragraph, pIdx) => (
                       <p
                         key={pIdx}
-                        className="text-slate-600 text-xs sm:text-sm leading-relaxed"
+                        className="text-slate-300 text-xs sm:text-sm leading-relaxed"
                       >
                         {paragraph}
                       </p>

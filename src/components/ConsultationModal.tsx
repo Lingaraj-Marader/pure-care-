@@ -76,7 +76,7 @@ export default function ConsultationModal() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[60] flex items-center justify-center p-4"
+          className="fixed inset-0 bg-[#020510]/80 backdrop-blur-md z-[60] flex items-center justify-center p-4"
           onClick={closeModal}
         >
           <motion.div
@@ -84,24 +84,24 @@ export default function ConsultationModal() {
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20 }}
             transition={{ type: "spring", duration: 0.5 }}
-            className="bg-white border border-slate-200 rounded-2xl shadow-2xl shadow-slate-300/40 max-w-lg w-full max-h-[90dvh] overflow-y-auto"
+            className="bg-[#0a1638] border border-sky-500/30 rounded-2xl shadow-2xl shadow-navy-950/90 max-w-lg w-full max-h-[90dvh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="bg-gradient-to-r from-blue-primary/10 to-red-primary/10 border-b border-slate-200 px-5 py-4 flex items-center justify-between rounded-t-2xl">
+            <div className="bg-gradient-to-r from-sky-950/60 to-blue-900/40 border-b border-sky-500/20 px-5 py-4 flex items-center justify-between rounded-t-2xl">
               <div>
-                <h3 className="text-xl font-bold text-slate-900">
+                <h3 className="text-xl font-bold text-white">
                   Free Consultation
                 </h3>
-                <p className="text-slate-600 text-xs mt-0.5">
+                <p className="text-sky-300 text-xs mt-0.5">
                   Get expert advice for your vehicle
                 </p>
               </div>
               <button
                 onClick={closeModal}
-                className="w-8 h-8 rounded-full hover:bg-red-primary/5 flex items-center justify-center transition-colors duration-200"
+                className="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white flex items-center justify-center transition-colors duration-200"
                 aria-label="Close modal"
               >
-                <FaTimes className="text-slate-600 hover:text-red-primary" />
+                <FaTimes />
               </button>
             </div>
 
@@ -111,7 +111,7 @@ export default function ConsultationModal() {
                   <div>
                     <label
                       htmlFor="modal-name"
-                      className="block text-sm font-semibold text-slate-700 mb-1.5"
+                      className="block text-sm font-semibold text-slate-200 mb-1.5"
                     >
                       Full Name *
                     </label>
@@ -122,14 +122,14 @@ export default function ConsultationModal() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 py-2.5 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 placeholder-slate-400 focus:border-blue-primary/50 focus:outline-none transition-colors"
+                      className="w-full px-3 py-2.5 text-sm bg-[#060c20] border border-sky-500/25 rounded-lg text-white placeholder-slate-400 focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400 transition-colors"
                       placeholder="Your name"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="modal-phone"
-                      className="block text-sm font-semibold text-slate-700 mb-1.5"
+                      className="block text-sm font-semibold text-slate-200 mb-1.5"
                     >
                       Phone Number *
                     </label>
@@ -140,7 +140,7 @@ export default function ConsultationModal() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 py-2.5 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 placeholder-slate-400 focus:border-blue-primary/50 focus:outline-none transition-colors"
+                      className="w-full px-3 py-2.5 text-sm bg-[#060c20] border border-sky-500/25 rounded-lg text-white placeholder-slate-400 focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400 transition-colors"
                       placeholder="+971 XX XXX XXXX"
                     />
                   </div>
@@ -150,7 +150,7 @@ export default function ConsultationModal() {
                   <div>
                     <label
                       htmlFor="modal-email"
-                      className="block text-sm font-semibold text-slate-700 mb-1.5"
+                      className="block text-sm font-semibold text-slate-200 mb-1.5"
                     >
                       Email
                     </label>
@@ -160,14 +160,14 @@ export default function ConsultationModal() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-3 py-2.5 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 placeholder-slate-400 focus:border-blue-primary/50 focus:outline-none transition-colors"
+                      className="w-full px-3 py-2.5 text-sm bg-[#060c20] border border-sky-500/25 rounded-lg text-white placeholder-slate-400 focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400 transition-colors"
                       placeholder="your@email.com"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="modal-service"
-                      className="block text-sm font-semibold text-slate-700 mb-1.5"
+                      className="block text-sm font-semibold text-slate-200 mb-1.5"
                     >
                       Service Interested In *
                     </label>
@@ -177,36 +177,36 @@ export default function ConsultationModal() {
                       value={formData.service}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 py-2.5 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 focus:border-blue-primary/50 focus:outline-none transition-colors"
+                      className="w-full px-3 py-2.5 text-sm bg-[#060c20] border border-sky-500/25 rounded-lg text-white focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400 transition-colors"
                     >
-                      <option value="" className="bg-white text-slate-900">
+                      <option value="" className="bg-[#0a1638] text-white">
                         Select a service
                       </option>
                       <option
                         value="Exterior Detailing"
-                        className="bg-white text-slate-900"
+                        className="bg-[#0a1638] text-white"
                       >
                         Exterior Detailing
                       </option>
                       <option
                         value="Interior Detailing"
-                        className="bg-white text-slate-900"
+                        className="bg-[#0a1638] text-white"
                       >
                         Interior Detailing
                       </option>
                       <option
                         value="Paint Protection Services"
-                        className="bg-white text-slate-900"
+                        className="bg-[#0a1638] text-white"
                       >
                         Paint Protection Services
                       </option>
                       <option
                         value="Additional Detailing Services"
-                        className="bg-white text-slate-900"
+                        className="bg-[#0a1638] text-white"
                       >
                         Additional Detailing Services
                       </option>
-                      <option value="Other" className="bg-white text-slate-900">
+                      <option value="Other" className="bg-[#0a1638] text-white">
                         Other
                       </option>
                     </select>
@@ -216,7 +216,7 @@ export default function ConsultationModal() {
                 <div>
                   <label
                     htmlFor="modal-message"
-                    className="block text-sm font-semibold text-slate-700 mb-1.5"
+                    className="block text-sm font-semibold text-slate-200 mb-1.5"
                   >
                     Your Message *
                   </label>
@@ -227,7 +227,7 @@ export default function ConsultationModal() {
                     onChange={handleChange}
                     required
                     rows={4}
-                    className="w-full px-3 py-2.5 text-sm bg-white border border-slate-300 rounded-lg text-slate-900 placeholder-slate-400 focus:border-blue-primary/50 focus:outline-none transition-colors resize-none"
+                    className="w-full px-3 py-2.5 text-sm bg-[#060c20] border border-sky-500/25 rounded-lg text-white placeholder-slate-400 focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400 transition-colors resize-none"
                     placeholder="Tell us about your vehicle and what service you need..."
                   />
                 </div>
@@ -237,10 +237,8 @@ export default function ConsultationModal() {
                   disabled={isSubmitting}
                   whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                   whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-                  className={`w-full py-3 bg-gradient-to-r from-blue-primary to-blue-dark hover:from-red-primary hover:to-red-dark text-white font-bold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-blue-primary/20 text-sm ${
-                    isSubmitting
-                      ? "opacity-70 cursor-not-allowed"
-                      : "hover:shadow-xl hover:shadow-red-primary/30"
+                  className={`w-full py-3 bg-gradient-to-r from-sky-500 via-blue-600 to-blue-700 hover:from-sky-400 hover:to-blue-600 text-white font-bold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-sky-500/30 text-sm border border-sky-400/30 ${
+                    isSubmitting ? "opacity-70 cursor-not-allowed" : ""
                   }`}
                 >
                   {isSubmitting ? (

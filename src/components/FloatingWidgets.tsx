@@ -20,9 +20,9 @@ export default function FloatingWidgets() {
         className="hidden md:block fixed top-1/2 right-0 -translate-y-1/2 z-50 cursor-pointer"
         onClick={handleOpenConsultation}
       >
-        <div className="bg-gradient-to-b from-blue-primary to-blue-dark hover:from-red-primary hover:to-red-dark text-white py-6 px-3 shadow-lg shadow-blue-primary/20 rounded-l-lg hover:shadow-xl hover:shadow-red-primary/30 transition-all duration-300">
+        <div className="bg-gradient-to-b from-sky-500 via-blue-600 to-navy-800 hover:from-sky-400 hover:to-blue-600 text-white py-6 px-3.5 shadow-xl shadow-sky-500/25 rounded-l-xl border-l border-y border-sky-400/40 hover:shadow-2xl hover:shadow-sky-400/40 transition-all duration-300 backdrop-blur-md">
           <div
-            className="font-bold text-xs tracking-wider uppercase"
+            className="font-extrabold text-xs tracking-widest uppercase drop-shadow-sm"
             style={{
               writingMode: "vertical-rl",
               textOrientation: "mixed",
@@ -41,9 +41,9 @@ export default function FloatingWidgets() {
         className="md:hidden fixed top-1/2 right-0 -translate-y-1/2 z-40 cursor-pointer"
         onClick={handleOpenConsultation}
       >
-        <div className="bg-gradient-to-b from-blue-primary to-blue-dark hover:from-red-primary hover:to-red-dark text-white py-4 px-2 shadow-lg shadow-blue-primary/20 rounded-l-lg">
+        <div className="bg-gradient-to-b from-sky-500 via-blue-600 to-navy-800 hover:from-sky-400 hover:to-blue-600 text-white py-4 px-2.5 shadow-xl shadow-sky-500/25 rounded-l-lg border-l border-y border-sky-400/40">
           <div
-            className="font-bold text-[10px] tracking-wider uppercase"
+            className="font-bold text-[10px] tracking-wider uppercase drop-shadow-sm"
             style={{
               writingMode: "vertical-rl",
               textOrientation: "mixed",
@@ -60,11 +60,11 @@ export default function FloatingWidgets() {
           href="tel:+971586368849"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-primary to-blue-dark hover:from-red-primary hover:to-red-dark rounded-full flex items-center justify-center shadow-lg shadow-blue-primary/30 hover:shadow-xl hover:shadow-red-primary/30 transition-all duration-300"
+          className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-sky-500 to-blue-700 hover:from-sky-400 hover:to-blue-600 rounded-full flex items-center justify-center shadow-xl shadow-sky-500/40 hover:shadow-2xl hover:shadow-sky-400/50 transition-all duration-300 border border-sky-400/30"
           title="Call us"
           aria-label="Call us"
         >
-          <FaPhoneAlt className="text-white text-lg sm:text-xl" />
+          <FaPhoneAlt className="text-white text-lg sm:text-xl drop-shadow-md" />
         </motion.a>
 
         <motion.a
@@ -73,11 +73,11 @@ export default function FloatingWidgets() {
           rel="noopener noreferrer"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 hover:shadow-xl hover:shadow-green-500/40 transition-all duration-300"
+          className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center shadow-xl shadow-green-500/30 hover:shadow-2xl hover:shadow-green-500/45 transition-all duration-300 border border-green-400/30"
           title="Chat on WhatsApp"
           aria-label="WhatsApp"
         >
-          <FaWhatsapp className="text-white text-xl sm:text-2xl" />
+          <FaWhatsapp className="text-white text-xl sm:text-2xl drop-shadow-md" />
         </motion.a>
       </div>
     </>

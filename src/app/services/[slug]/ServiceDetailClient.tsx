@@ -41,7 +41,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="relative w-full aspect-[16/9] sm:aspect-[21/9] overflow-hidden shadow-lg shadow-slate-300/40"
+            className="relative w-full aspect-[16/9] sm:aspect-[21/9] overflow-hidden shadow-2xl shadow-navy-950/70 border-b border-sky-500/20"
           >
             <Image
               src={category.image}
@@ -51,16 +51,16 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
               className="object-cover"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#070f26] via-[#070f26]/50 to-transparent" />
             <div className="absolute inset-0 flex flex-col justify-end p-5 sm:p-8 md:p-12">
-              <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 w-full">
-                <span className="block text-white/80 text-[10px] sm:text-sm font-semibold tracking-widest uppercase mb-1 sm:mb-2">
+              <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
+                <span className="block text-sky-400 text-[10px] sm:text-sm font-semibold tracking-widest uppercase mb-1 sm:mb-2">
                   Pure Care Services
                 </span>
-                <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight">
+                <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight drop-shadow-md">
                   {category.title}
                 </h1>
-                <p className="text-white/90 text-xs sm:text-base md:text-lg mt-1 sm:mt-2 max-w-2xl">
+                <p className="text-slate-200 text-xs sm:text-base md:text-lg mt-1 sm:mt-2 max-w-2xl">
                   {category.tagline}
                 </p>
               </div>
@@ -71,28 +71,28 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
         {/* Intro & Book WhatsApp */}
         <section className="py-6 sm:py-8">
           <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
-            <nav className="flex items-center gap-2 text-xs sm:text-sm text-slate-500 mb-4 sm:mb-6 flex-wrap">
+            <nav className="flex items-center gap-2 text-xs sm:text-sm text-slate-400 mb-4 sm:mb-6 flex-wrap">
               <Link
                 href="/services"
-                className="hover:text-red-primary transition-colors"
+                className="hover:text-sky-300 transition-colors"
               >
                 Services
               </Link>
-              <span className="text-slate-300">/</span>
-              <span className="text-slate-700 font-medium">
+              <span className="text-slate-600">/</span>
+              <span className="text-sky-300 font-semibold">
                 {category.title}
               </span>
             </nav>
 
             <FadeIn>
-              <p className="text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mb-6 sm:mb-8">
+              <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mb-6 sm:mb-8">
                 {category.intro}
               </p>
               <a
                 href={makeWhatsAppUrl(category.title)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-bold rounded-full hover:shadow-lg hover:shadow-green-500/30 transition-all text-sm sm:text-base"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold rounded-full hover:shadow-lg hover:shadow-green-500/30 transition-all text-sm sm:text-base shadow-md"
               >
                 <FaWhatsapp className="text-lg" /> Book {category.title}
               </a>
@@ -105,7 +105,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
           <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
             <div className="section-divider mb-8 sm:mb-10" />
             <FadeIn className="mb-6 sm:mb-8">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white">
                 All {category.title} Services
               </h2>
             </FadeIn>
@@ -122,7 +122,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a1638] via-black/40 to-transparent" />
                       <div
                         className={`absolute top-3 left-3 w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center shadow-md`}
                       >
@@ -130,14 +130,14 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
                       </div>
                     </div>
                     <div className="p-4 sm:p-5">
-                      <h3 className="text-slate-900 font-bold text-sm sm:text-base mb-1 sm:mb-1.5 leading-snug group-hover:text-red-primary transition-colors">
+                      <h3 className="text-white font-bold text-sm sm:text-base mb-1 sm:mb-1.5 leading-snug group-hover:text-sky-300 transition-colors">
                         {sub.name}
                       </h3>
-                      <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                      <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
                         {sub.blurb}
                       </p>
                       {sub.slug && (
-                        <span className="mt-2.5 inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-blue-primary group-hover:text-red-primary transition-colors">
+                        <span className="mt-2.5 inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-sky-400 group-hover:text-sky-200 transition-colors">
                           View details <FaArrowRight className="text-[10px]" />
                         </span>
                       )}
@@ -146,20 +146,20 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
                 ) : (
                   <div className="p-4 sm:p-5">
                     <div
-                      className={`w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center mb-2.5 sm:mb-3`}
+                      className={`w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center mb-2.5 sm:mb-3 shadow-md`}
                     >
                       <sub.icon className="text-sm sm:text-base text-white" />
                     </div>
-                    <h3 className="text-slate-900 font-bold text-sm sm:text-base mb-1 sm:mb-1.5 leading-snug">
+                    <h3 className="text-white font-bold text-sm sm:text-base mb-1 sm:mb-1.5 leading-snug">
                       {sub.name}
                     </h3>
-                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
                       {sub.blurb}
                     </p>
                   </div>
                 );
 
-                const cardClass = `h-full rounded-xl sm:rounded-2xl bg-white border border-slate-200 shadow-sm ${category.hoverBorder} hover:shadow-md transition-all group overflow-hidden ${
+                const cardClass = `h-full rounded-xl sm:rounded-2xl bg-[#0a1638]/85 backdrop-blur-md border border-sky-500/20 shadow-lg shadow-navy-950/60 hover:border-sky-400/60 hover:shadow-xl hover:shadow-sky-500/20 transition-all group overflow-hidden ${
                   sub.slug ? "cursor-pointer" : ""
                 }`;
 
@@ -200,13 +200,13 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <Link
                   href="/services"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-primary to-blue-dark hover:from-red-primary hover:to-red-dark text-white font-bold rounded-full text-sm sm:text-base transition-all justify-center"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-sky-500 via-blue-600 to-blue-700 hover:from-sky-400 hover:to-blue-600 text-white font-bold rounded-full text-sm sm:text-base transition-all justify-center shadow-lg shadow-sky-500/25"
                 >
                   <FaArrowLeft /> All Services
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 border-2 border-slate-300 text-slate-900 font-bold rounded-full text-sm sm:text-base hover:border-red-primary hover:text-red-primary hover:bg-red-primary/5 transition-all justify-center"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white text-white hover:text-navy-950 border border-white/30 font-bold rounded-full text-sm sm:text-base transition-all justify-center backdrop-blur-sm"
                 >
                   Contact Us <FaArrowRight />
                 </Link>
@@ -231,7 +231,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="relative w-full overflow-hidden shadow-lg shadow-slate-300/40"
+              className="relative w-full overflow-hidden shadow-2xl shadow-navy-950/70 border-b border-sky-500/20"
             >
               <Image
                 src={service.banner}
@@ -249,45 +249,45 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
         {/* Content Section */}
         <section className="py-6 sm:py-8 md:py-10">
           <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
-            <nav className="flex items-center gap-2 text-xs sm:text-sm text-slate-500 mb-5 sm:mb-7 flex-wrap">
+            <nav className="flex items-center gap-2 text-xs sm:text-sm text-slate-400 mb-5 sm:mb-7 flex-wrap">
               <Link
                 href="/services"
-                className="hover:text-red-primary transition-colors"
+                className="hover:text-sky-300 transition-colors"
               >
                 Services
               </Link>
-              <span className="text-slate-300">/</span>
+              <span className="text-slate-600">/</span>
               <Link
                 href={`/services/${service.categoryKey}`}
-                className="hover:text-red-primary transition-colors"
+                className="hover:text-sky-300 transition-colors"
               >
                 {service.categoryTitle}
               </Link>
-              <span className="text-slate-300">/</span>
-              <span className="text-slate-700 font-medium">{service.name}</span>
+              <span className="text-slate-600">/</span>
+              <span className="text-sky-300 font-semibold">{service.name}</span>
             </nav>
 
             <FadeIn>
               <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-5">
                 <div
-                  className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center shrink-0`}
+                  className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center shrink-0 shadow-lg shadow-sky-500/25`}
                 >
                   <service.icon className="text-xl sm:text-2xl text-white" />
                 </div>
                 <div>
                   <Link
                     href={`/services/${service.categoryKey}`}
-                    className="text-xs sm:text-sm font-semibold text-blue-primary hover:text-red-primary transition-colors"
+                    className="text-xs sm:text-sm font-semibold text-sky-400 hover:text-sky-200 transition-colors"
                   >
                     {service.categoryTitle}
                   </Link>
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight">
                     {service.name}
                   </h1>
                 </div>
               </div>
 
-              <p className="text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8">
+              <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8">
                 {service.description}
               </p>
 
@@ -296,10 +296,10 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
                   {service.features.map((feat) => (
                     <div
                       key={feat}
-                      className="flex items-center gap-2.5 rounded-xl bg-white border border-slate-200 shadow-sm px-3.5 py-2.5 sm:py-3"
+                      className="flex items-center gap-2.5 rounded-xl bg-[#0a1638]/85 backdrop-blur-md border border-sky-500/20 shadow-md px-3.5 py-2.5 sm:py-3"
                     >
-                      <FaCheckCircle className="text-blue-primary shrink-0 text-sm" />
-                      <span className="text-slate-700 text-xs sm:text-sm font-medium">
+                      <FaCheckCircle className="text-sky-400 shrink-0 text-sm" />
+                      <span className="text-slate-200 text-xs sm:text-sm font-medium">
                         {feat}
                       </span>
                     </div>
@@ -311,7 +311,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
                 href={makeWhatsAppUrl(service.name)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 bg-gradient-to-r from-green-500 to-green-600 text-white font-bold rounded-full hover:shadow-lg hover:shadow-green-500/30 transition-all text-sm sm:text-base"
+                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold rounded-full hover:shadow-lg hover:shadow-green-500/30 transition-all text-sm sm:text-base shadow-md"
               >
                 <FaWhatsapp className="text-lg" /> Book {service.name}
               </a>
@@ -325,10 +325,10 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
             <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
               <div className="section-divider mb-8 sm:mb-10" />
               <FadeIn className="text-center mb-6 sm:mb-8">
-                <span className="text-blue-primary text-xs sm:text-sm font-semibold tracking-widest uppercase">
+                <span className="text-sky-400 text-xs sm:text-sm font-semibold tracking-widest uppercase">
                   Gallery
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-white mt-2">
                   {service.name} in{" "}
                   <span className="gradient-text-blue">Action</span>
                 </h2>
@@ -340,7 +340,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
                     key={photo}
                     onClick={() => setActivePhotoIndex(idx)}
                     whileHover={{ y: -4 }}
-                    className="relative aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:border-red-primary/50 hover:shadow-md transition-all group"
+                    className="relative aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden border border-sky-500/20 shadow-lg shadow-navy-950/60 hover:border-sky-400/50 hover:shadow-xl hover:shadow-sky-500/20 transition-all group"
                   >
                     <Image
                       src={photo}
@@ -361,23 +361,23 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
           <div className="section-divider mb-8 sm:mb-10" />
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <FadeIn>
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 mb-3">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white mb-3">
                 More {service.categoryTitle}
               </h2>
-              <p className="text-slate-600 text-sm sm:text-base mb-6 px-2">
+              <p className="text-slate-300 text-sm sm:text-base mb-6 px-2">
                 Explore the full range of {service.categoryTitle.toLowerCase()} at
                 Pure Care.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <Link
                   href={`/services/${service.categoryKey}`}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-primary to-blue-dark hover:from-red-primary hover:to-red-dark text-white font-bold rounded-full text-sm sm:text-base transition-all justify-center"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-sky-500 via-blue-600 to-blue-700 hover:from-sky-400 hover:to-blue-600 text-white font-bold rounded-full text-sm sm:text-base transition-all justify-center shadow-lg shadow-sky-500/25"
                 >
                   <FaArrowLeft /> {service.categoryTitle}
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 border-2 border-slate-300 text-slate-900 font-bold rounded-full text-sm sm:text-base hover:border-red-primary hover:text-red-primary hover:bg-red-primary/5 transition-all justify-center"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white text-white hover:text-navy-950 border border-white/30 font-bold rounded-full text-sm sm:text-base transition-all justify-center backdrop-blur-sm"
                 >
                   Contact Us <FaArrowRight />
                 </Link>
@@ -393,7 +393,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-[70] bg-black/90 backdrop-blur-md flex items-center justify-center p-4"
+              className="fixed inset-0 z-[70] bg-[#020510]/90 backdrop-blur-xl flex items-center justify-center p-4"
               onClick={() => setActivePhotoIndex(null)}
             >
               <button
@@ -458,15 +458,15 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
   return (
     <section className="pt-28 sm:pt-32 pb-20 min-h-[60vh] flex items-center">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3">
+        <h1 className="text-2xl sm:text-3xl font-extrabold text-white mb-3">
           Service not found
         </h1>
-        <p className="text-slate-600 mb-6">
+        <p className="text-slate-300 mb-6">
           The service you&apos;re looking for doesn&apos;t exist or has moved.
         </p>
         <Link
           href="/services"
-          className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-primary to-blue-dark hover:from-red-primary hover:to-red-dark text-white font-bold rounded-full transition-all"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-sky-500 via-blue-600 to-blue-700 hover:from-sky-400 hover:to-blue-600 text-white font-bold rounded-full transition-all shadow-lg shadow-sky-500/30"
         >
           <FaArrowLeft /> Back to Services
         </Link>

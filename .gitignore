@@ -18,6 +18,7 @@
 .DS_Store
 *.pem
 *.zip
+WhatsApp Video*.mp4
 
 # debug logs
 npm-debug.log*

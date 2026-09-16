@@ -63,7 +63,7 @@ export default function GalleryPage() {
     <>
       {/* 1. Header Hero */}
       <section className="relative pt-24 sm:pt-28 md:pt-32 pb-6 sm:pb-8 md:pb-10 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(79,195,247,0.15),_transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(56,189,248,0.15),_transparent_60%)]" />
         <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -71,13 +71,13 @@ export default function GalleryPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-blue-primary/10 border border-blue-primary/20 text-blue-primary text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+            <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-sky-500/15 border border-sky-400/30 text-sky-300 text-xs sm:text-sm font-semibold mb-4 sm:mb-6 shadow-sm">
               Visual Portfolio
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-4 sm:mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 sm:mb-6">
               Project <span className="gradient-text-blue">Gallery & Videos</span>
             </h1>
-            <p className="text-slate-600 text-sm sm:text-base md:text-lg max-w-3xl mx-auto px-2">
+            <p className="text-slate-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto px-2">
               Explore our videos and completed vehicle transformations.
             </p>
           </motion.div>
@@ -85,14 +85,14 @@ export default function GalleryPage() {
       </section>
 
       {/* 2. DEDICATED FEATURED VIDEO THEATER SECTION */}
-      <section className="py-6 sm:py-8 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white border-y border-slate-800">
+      <section className="py-6 sm:py-8 bg-gradient-to-b from-[#070f26] via-[#09173d] to-[#070f26] text-white border-y border-sky-500/20">
         <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <div className="max-w-6xl mx-auto">
             {/* Section Header */}
             <div className="flex items-center justify-between gap-3 mb-5">
               <div>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-primary/20 border border-red-primary/40 text-red-400 text-xs font-semibold uppercase tracking-wider mb-2">
-                  <FaVideo className="text-red-primary text-xs" /> Video Player
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/20 border border-sky-400/40 text-sky-300 text-xs font-semibold uppercase tracking-wider mb-2">
+                  <FaVideo className="text-sky-400 text-xs" /> Video Player
                 </span>
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white">
                   Videos
@@ -101,7 +101,7 @@ export default function GalleryPage() {
             </div>
 
             {/* Video Player Display */}
-            <div className="rounded-2xl sm:rounded-3xl overflow-hidden bg-black border border-slate-800 shadow-2xl">
+            <div className="rounded-2xl sm:rounded-3xl overflow-hidden bg-black border border-sky-500/30 shadow-2xl shadow-navy-950/90">
               <div className="relative aspect-video w-full bg-black">
                 <video
                   ref={theaterVideoRef}
@@ -116,9 +116,9 @@ export default function GalleryPage() {
               </div>
 
               {/* Player Info Bar */}
-              <div className="p-3.5 sm:p-4 bg-slate-900/90 border-t border-slate-800 flex items-center justify-between gap-3">
+              <div className="p-3.5 sm:p-4 bg-[#060c20]/95 border-t border-sky-500/20 flex items-center justify-between gap-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-red-primary/20 border border-red-primary/30 flex items-center justify-center text-red-primary shrink-0">
+                  <div className="w-9 h-9 rounded-xl bg-sky-500/20 border border-sky-400/30 flex items-center justify-center text-sky-400 shrink-0">
                     <FaPlay className="ml-0.5 text-xs" />
                   </div>
                   <h3 className="text-sm sm:text-base font-bold text-white">
@@ -133,7 +133,7 @@ export default function GalleryPage() {
                     );
                     setLightboxIndex(idx !== -1 ? idx : 0);
                   }}
-                  className="px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-semibold text-white transition-colors"
+                  className="px-3.5 py-1.5 rounded-lg bg-sky-500/20 hover:bg-sky-500/30 text-xs font-semibold text-sky-300 border border-sky-400/30 transition-colors"
                 >
                   Fullscreen
                 </button>
@@ -151,11 +151,11 @@ export default function GalleryPage() {
                       onClick={() => handleSelectVideo(video)}
                       className={`group p-2 rounded-xl cursor-pointer transition-all border text-center ${
                         isCurrent
-                          ? "bg-red-primary/15 border-red-primary ring-1 ring-red-primary"
-                          : "bg-slate-800/60 border-slate-700/60 hover:bg-slate-800 hover:border-slate-600"
+                          ? "bg-sky-500/20 border-sky-400 ring-1 ring-sky-400 shadow-md shadow-sky-500/20"
+                          : "bg-[#0a1638]/70 border-sky-500/20 hover:bg-[#102456] hover:border-sky-400/50"
                       }`}
                     >
-                      <div className="relative aspect-video rounded-lg overflow-hidden bg-black mb-2 border border-slate-700">
+                      <div className="relative aspect-video rounded-lg overflow-hidden bg-black mb-2 border border-sky-900/40">
                         <video
                           src={video.src}
                           muted
@@ -167,7 +167,7 @@ export default function GalleryPage() {
                           <div
                             className={`w-7 h-7 rounded-full flex items-center justify-center transition-transform group-hover:scale-110 ${
                               isCurrent
-                                ? "bg-red-primary text-white shadow-lg shadow-red-primary/50"
+                                ? "bg-sky-400 text-slate-950 shadow-lg shadow-sky-400/50"
                                 : "bg-white/90 text-slate-900"
                             }`}
                           >
@@ -177,7 +177,7 @@ export default function GalleryPage() {
                       </div>
                       <p
                         className={`text-xs font-semibold ${
-                          isCurrent ? "text-red-400" : "text-slate-300 group-hover:text-white"
+                          isCurrent ? "text-sky-300" : "text-slate-300 group-hover:text-white"
                         }`}
                       >
                         {video.title}
@@ -195,7 +195,7 @@ export default function GalleryPage() {
       <section className="pt-10 pb-4">
         <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <div className="text-center mb-6">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-2">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-2">
               Browse Gallery
             </h2>
           </div>
@@ -210,8 +210,8 @@ export default function GalleryPage() {
                 }}
                 className={`px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 flex items-center gap-1.5 ${
                   selectedCategory === cat
-                    ? "bg-gradient-to-r from-blue-primary to-blue-dark text-white shadow-lg shadow-blue-primary/20"
-                    : "bg-white border border-slate-200 text-slate-600 hover:text-red-primary hover:border-red-primary/50 shadow-sm"
+                    ? "bg-gradient-to-r from-sky-500 via-blue-600 to-blue-700 text-white shadow-lg shadow-sky-500/30 border border-sky-400/40"
+                    : "bg-[#0a1638] border border-sky-500/20 text-slate-300 hover:text-white hover:border-sky-400 hover:bg-sky-500/20 shadow-sm"
                 }`}
               >
                 {cat === "Videos" && <FaVideo className="text-xs" />}
@@ -249,7 +249,7 @@ export default function GalleryPage() {
                     }
                   }}
                 >
-                  <div className="relative aspect-video sm:aspect-square rounded-xl sm:rounded-2xl overflow-hidden border border-slate-200 bg-slate-950 shadow-sm hover:shadow-xl hover:border-red-primary/60 transition-all duration-300">
+                  <div className="relative aspect-video sm:aspect-square rounded-xl sm:rounded-2xl overflow-hidden border border-sky-500/20 bg-[#0a1638] shadow-lg shadow-navy-950/60 hover:shadow-2xl hover:border-sky-400/60 hover:shadow-sky-500/20 transition-all duration-300">
                     {item.type === "video" ? (
                       <>
                         <video
@@ -261,14 +261,14 @@ export default function GalleryPage() {
                         />
                         {/* Video overlay with Play badge */}
                         <div className="absolute inset-0 bg-black/35 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-red-primary/95 text-white flex items-center justify-center shadow-lg shadow-red-primary/50 group-hover:scale-110 transition-transform">
+                          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-sky-400 to-blue-600 text-white flex items-center justify-center shadow-lg shadow-sky-500/50 group-hover:scale-110 transition-transform">
                             <FaPlay className="ml-1 text-sm sm:text-base" />
                           </div>
                         </div>
 
                         {/* Top tag badge */}
-                        <div className="absolute top-3 right-3 z-10 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-sm text-white text-[11px] font-semibold flex items-center gap-1.5 border border-white/20 shadow">
-                          <FaVideo className="text-[10px] text-red-400" />
+                        <div className="absolute top-3 right-3 z-10 px-2.5 py-1 rounded-full bg-[#070f26]/80 backdrop-blur-sm text-sky-300 text-[11px] font-semibold flex items-center gap-1.5 border border-sky-400/30 shadow">
+                          <FaVideo className="text-[10px] text-sky-400" />
                           <span>{item.title}</span>
                         </div>
                       </>
@@ -281,13 +281,13 @@ export default function GalleryPage() {
                           className="object-cover group-hover:scale-110 transition-transform duration-500"
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 25vw"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#060c20]/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         {/* Bottom Captions for Photos */}
-                        <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 bg-gradient-to-t from-black/85 via-black/50 to-transparent">
+                        <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 bg-gradient-to-t from-[#060c20]/95 via-[#060c20]/60 to-transparent">
                           <h3 className="text-white font-bold text-xs sm:text-sm line-clamp-1">
                             {item.title}
                           </h3>
-                          <p className="text-blue-300 text-[10px] sm:text-xs">
+                          <p className="text-sky-400 text-[10px] sm:text-xs">
                             {item.category}
                           </p>
                         </div>
@@ -301,12 +301,12 @@ export default function GalleryPage() {
 
           {filteredItems.length === 0 && (
             <div className="text-center py-16">
-              <p className="text-slate-500 text-sm">
+              <p className="text-slate-400 text-sm">
                 No items found for this category.
               </p>
               <button
                 onClick={() => setSelectedCategory("All")}
-                className="mt-3 px-4 py-2 rounded-full bg-blue-primary text-white text-xs font-semibold hover:bg-blue-dark transition-colors"
+                className="mt-3 px-4 py-2 rounded-full bg-gradient-to-r from-sky-500 to-blue-600 text-white text-xs font-semibold hover:from-sky-400 hover:to-blue-500 transition-colors shadow-lg shadow-sky-500/30"
               >
                 Reset Filters
               </button>
@@ -322,7 +322,7 @@ export default function GalleryPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[70] bg-black/95 backdrop-blur-md flex items-center justify-center p-3 sm:p-6"
+            className="fixed inset-0 z-[70] bg-[#020510]/95 backdrop-blur-xl flex items-center justify-center p-3 sm:p-6"
             onClick={closeLightbox}
           >
             {/* Close Button */}
@@ -372,7 +372,7 @@ export default function GalleryPage() {
               className="relative max-w-5xl w-full max-h-[85vh] flex flex-col items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="relative w-full h-[60vh] sm:h-[70vh] md:h-[75vh] rounded-2xl overflow-hidden bg-black flex items-center justify-center shadow-2xl">
+              <div className="relative w-full h-[60vh] sm:h-[70vh] md:h-[75vh] rounded-2xl overflow-hidden bg-black flex items-center justify-center shadow-2xl border border-sky-500/20">
                 {filteredItems[lightboxIndex].type === "video" ? (
                   <video
                     src={filteredItems[lightboxIndex].src}
@@ -395,15 +395,15 @@ export default function GalleryPage() {
               <div className="mt-3 text-center text-white">
                 <div className="flex items-center justify-center gap-2 mb-1">
                   {filteredItems[lightboxIndex].type === "video" ? (
-                    <span className="px-2 py-0.5 rounded-full bg-red-primary text-white text-[10px] font-semibold flex items-center gap-1">
+                    <span className="px-2 py-0.5 rounded-full bg-red-primary text-white text-[10px] font-semibold flex items-center gap-1 shadow-sm">
                       <FaVideo className="text-[8px]" /> Video
                     </span>
                   ) : (
-                    <span className="px-2 py-0.5 rounded-full bg-blue-primary text-white text-[10px] font-semibold flex items-center gap-1">
+                    <span className="px-2 py-0.5 rounded-full bg-sky-500 text-white text-[10px] font-semibold flex items-center gap-1 shadow-sm">
                       <FaImages className="text-[8px]" /> Photo
                     </span>
                   )}
-                  <p className="text-xs text-blue-300">
+                  <p className="text-xs text-sky-400 font-medium">
                     {filteredItems[lightboxIndex].category}
                   </p>
                 </div>
