@@ -58,8 +58,8 @@ export default function Footer() {
                 <Image
                   src="/purecare-logo.png"
                   alt="Pure Care Auto Accessories"
-                  width={1469}
-                  height={559}
+                  width={1386}
+                  height={536}
                   className="h-12 sm:h-14 w-auto object-contain"
                 />
               </div>

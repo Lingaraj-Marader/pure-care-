@@ -95,8 +95,8 @@ export default function Preloader() {
                 <Image
                   src="/purecare-logo.png"
                   alt="Pure Care Auto Accessories"
-                  width={1469}
-                  height={559}
+                  width={1386}
+                  height={536}
                   className="h-12 sm:h-16 md:h-18 w-auto object-contain"
                   priority
                 />

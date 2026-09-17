@@ -349,8 +349,8 @@ export default function HomePage() {
                     <Image
                       src="/purecare-logo.png"
                       alt="Pure Care Auto Accessories"
-                      width={1469}
-                      height={559}
+                      width={1386}
+                      height={536}
                       className="w-52 sm:w-64 md:w-76 h-auto mx-auto mb-4 sm:mb-6 object-contain drop-shadow-sm"
                     />
                     <div className="mt-2 sm:mt-4 space-y-1 sm:space-y-1.5">
