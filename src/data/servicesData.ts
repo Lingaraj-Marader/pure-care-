@@ -63,9 +63,9 @@ export const categories: ServiceCategory[] = [
     icon: MdLocalCarWash,
     emoji: "🚗",
     title: "Exterior Detailing",
-    tagline: "Showroom shine built to survive Middle East climate heat and dust",
+    tagline: "Showroom shine engineered for the UAE heat, sun, and dust",
     intro:
-      "Our exterior detailing restores and protects every painted surface, from a careful hand wash to long-lasting ceramic coating. Engineered for the Middle East climate's relentless sun, heat and dust, it keeps your car looking showroom-fresh.",
+      "Our exterior detailing restores and protects every painted surface, from a careful hand wash to long-lasting ceramic coating. Engineered for the UAE's relentless sun, heat and dust, it keeps your car looking showroom-fresh.",
     image: "/services/Car-Polish.jpg",
     color: "from-blue-primary to-blue-dark",
     accent: "text-blue-primary",
@@ -77,9 +77,6 @@ export const categories: ServiceCategory[] = [
         blurb: "Gentle hand wash lifting dust and grime with no swirl marks or scratches.",
         image: `${n}/hand-wash/1.png`,
         slug: "handwash-premiumshampoo",
-        banner: `${n}/hand-wash/banner-image.png`,
-        bannerW: 2752,
-        bannerH: 1536,
         description:
           "Every detail starts with a flawless, safe wash. We hand-wash your vehicle using the two-bucket method and a pH-balanced premium shampoo that lifts dust, road film and grime without stripping wax or leaving swirl marks. Wheels, arches and door shuts are cleaned by hand so the whole car — not just the panels — comes back genuinely spotless.",
         features: [
@@ -100,9 +97,6 @@ export const categories: ServiceCategory[] = [
         blurb: "Pulls embedded contaminants from your paint, leaving a glass-smooth surface ready for protection.",
         image: `${n}/clay-bar/1.png`,
         slug: "clay-bar-decontamination",
-        banner: `${n}/clay-bar/banner-image.png`,
-        bannerW: 2752,
-        bannerH: 1536,
         description:
           "Even a clean-looking car hides bonded contaminants — industrial fallout, tar and rail dust — that washing alone can't remove. Our clay bar treatment gently pulls these particles out of the paint, leaving a glass-smooth surface that's ready to accept wax, sealant or ceramic coating for maximum bonding and shine.",
         features: [
@@ -123,9 +117,6 @@ export const categories: ServiceCategory[] = [
         blurb: "Erases swirls, scratches and oxidation to restore deep, mirror-like factory gloss.",
         image: `${n}/machine-polishing/2.png`,
         slug: "machine-polishing-paint-correction",
-        banner: `${n}/machine-polishing/banner-image.png`,
-        bannerW: 1376,
-        bannerH: 768,
         description:
           "Machine polishing removes the swirl marks, light scratches, holograms and oxidation that dull your paint over time. Using professional dual-action polishers and graded compounds, we restore depth, clarity and a true mirror gloss — correcting the paint itself rather than masking imperfections with temporary fillers.",
         features: [
@@ -146,11 +137,8 @@ export const categories: ServiceCategory[] = [
         blurb: "Seals your paint against UV, dust and water spots for a lasting shine.",
         image: `${n}/waxing/1.png`,
         slug: "waxing-paint-sealant",
-        banner: `${n}/waxing/banner-image.png`,
-        bannerW: 1584,
-        bannerH: 672,
         description:
-          "Lock in that fresh finish with a protective layer of premium wax or synthetic paint sealant. This hydrophobic barrier shields your paint from UV, dust and water spots, makes future washing easier and keeps your car glossy for months even in the harsh Middle East climate.",
+          "Lock in that fresh finish with a protective layer of premium wax or synthetic paint sealant. This hydrophobic barrier shields your paint from UV, dust and water spots, makes future washing easier and keeps your car glossy for months even in the harsh UAE climate.",
         features: [
           "UV & water-spot protection",
           "Hydrophobic, easy-clean surface",
@@ -169,9 +157,6 @@ export const categories: ServiceCategory[] = [
         blurb: "Clears yellowed, foggy lenses for sharper night vision and a fresh front end.",
         image: `${n}/headlight/1.png`,
         slug: "headlight-restoration",
-        banner: `${n}/headlight/banner-images.png`,
-        bannerW: 1376,
-        bannerH: 768,
         description:
           "Yellowed, foggy headlights reduce night-time visibility and age your car's whole front end. We sand, polish and re-seal the lenses to remove oxidation and haze, restoring crystal-clear clarity, brighter light output and a fresh, like-new look.",
         features: [
@@ -192,9 +177,6 @@ export const categories: ServiceCategory[] = [
         blurb: "A durable hydrophobic layer shielding paint from harsh sun, heat and dust for years.",
         image: `${n}/ceramic-coating/1.png`,
         slug: "ceramic-coating-protection",
-        banner: `${n}/ceramic-coating/banner-image.png`,
-        bannerW: 1376,
-        bannerH: 768,
         description:
           "A ceramic coating chemically bonds to your paint to create a durable, hydrophobic shield that lasts for years. It repels water, dust and contaminants, resists UV fading and chemical staining, and delivers an incredibly deep, glossy finish that ordinary wax simply can't match.",
         features: [
@@ -218,7 +200,7 @@ export const categories: ServiceCategory[] = [
     title: "Interior Detailing",
     tagline: "A cabin that feels showroom-fresh again",
     intro:
-      "Middle East climate heat and fine dust work their way into every surface of your cabin. Our interior detailing lifts out embedded grime, sanitizes the surfaces you touch daily, and restores a clean, fresh interior you notice the moment you step in.",
+      "The UAE heat and fine dust work their way into every surface of your cabin. Our interior detailing lifts out embedded grime, sanitizes the surfaces you touch daily, and restores a clean, fresh interior you notice the moment you step in.",
     image: `${a}/seat-shampooing/3.png`,
     color: "from-emerald-500 to-emerald-700",
     accent: "text-emerald-600",
@@ -230,11 +212,8 @@ export const categories: ServiceCategory[] = [
         blurb: "Extracts sand, dust and debris from carpets, seams and crevices most cleaners miss.",
         image: `${a}/deep-cleaning/1.png`,
         slug: "deep-vacuum-cleaning",
-        banner: `${a}/deep-cleaning/banner-image.png`,
-        bannerW: 1584,
-        bannerH: 672,
         description:
-          "The Middle East climate's fine dust and sand work into every seam, vent and carpet fibre. Our deep vacuum service extracts embedded dirt, sand and debris from carpets, mats, seats, boot and the crevices most quick-cleans miss — the essential first step to a genuinely fresh cabin.",
+          "The UAE's fine dust and sand work into every seam, vent and carpet fibre. Our deep vacuum service extracts embedded dirt, sand and debris from carpets, mats, seats, boot and the crevices most quick-cleans miss — the essential first step to a genuinely fresh cabin.",
         features: [
           "Extracts embedded sand & dust",
           "Seats, carpets, boot & crevices",
@@ -253,9 +232,6 @@ export const categories: ServiceCategory[] = [
         blurb: "High-temperature steam dissolves grime and kills bacteria on contact — no harsh chemicals required.",
         image: `${a}/steam-cleaning/1.png`,
         slug: "steam-cleaning-sanitization",
-        banner: `${a}/steam-cleaning/banner-image.png`,
-        bannerW: 3168,
-        bannerH: 1344,
         description:
           "High-temperature steam dissolves grease, grime and stains while killing bacteria and germs on contact — no harsh chemicals required. We steam-clean seats, carpets, panels and high-touch surfaces to leave your cabin deep-cleaned, sanitized and hygienic for you and your family.",
         features: [
@@ -276,9 +252,6 @@ export const categories: ServiceCategory[] = [
         blurb: "Deep-cleans fabric and conditions leather, lifting stains and sweat marks left by summer driving.",
         image: `${a}/seat-shampooing/2.png`,
         slug: "seat-shampooing",
-        banner: `${a}/seat-shampooing/banner-image.png`,
-        bannerW: 3168,
-        bannerH: 1344,
         description:
           "Seats take the most wear and hold the most grime. We shampoo and extract fabric upholstery to lift stains, sweat and odours, and gently clean and condition leather to keep it soft, supple and crack-free — restoring a fresh, like-new feel to every seat.",
         features: [
@@ -301,9 +274,6 @@ export const categories: ServiceCategory[] = [
         blurb: "Cleans and protects every panel, vent and button with a matte, sun-resistant finish.",
         image: `${a}/dashboard-console/1.png`,
         slug: "dashboard-console-detailing",
-        banner: `${a}/dashboard-console/banner-image.png`,
-        bannerW: 1672,
-        bannerH: 941,
         description:
           "The dashboard, console, vents and trim collect dust, fingerprints and UV damage. We clean, detail and protect every panel, button and vent with a non-greasy, UV-resistant dressing that leaves a clean matte finish — no sticky shine, just a fresh, well-cared-for cabin.",
         features: [
@@ -326,9 +296,6 @@ export const categories: ServiceCategory[] = [
         blurb: "Neutralizes trapped smells at the source, leaving your cabin genuinely fresh rather than masked.",
         image: `${a}/odor/1.png`,
         slug: "odor-removal-treatment",
-        banner: `${a}/odor/banner-image.png`,
-        bannerW: 1677,
-        bannerH: 938,
         description:
           "Bad smells don't just sit on the surface — they live in the fabric, vents and AC system. Our odor removal treatment neutralizes smoke, food, damp and pet odours at the source and treats the AC and cabin, leaving your car genuinely fresh rather than masked with a spray.",
         features: [
@@ -354,7 +321,7 @@ export const categories: ServiceCategory[] = [
     title: "Paint Protection Film (PPF)",
     tagline: "Wrapping, PPF, and related protection solutions",
     intro:
-      "The Middle East climate's relentless heat, UV and airborne grit wear down factory paint fast. Our layered protection systems — including self-healing PPF, vinyl wrapping, ceramic and graphene coatings — guard every panel, preserving depth, shine and resale value for years.",
+      "The UAE's relentless heat, UV and airborne grit wear down factory paint fast. Our layered protection systems — including self-healing PPF, vinyl wrapping, ceramic and graphene coatings — guard every panel, preserving depth, shine and resale value for years.",
     image: "/services/PPF-CAR.jpg",
     color: "from-red-primary to-red-dark",
     accent: "text-red-primary",
@@ -409,7 +376,7 @@ export const categories: ServiceCategory[] = [
         icon: MdAirlineSeatReclineExtra,
         name: "Custom Seat Stitching",
         blurb: "Bespoke leather stitching, diamond quilting and personalized interior tailoring.",
-        image: "/services/Seat-Covers.jpg",
+        image: "/services/custom-seat-stitching.jpg",
       },
       {
         icon: MdEventSeat,
@@ -444,7 +411,7 @@ export const categories: ServiceCategory[] = [
     title: "Additional Detailing Services",
     tagline: "The finishing touches that complete every detail",
     intro:
-      "Targeted treatments that tackle the areas everyday washes overlook. From engine bays to cabin air, we finish your car to a standard the Middle East climate heat and dust cannot fake.",
+      "Targeted treatments that tackle the areas everyday washes overlook. From engine bays to cabin air, we finish your car to a standard the UAE climate heat and dust cannot fake.",
     image: "/services/Car-Detailing.jpg",
     color: "from-amber-500 to-amber-700",
     accent: "text-amber-600",

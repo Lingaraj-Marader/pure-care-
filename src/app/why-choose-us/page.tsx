@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   FaStar,
@@ -7,6 +8,10 @@ import {
   FaCheckCircle,
   FaWhatsapp,
   FaPhoneAlt,
+  FaShieldAlt,
+  FaCarSide,
+  FaPaintBrush,
+  FaArrowRight,
 } from "react-icons/fa";
 import FadeIn from "@/components/FadeIn";
 import {
@@ -204,7 +209,87 @@ export default function WhyChooseUsPage() {
         </div>
       </section>
 
-      {/* 6. Promise & CTA Section */}
+      {/* 6. Paint Protection & Auto Services Links */}
+      <section className="py-8 sm:py-10 md:py-14 bg-gradient-to-b from-transparent via-[#060e28]/70 to-transparent">
+        <div className="section-divider mb-8 sm:mb-10 md:mb-14" />
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
+          <FadeIn className="text-center mb-6 sm:mb-8 md:mb-10">
+            <span className="text-red-400 text-xs sm:text-sm font-semibold tracking-widest uppercase">
+              Pure Care Protection & Services
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mt-2 sm:mt-3 mb-3 sm:mb-4">
+              Explore Our <span className="gradient-text">Paint Protection</span> & Auto Services
+            </h2>
+            <p className="text-slate-300 text-xs sm:text-sm md:text-base max-w-2xl mx-auto">
+              From advanced self-healing PPF and 9H ceramic coatings to bespoke diamond-stitched upholstery, explore our complete lineup.
+            </p>
+          </FadeIn>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
+            <FadeIn delay={0.1}>
+              <Link
+                href="/services#protection"
+                className="block p-5 sm:p-6 rounded-2xl bg-[#0a1638]/90 border border-red-500/30 hover:border-red-400/70 hover:shadow-xl hover:shadow-red-500/20 transition-all group h-full"
+              >
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500 to-rose-600 flex items-center justify-center mb-4 shadow-lg shadow-red-500/30">
+                  <FaShieldAlt className="text-xl text-white" />
+                </div>
+                <h3 className="text-white font-bold text-base sm:text-lg mb-2 group-hover:text-red-300 transition-colors">
+                  Paint Protection Film (PPF)
+                </h3>
+                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                  Self-healing TPU film, full-body wraps, and rock-chip defense engineered specifically for UAE heat and sand.
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-red-400 group-hover:text-red-200 transition-colors">
+                  Explore PPF & Wraps <FaArrowRight className="text-xs" />
+                </span>
+              </Link>
+            </FadeIn>
+
+            <FadeIn delay={0.2}>
+              <Link
+                href="/services#exterior"
+                className="block p-5 sm:p-6 rounded-2xl bg-[#0a1638]/90 border border-blue-500/30 hover:border-blue-400/70 hover:shadow-xl hover:shadow-blue-500/20 transition-all group h-full"
+              >
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mb-4 shadow-lg shadow-blue-500/30">
+                  <FaCarSide className="text-xl text-white" />
+                </div>
+                <h3 className="text-white font-bold text-base sm:text-lg mb-2 group-hover:text-sky-300 transition-colors">
+                  Ceramic Coating & Detailing
+                </h3>
+                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                  Multi-stage machine paint correction, 9H nano ceramic coatings, and high-gloss protective sealants.
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-sky-400 group-hover:text-sky-200 transition-colors">
+                  Explore Exterior Care <FaArrowRight className="text-xs" />
+                </span>
+              </Link>
+            </FadeIn>
+
+            <FadeIn delay={0.3}>
+              <Link
+                href="/services#upholstery"
+                className="block p-5 sm:p-6 rounded-2xl bg-[#0a1638]/90 border border-purple-500/30 hover:border-purple-400/70 hover:shadow-xl hover:shadow-purple-500/20 transition-all group h-full sm:col-span-2 lg:col-span-1"
+              >
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center mb-4 shadow-lg shadow-purple-500/30">
+                  <FaPaintBrush className="text-xl text-white" />
+                </div>
+                <h3 className="text-white font-bold text-base sm:text-lg mb-2 group-hover:text-purple-300 transition-colors">
+                  Custom Seat Upholstery
+                </h3>
+                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                  Bespoke diamond stitching, tailor-fitted seat covers, 5D/7D mats, and luxury cabin lining.
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-purple-400 group-hover:text-purple-200 transition-colors">
+                  Explore Upholstery <FaArrowRight className="text-xs" />
+                </span>
+              </Link>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Promise & CTA Section */}
       <section className="py-8 sm:py-10 md:py-14">
         <div className="section-divider mb-8 sm:mb-10 md:mb-14" />
         <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">

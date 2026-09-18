@@ -23,7 +23,7 @@ export const productsData: ProductCategory[] = [
     icon: MdLayers,
     image: "/products/window-tinting-films.png",
     description:
-      "Premium quality window tinting films providing maximum UV protection, heat rejection, and glare reduction in the Middle East climate.",
+      "Premium quality window tinting films providing maximum UV protection, heat rejection, and glare reduction in the UAE climate.",
     color: "from-blue-primary to-blue-dark",
     products: [
       {

@@ -12,6 +12,23 @@ const makeWhatsAppUrl = (title: string) =>
     `Hi Pure Care! I'm interested in your *${title}*.\n\nPlease share the available time slots and a quote.\n\nThank you!`
   )}`;
 
+const categoryTabStyles: Record<string, string> = {
+  exterior: "bg-blue-500/15 border-blue-400/40 text-blue-300 hover:bg-blue-500/30 hover:border-blue-300 hover:shadow-blue-500/30",
+  interior: "bg-emerald-500/15 border-emerald-400/40 text-emerald-300 hover:bg-emerald-500/30 hover:border-emerald-300 hover:shadow-emerald-500/30",
+  protection: "bg-red-500/15 border-red-400/40 text-red-300 hover:bg-red-500/30 hover:border-red-300 hover:shadow-red-500/30",
+  upholstery: "bg-purple-500/15 border-purple-400/40 text-purple-300 hover:bg-purple-500/30 hover:border-purple-300 hover:shadow-purple-500/30",
+  additional: "bg-amber-500/15 border-amber-400/40 text-amber-300 hover:bg-amber-500/30 hover:border-amber-300 hover:shadow-amber-500/30",
+};
+
+const serviceAccents = [
+  { gradient: "from-blue-500 to-indigo-600", border: "hover:border-blue-400/60 hover:shadow-blue-500/20", tag: "text-blue-400 group-hover:text-blue-200" },
+  { gradient: "from-red-500 to-rose-600", border: "hover:border-red-400/60 hover:shadow-red-500/20", tag: "text-red-400 group-hover:text-red-200" },
+  { gradient: "from-emerald-500 to-teal-600", border: "hover:border-emerald-400/60 hover:shadow-emerald-500/20", tag: "text-emerald-400 group-hover:text-emerald-200" },
+  { gradient: "from-purple-500 to-violet-600", border: "hover:border-purple-400/60 hover:shadow-purple-500/20", tag: "text-purple-400 group-hover:text-purple-200" },
+  { gradient: "from-amber-500 to-orange-600", border: "hover:border-amber-400/60 hover:shadow-amber-500/20", tag: "text-amber-400 group-hover:text-amber-200" },
+  { gradient: "from-cyan-500 to-sky-600", border: "hover:border-cyan-400/60 hover:shadow-cyan-500/20", tag: "text-cyan-400 group-hover:text-cyan-200" },
+];
+
 export default function ServicesPage() {
   return (
     <>
@@ -45,16 +62,19 @@ export default function ServicesPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mt-6 sm:mt-8 flex flex-wrap justify-center gap-2 sm:gap-3"
           >
-            {categories.map((cat) => (
-              <a
-                key={cat.key}
-                href={`#${cat.key}`}
-                className="px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium bg-[#0a1638] border border-sky-500/25 shadow-md shadow-navy-950/60 text-slate-200 hover:text-white hover:border-sky-400 hover:bg-sky-500/20 transition-all flex items-center"
-              >
-                <span className="mr-1.5">{cat.emoji}</span>
-                {cat.title}
-              </a>
-            ))}
+            {categories.map((cat) => {
+              const pillColor = categoryTabStyles[cat.key] || "border-sky-500/25 text-slate-200";
+              return (
+                <a
+                  key={cat.key}
+                  href={`#${cat.key}`}
+                  className={`px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold border shadow-md shadow-navy-950/60 transition-all flex items-center gap-1.5 ${pillColor}`}
+                >
+                  <span>{cat.emoji}</span>
+                  <span>{cat.title}</span>
+                </a>
+              );
+            })}
           </motion.div>
         </div>
       </section>
@@ -125,7 +145,9 @@ export default function ServicesPage() {
 
                     {/* SubServices Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-                      {cat.subServices.map((sub) => {
+                      {cat.subServices.map((sub, subIdx) => {
+                        const accent = serviceAccents[subIdx % serviceAccents.length];
+
                         const cardContent = sub.image ? (
                           <>
                             <div className="relative h-36 sm:h-44 w-full overflow-hidden">
@@ -138,7 +160,7 @@ export default function ServicesPage() {
                               />
                               <div className="absolute inset-0 bg-gradient-to-t from-[#0a1638] via-black/40 to-transparent" />
                               <div
-                                className={`absolute top-3 left-3 w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br ${cat.color} flex items-center justify-center shadow-md`}
+                                className={`absolute top-3 left-3 w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br ${accent.gradient} flex items-center justify-center shadow-md`}
                               >
                                 <sub.icon className="text-sm sm:text-base text-white" />
                               </div>
@@ -151,7 +173,7 @@ export default function ServicesPage() {
                                 {sub.blurb}
                               </p>
                               {sub.slug && (
-                                <span className="mt-2.5 inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-sky-400 group-hover:text-sky-200 transition-colors">
+                                <span className={`mt-2.5 inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold ${accent.tag} transition-colors`}>
                                   View details <FaArrowRight className="text-[10px]" />
                                 </span>
                               )}
@@ -160,7 +182,7 @@ export default function ServicesPage() {
                         ) : (
                           <div className="p-4 sm:p-5">
                             <div
-                              className={`w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br ${cat.color} flex items-center justify-center mb-2.5 sm:mb-3 shadow-md`}
+                              className={`w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br ${accent.gradient} flex items-center justify-center mb-2.5 sm:mb-3 shadow-md`}
                             >
                               <sub.icon className="text-sm sm:text-base text-white" />
                             </div>
@@ -173,7 +195,7 @@ export default function ServicesPage() {
                           </div>
                         );
 
-                        const cardClass = `h-full rounded-xl sm:rounded-2xl bg-[#0a1638]/85 backdrop-blur-md border border-sky-500/20 shadow-lg shadow-navy-950/60 hover:border-sky-400/60 hover:shadow-xl hover:shadow-sky-500/20 transition-all group overflow-hidden ${
+                        const cardClass = `h-full rounded-xl sm:rounded-2xl bg-[#0a1638]/85 backdrop-blur-md border border-sky-500/20 shadow-lg shadow-navy-950/60 ${accent.border} hover:shadow-xl transition-all group overflow-hidden ${
                           sub.slug ? "cursor-pointer" : ""
                         }`;
 
@@ -202,6 +224,44 @@ export default function ServicesPage() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* 3. Link to Why Choose Us */}
+      <section className="py-10 sm:py-14 bg-gradient-to-b from-transparent via-[#070f26]/80 to-[#050b1d] border-t border-sky-500/20">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
+          <FadeIn>
+            <div className="max-w-5xl mx-auto rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#0a1638] via-[#0d1e4e] to-[#08122c] border border-sky-500/30 p-6 sm:p-10 md:p-12 shadow-2xl shadow-navy-950/80 text-center relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-80 h-80 bg-red-600/10 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-80 h-80 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
+
+              <div className="relative z-10">
+                <span className="inline-block px-3.5 py-1.5 rounded-full bg-red-500/20 border border-red-400/40 text-red-300 text-xs font-bold uppercase tracking-wider mb-3">
+                  Pure Care Guarantee
+                </span>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-3 sm:mb-4">
+                  Why Choose <span className="gradient-text">Pure Care</span> For Your Car?
+                </h2>
+                <p className="text-slate-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
+                  With 10,000+ satisfied car owners across the UAE, certified installers, and comprehensive warranties on PPF and coatings, see why UAE drivers choose us.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+                  <Link
+                    href="/why-choose-us"
+                    className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700 text-white font-bold rounded-full text-sm sm:text-base transition-all justify-center shadow-lg shadow-red-500/30"
+                  >
+                    Learn Why Drivers Choose Pure Care <FaArrowRight />
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 bg-white/10 hover:bg-white text-white hover:text-navy-950 border border-white/30 font-bold rounded-full text-sm sm:text-base transition-all justify-center backdrop-blur-sm shadow-md"
+                  >
+                    Contact Us & Location
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
     </>

@@ -15,6 +15,54 @@ import { galleryCategories, galleryItems, GalleryItem } from "@/data/galleryData
 
 const videoList = galleryItems.filter((item) => item.type === "video");
 
+const galleryCategoryStyles: Record<
+  string,
+  { active: string; inactive: string }
+> = {
+  All: {
+    active:
+      "bg-gradient-to-r from-sky-500 via-blue-600 to-blue-700 text-white shadow-lg shadow-sky-500/35 border border-sky-400/50",
+    inactive:
+      "bg-sky-500/10 border border-sky-400/30 text-sky-200 hover:text-white hover:border-sky-400 hover:bg-sky-500/25 shadow-sm",
+  },
+  Videos: {
+    active:
+      "bg-gradient-to-r from-red-500 via-rose-600 to-red-700 text-white shadow-lg shadow-red-500/35 border border-red-400/50",
+    inactive:
+      "bg-red-500/10 border border-red-400/30 text-red-200 hover:text-white hover:border-red-400 hover:bg-red-500/25 shadow-sm",
+  },
+  "Exterior Detailing": {
+    active:
+      "bg-gradient-to-r from-blue-500 via-indigo-600 to-blue-700 text-white shadow-lg shadow-blue-500/35 border border-blue-400/50",
+    inactive:
+      "bg-blue-500/10 border border-blue-400/30 text-blue-200 hover:text-white hover:border-blue-400 hover:bg-blue-500/25 shadow-sm",
+  },
+  "Interior Detailing": {
+    active:
+      "bg-gradient-to-r from-emerald-500 via-teal-600 to-emerald-700 text-white shadow-lg shadow-emerald-500/35 border border-emerald-400/50",
+    inactive:
+      "bg-emerald-500/10 border border-emerald-400/30 text-emerald-200 hover:text-white hover:border-emerald-400 hover:bg-emerald-500/25 shadow-sm",
+  },
+  "Paint Protection Film (PPF)": {
+    active:
+      "bg-gradient-to-r from-rose-500 via-red-600 to-rose-700 text-white shadow-lg shadow-rose-500/35 border border-rose-400/50",
+    inactive:
+      "bg-rose-500/10 border border-rose-400/30 text-rose-200 hover:text-white hover:border-rose-400 hover:bg-rose-500/25 shadow-sm",
+  },
+  "Seat Upholstery": {
+    active:
+      "bg-gradient-to-r from-purple-500 via-violet-600 to-purple-700 text-white shadow-lg shadow-purple-500/35 border border-purple-400/50",
+    inactive:
+      "bg-purple-500/10 border border-purple-400/30 text-purple-200 hover:text-white hover:border-purple-400 hover:bg-purple-500/25 shadow-sm",
+  },
+  "Additional Detailing Services": {
+    active:
+      "bg-gradient-to-r from-amber-500 via-orange-600 to-amber-700 text-white shadow-lg shadow-amber-500/35 border border-amber-400/50",
+    inactive:
+      "bg-amber-500/10 border border-amber-400/30 text-amber-200 hover:text-white hover:border-amber-400 hover:bg-amber-500/25 shadow-sm",
+  },
+};
+
 export default function GalleryPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [activeVideo, setActiveVideo] = useState<GalleryItem>(videoList[0]);
@@ -201,24 +249,30 @@ export default function GalleryPage() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
-            {galleryCategories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => {
-                  setSelectedCategory(cat);
-                  setLightboxIndex(null);
-                }}
-                className={`px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 flex items-center gap-1.5 ${
-                  selectedCategory === cat
-                    ? "bg-gradient-to-r from-sky-500 via-blue-600 to-blue-700 text-white shadow-lg shadow-sky-500/30 border border-sky-400/40"
-                    : "bg-[#0a1638] border border-sky-500/20 text-slate-300 hover:text-white hover:border-sky-400 hover:bg-sky-500/20 shadow-sm"
-                }`}
-              >
-                {cat === "Videos" && <FaVideo className="text-xs" />}
-                {cat === "All" && <FaImages className="text-xs" />}
-                <span>{cat}</span>
-              </button>
-            ))}
+            {galleryCategories.map((cat) => {
+              const styles = galleryCategoryStyles[cat] || {
+                active: "bg-gradient-to-r from-sky-500 via-blue-600 to-blue-700 text-white shadow-lg shadow-sky-500/35 border border-sky-400/50",
+                inactive: "bg-[#0a1638] border border-sky-500/20 text-slate-300 hover:text-white hover:border-sky-400 hover:bg-sky-500/20 shadow-sm",
+              };
+              const isActive = selectedCategory === cat;
+
+              return (
+                <button
+                  key={cat}
+                  onClick={() => {
+                    setSelectedCategory(cat);
+                    setLightboxIndex(null);
+                  }}
+                  className={`px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center gap-1.5 ${
+                    isActive ? styles.active : styles.inactive
+                  }`}
+                >
+                  {cat === "Videos" && <FaVideo className="text-xs" />}
+                  {cat === "All" && <FaImages className="text-xs" />}
+                  <span>{cat}</span>
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -21,6 +21,15 @@ const makeWhatsAppUrl = (title: string) =>
     `Hi Pure Care! I'm interested in your *${title}*.\n\nPlease share the available time slots and a quote.\n\nThank you!`
   )}`;
 
+const subServiceAccents = [
+  { gradient: "from-blue-500 to-indigo-600", tag: "text-blue-400 group-hover:text-blue-200", border: "hover:border-blue-400/60 hover:shadow-blue-500/20" },
+  { gradient: "from-red-500 to-rose-600", tag: "text-red-400 group-hover:text-red-200", border: "hover:border-red-400/60 hover:shadow-red-500/20" },
+  { gradient: "from-emerald-500 to-teal-600", tag: "text-emerald-400 group-hover:text-emerald-200", border: "hover:border-emerald-400/60 hover:shadow-emerald-500/20" },
+  { gradient: "from-purple-500 to-violet-600", tag: "text-purple-400 group-hover:text-purple-200", border: "hover:border-purple-400/60 hover:shadow-purple-500/20" },
+  { gradient: "from-amber-500 to-orange-600", tag: "text-amber-400 group-hover:text-amber-200", border: "hover:border-amber-400/60 hover:shadow-amber-500/20" },
+  { gradient: "from-cyan-500 to-sky-600", tag: "text-cyan-400 group-hover:text-cyan-200", border: "hover:border-cyan-400/60 hover:shadow-cyan-500/20" },
+];
+
 interface ServiceDetailClientProps {
   slug: string;
 }
@@ -111,7 +120,9 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
             </FadeIn>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-              {category.subServices.map((sub) => {
+              {category.subServices.map((sub, idx) => {
+                const accent = subServiceAccents[idx % subServiceAccents.length];
+
                 const cardInner = sub.image ? (
                   <>
                     <div className="relative h-40 sm:h-48 w-full overflow-hidden">
@@ -124,7 +135,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0a1638] via-black/40 to-transparent" />
                       <div
-                        className={`absolute top-3 left-3 w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center shadow-md`}
+                        className={`absolute top-3 left-3 w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br ${accent.gradient} flex items-center justify-center shadow-md`}
                       >
                         <sub.icon className="text-sm sm:text-base text-white" />
                       </div>
@@ -137,7 +148,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
                         {sub.blurb}
                       </p>
                       {sub.slug && (
-                        <span className="mt-2.5 inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-sky-400 group-hover:text-sky-200 transition-colors">
+                        <span className={`mt-2.5 inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold ${accent.tag} transition-colors`}>
                           View details <FaArrowRight className="text-[10px]" />
                         </span>
                       )}
@@ -146,7 +157,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
                 ) : (
                   <div className="p-4 sm:p-5">
                     <div
-                      className={`w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center mb-2.5 sm:mb-3 shadow-md`}
+                      className={`w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br ${accent.gradient} flex items-center justify-center mb-2.5 sm:mb-3 shadow-md`}
                     >
                       <sub.icon className="text-sm sm:text-base text-white" />
                     </div>
@@ -159,7 +170,7 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
                   </div>
                 );
 
-                const cardClass = `h-full rounded-xl sm:rounded-2xl bg-[#0a1638]/85 backdrop-blur-md border border-sky-500/20 shadow-lg shadow-navy-950/60 hover:border-sky-400/60 hover:shadow-xl hover:shadow-sky-500/20 transition-all group overflow-hidden ${
+                const cardClass = `h-full rounded-xl sm:rounded-2xl bg-[#0a1638]/85 backdrop-blur-md border border-sky-500/20 shadow-lg shadow-navy-950/60 ${accent.border} hover:shadow-xl transition-all group overflow-hidden ${
                   sub.slug ? "cursor-pointer" : ""
                 }`;
 
@@ -205,6 +216,12 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
                   <FaArrowLeft /> All Services
                 </Link>
                 <Link
+                  href="/why-choose-us"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-red-600/20 hover:bg-red-600/40 text-red-200 hover:text-white border border-red-500/30 font-bold rounded-full text-sm sm:text-base transition-all justify-center shadow-md backdrop-blur-sm"
+                >
+                  Why Choose Pure Care <FaArrowRight />
+                </Link>
+                <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white text-white hover:text-navy-950 border border-white/30 font-bold rounded-full text-sm sm:text-base transition-all justify-center backdrop-blur-sm"
                 >
@@ -224,27 +241,47 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
 
     return (
       <>
-        {/* Banner Section */}
-        {service.banner && (
-          <section className="pt-20 sm:pt-24 pb-2 sm:pb-3">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="relative w-full overflow-hidden shadow-2xl shadow-navy-950/70 border-b border-sky-500/20"
-            >
+        {/* Subservice Hero Banner (Official Pure Care Brand) */}
+        <section className="pt-20 sm:pt-24 pb-2 sm:pb-3">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="relative w-full aspect-[16/9] sm:aspect-[21/9] overflow-hidden shadow-2xl shadow-navy-950/70 border-b border-sky-500/20 bg-gradient-to-br from-[#070f26] via-[#09173d] to-[#040816]"
+          >
+            {service.image && (
               <Image
-                src={service.banner}
+                src={service.image}
                 alt={service.name}
-                width={service.bannerW ?? 1600}
-                height={service.bannerH ?? 900}
-                className="w-full h-auto"
+                fill
                 priority
+                className="object-cover opacity-30 sm:opacity-40"
                 sizes="100vw"
               />
-            </motion.div>
-          </section>
-        )}
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#070f26] via-[#070f26]/75 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#070f26] via-[#070f26]/50 to-transparent" />
+            <div className="absolute inset-0 flex flex-col justify-end p-5 sm:p-8 md:p-12">
+              <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
+                <div className="flex flex-wrap items-center gap-2 mb-1.5 sm:mb-2">
+                  <span className="block text-sky-400 text-[10px] sm:text-sm font-semibold tracking-widest uppercase">
+                    Pure Care • {service.categoryTitle}
+                  </span>
+                  <span className="text-slate-500 text-xs hidden sm:inline">•</span>
+                  <span className="text-red-400 text-[10px] sm:text-xs font-semibold tracking-wide uppercase hidden sm:inline">
+                    Clean • Restore • Protect
+                  </span>
+                </div>
+                <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight drop-shadow-md">
+                  {service.name}
+                </h1>
+                <p className="text-slate-200 text-xs sm:text-base md:text-lg mt-1 sm:mt-2 max-w-2xl">
+                  {service.blurb}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </section>
 
         {/* Content Section */}
         <section className="py-6 sm:py-8 md:py-10">
@@ -374,6 +411,12 @@ export default function ServiceDetailClient({ slug }: ServiceDetailClientProps) 
                   className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-sky-500 via-blue-600 to-blue-700 hover:from-sky-400 hover:to-blue-600 text-white font-bold rounded-full text-sm sm:text-base transition-all justify-center shadow-lg shadow-sky-500/25"
                 >
                   <FaArrowLeft /> {service.categoryTitle}
+                </Link>
+                <Link
+                  href="/why-choose-us"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-red-600/20 hover:bg-red-600/40 text-red-200 hover:text-white border border-red-500/30 font-bold rounded-full text-sm sm:text-base transition-all justify-center shadow-md backdrop-blur-sm"
+                >
+                  Why Choose Pure Care <FaArrowRight />
                 </Link>
                 <Link
                   href="/contact"
