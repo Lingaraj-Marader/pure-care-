@@ -22,12 +22,18 @@ export interface ValueItem {
   icon: IconType;
   title: string;
   desc: string;
+  color: string;
+  borderHover: string;
+  shadowHover: string;
+  accentText: string;
 }
 
 export interface TimelineItem {
   year: string;
   title: string;
   desc: string;
+  badgeGradient: string;
+  glowColor: string;
 }
 
 export interface TeamItem {
@@ -35,6 +41,11 @@ export interface TeamItem {
   role: string;
   desc: string;
   icon: IconType;
+  color: string;
+  roleColor: string;
+  badgeBg: string;
+  borderHover: string;
+  shadowHover: string;
 }
 
 export const missionItems: MissionItem[] = [
@@ -62,22 +73,38 @@ export const values: ValueItem[] = [
   {
     icon: FaGem,
     title: "Quality First",
-    desc: "We never compromise on the quality of materials or workmanship. Every job is done to perfection.",
+    desc: "We never compromise on the quality of materials or workmanship. Every job is executed to showroom perfection.",
+    color: "from-blue-500 via-indigo-600 to-blue-700",
+    borderHover: "hover:border-blue-400/60",
+    shadowHover: "hover:shadow-blue-500/25",
+    accentText: "group-hover:text-blue-300",
   },
   {
     icon: FaHeart,
     title: "Customer Care",
-    desc: "Your satisfaction is our top priority. We treat every vehicle as if it were our own.",
+    desc: "Your complete satisfaction is our highest priority. We treat every client vehicle with royal, dedicated attention.",
+    color: "from-red-500 via-rose-600 to-red-700",
+    borderHover: "hover:border-red-400/60",
+    shadowHover: "hover:shadow-red-500/25",
+    accentText: "group-hover:text-red-300",
   },
   {
     icon: FaAward,
     title: "Excellence",
-    desc: "We strive for excellence in every service, using the latest techniques and premium products.",
+    desc: "We uphold elite industry standards in every service, leveraging cutting-edge tools and internationally certified products.",
+    color: "from-amber-400 via-amber-500 to-orange-600",
+    borderHover: "hover:border-amber-400/60",
+    shadowHover: "hover:shadow-amber-500/25",
+    accentText: "group-hover:text-amber-300",
   },
   {
     icon: FaClock,
     title: "Timely Delivery",
-    desc: "We respect your time and ensure all services are completed within the promised timeframe.",
+    desc: "We value your schedule and ensure all detailing and protection treatments are completed precisely on time.",
+    color: "from-emerald-400 via-teal-500 to-emerald-700",
+    borderHover: "hover:border-emerald-400/60",
+    shadowHover: "hover:shadow-emerald-500/25",
+    accentText: "group-hover:text-emerald-300",
   },
 ];
 
@@ -85,47 +112,72 @@ export const timeline: TimelineItem[] = [
   {
     year: "2014",
     title: "The Beginning",
-    desc: "Pure Care was founded with a vision to provide premium auto care tailored for the UAE climate.",
+    desc: "Pure Care was founded in Sharjah with a bold vision to provide premium automotive care and accessories tailored for the UAE climate.",
+    badgeGradient: "from-sky-400 to-blue-600",
+    glowColor: "rgba(56,189,248,0.8)",
   },
   {
     year: "2016",
-    title: "Expanding Services",
-    desc: "Added ceramic coating, PPF, and graphene coating to our growing list of services.",
+    title: "Ceramic vs Graphene Innovation",
+    desc: "Pioneered specialized 9H Ceramic Coatings and ultra-durable Graphene Nano-coatings with superior heat dispersion alongside Self-Healing PPF, providing distinct tiers of ultimate surface protection.",
+    badgeGradient: "from-red-500 to-rose-600",
+    glowColor: "rgba(239,68,68,0.8)",
   },
   {
     year: "2019",
-    title: "Growing Reputation",
-    desc: "Became one of the most trusted auto care providers in the UAE with thousands of satisfied customers.",
+    title: "UAE Recognition",
+    desc: "Recognized across the UAE as one of the country's most trusted auto care and paint protection providers, serving thousands of discerning vehicle owners.",
+    badgeGradient: "from-emerald-400 to-teal-600",
+    glowColor: "rgba(16,185,129,0.8)",
   },
   {
     year: "2022",
-    title: "Modern Techniques",
-    desc: "Adopted cutting-edge technology and expanded our team of skilled technicians.",
+    title: "Modern Detailing Facility",
+    desc: "Upgraded our state-of-the-art facility on Sheikh Sultan Bin Saqr Al Qasimi Street with dust-free PPF installation bays and advanced spectrophotometer paint matching.",
+    badgeGradient: "from-amber-400 to-orange-600",
+    glowColor: "rgba(245,158,11,0.8)",
   },
   {
     year: "2024",
-    title: "Industry Leader",
-    desc: "One of the leading auto accessories and car service provider.",
+    title: "UAE Premier Benchmark",
+    desc: "Firmly established as the UAE's premier landmark for luxury vehicle detailing, high-performance nano-coatings, and certified auto accessories.",
+    badgeGradient: "from-purple-500 to-indigo-600",
+    glowColor: "rgba(168,85,247,0.8)",
   },
 ];
 
 export const team: TeamItem[] = [
   {
     name: "Leadership Team",
-    role: "Management",
-    desc: "Driving Pure Care's vision with over a decade of experience in the auto care industry.",
+    role: "Executive Management",
+    desc: "Driving Pure Care's vision with over a decade of hands-on automotive expertise in the UAE luxury market.",
     icon: FaUserTie,
+    color: "from-blue-500 via-indigo-600 to-blue-700",
+    roleColor: "text-sky-400",
+    badgeBg: "bg-blue-500/15 border-blue-400/30 text-sky-300",
+    borderHover: "hover:border-blue-400/50",
+    shadowHover: "hover:shadow-blue-500/25",
   },
   {
-    name: "Expert Technicians",
-    role: "Service Team",
-    desc: "Skilled professionals trained in the latest car care techniques and technologies.",
+    name: "Master Technicians",
+    role: "Detailing & PPF Specialists",
+    desc: "Certified technicians trained in micro-finishing, precision PPF edge wrapping, and multi-stage paint correction.",
     icon: FaWrench,
+    color: "from-red-500 via-rose-600 to-red-700",
+    roleColor: "text-red-400",
+    badgeBg: "bg-red-500/15 border-red-400/30 text-red-300",
+    borderHover: "hover:border-red-400/50",
+    shadowHover: "hover:shadow-red-500/25",
   },
   {
-    name: "Customer Support",
-    role: "Support Team",
-    desc: "Dedicated team ensuring seamless customer experience from inquiry to delivery.",
+    name: "Customer Advisory",
+    role: "Client Care & Support",
+    desc: "Dedicated automotive consultants providing honest guidance, transparent quotes, and complete satisfaction.",
     icon: FaHeadset,
+    color: "from-emerald-500 via-teal-600 to-emerald-700",
+    roleColor: "text-emerald-400",
+    badgeBg: "bg-emerald-500/15 border-emerald-400/30 text-emerald-300",
+    borderHover: "hover:border-emerald-400/50",
+    shadowHover: "hover:shadow-emerald-500/25",
   },
 ];

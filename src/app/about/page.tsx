@@ -211,8 +211,8 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 md:grid-cols-1 gap-4 sm:gap-6">
                 <div className="relative aspect-[16/10] rounded-xl sm:rounded-2xl overflow-hidden border border-sky-500/25 shadow-lg shadow-navy-950/60 group">
                   <Image
-                    src="/services/PPF-CAR.jpg"
-                    alt="Pure Care Auto — PPF Installation"
+                    src="/showcase/ppf-installation.jpg"
+                    alt="Pure Care Auto — PPF Paint Protection Installation"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 50vw, 33vw"
@@ -223,8 +223,8 @@ export default function AboutPage() {
                 </div>
                 <div className="relative aspect-[16/10] rounded-xl sm:rounded-2xl overflow-hidden border border-sky-500/25 shadow-lg shadow-navy-950/60 group">
                   <Image
-                    src="/gallery/purecare-showcase-1.jpg"
-                    alt="Pure Care Auto — Custom Interior & Detailing"
+                    src="/showcase/luxury-interior.jpg"
+                    alt="Pure Care Auto — Luxury Interior Detailing"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 50vw, 33vw"
@@ -248,7 +248,7 @@ export default function AboutPage() {
               Our Values
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mt-2 sm:mt-3 mb-3 sm:mb-4">
-              What <span className="gradient-text-red">Drives Us</span>
+              What <span className="gradient-text">Drives Us</span>
             </h2>
           </FadeIn>
 
@@ -257,12 +257,16 @@ export default function AboutPage() {
               <FadeIn key={v.title} delay={0.1 * idx}>
                 <motion.div
                   whileHover={{ y: -8 }}
-                  className="h-full text-center p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl bg-[#0a1638]/85 backdrop-blur-md border border-sky-500/20 shadow-lg shadow-navy-950/60 hover:border-sky-400/50 hover:shadow-xl hover:shadow-sky-500/20 transition-all flex flex-col items-center group"
+                  className={`h-full text-center p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl bg-[#0a1638]/85 backdrop-blur-md border border-sky-500/20 shadow-lg shadow-navy-950/60 ${v.borderHover} hover:shadow-xl ${v.shadowHover} transition-all flex flex-col items-center group`}
                 >
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br from-red-primary to-red-dark flex items-center justify-center mx-auto mb-3 sm:mb-4 md:mb-5 shadow-lg shadow-red-primary/25">
+                  <div
+                    className={`w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-br ${v.color} flex items-center justify-center mx-auto mb-3 sm:mb-4 md:mb-5 shadow-lg ${v.shadowHover}`}
+                  >
                     <v.icon className="text-sm sm:text-base md:text-xl text-white" />
                   </div>
-                  <h3 className="text-white font-bold text-xs sm:text-base md:text-lg mb-1 sm:mb-2 group-hover:text-sky-300 transition-colors">
+                  <h3
+                    className={`text-white font-bold text-xs sm:text-base md:text-lg mb-1 sm:mb-2 ${v.accentText} transition-colors`}
+                  >
                     {v.title}
                   </h3>
                   <p className="text-slate-300 text-[10px] sm:text-xs md:text-sm leading-relaxed">
@@ -302,7 +306,9 @@ export default function AboutPage() {
                   }`}
                 >
                   {/* Mobile year badge */}
-                  <div className="flex w-8 h-8 sm:hidden rounded-full bg-gradient-to-br from-sky-400 to-blue-600 shrink-0 items-center justify-center relative z-10 glow-blue shadow-lg">
+                  <div
+                    className={`flex w-9 h-9 sm:hidden rounded-full bg-gradient-to-br ${item.badgeGradient} shrink-0 items-center justify-center relative z-10 shadow-lg`}
+                  >
                     <span className="text-[10px] font-bold text-white">
                       {item.year.slice(2)}
                     </span>
@@ -315,7 +321,9 @@ export default function AboutPage() {
                     }`}
                   >
                     <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#0a1638]/85 backdrop-blur-md border border-sky-500/20 shadow-lg shadow-navy-950/60 hover:border-sky-400/50 hover:shadow-xl hover:shadow-sky-500/20 transition-all group">
-                      <span className="text-sky-400 font-extrabold text-sm sm:text-lg drop-shadow-sm">
+                      <span
+                        className={`inline-block font-extrabold text-sm sm:text-lg text-transparent bg-clip-text bg-gradient-to-r ${item.badgeGradient} drop-shadow-sm`}
+                      >
                         {item.year}
                       </span>
                       <h3 className="text-white font-bold text-base sm:text-xl mt-0.5 sm:mt-1 mb-1 sm:mb-2 group-hover:text-sky-300 transition-colors">
@@ -328,7 +336,9 @@ export default function AboutPage() {
                   </div>
 
                   {/* Center Dot for desktop */}
-                  <div className="hidden sm:flex w-4 h-4 rounded-full bg-sky-400 shrink-0 relative z-10 glow-blue shadow-[0_0_10px_rgba(56,189,248,0.8)]" />
+                  <div
+                    className={`hidden sm:flex w-4 h-4 rounded-full bg-gradient-to-br ${item.badgeGradient} shrink-0 relative z-10 shadow-md`}
+                  />
                   <div className="flex-1 hidden sm:block" />
                 </div>
               </FadeIn>
@@ -355,18 +365,22 @@ export default function AboutPage() {
               <FadeIn key={member.name} delay={0.1 * idx}>
                 <motion.div
                   whileHover={{ y: -8 }}
-                  className="text-center p-6 sm:p-8 rounded-xl sm:rounded-2xl bg-[#0a1638]/85 backdrop-blur-md border border-sky-500/20 shadow-lg shadow-navy-950/60 hover:border-sky-400/50 hover:shadow-xl hover:shadow-sky-500/20 transition-all group"
+                  className={`text-center p-6 sm:p-8 rounded-xl sm:rounded-2xl bg-[#0a1638]/85 backdrop-blur-md border border-sky-500/20 shadow-lg shadow-navy-950/60 ${member.borderHover} hover:shadow-xl ${member.shadowHover} transition-all group`}
                 >
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-sky-500 to-blue-700 flex items-center justify-center mx-auto mb-3 sm:mb-4 md:mb-5 shadow-lg shadow-sky-500/30">
+                  <div
+                    className={`w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br ${member.color} flex items-center justify-center mx-auto mb-3 sm:mb-4 md:mb-5 shadow-lg ${member.shadowHover}`}
+                  >
                     <member.icon className="text-xl sm:text-2xl md:text-3xl text-white" />
                   </div>
-                  <h3 className="text-white font-bold text-base sm:text-lg md:text-xl mb-0.5 sm:mb-1 group-hover:text-sky-300 transition-colors">
+                  <h3 className="text-white font-bold text-base sm:text-lg md:text-xl mb-1.5 sm:mb-2 group-hover:text-white transition-colors">
                     {member.name}
                   </h3>
-                  <span className="text-sky-400 text-xs sm:text-sm font-semibold">
+                  <span
+                    className={`inline-block px-3 py-1 rounded-full text-xs font-semibold border ${member.badgeBg}`}
+                  >
                     {member.role}
                   </span>
-                  <p className="text-slate-300 text-xs sm:text-sm mt-2 sm:mt-3 leading-relaxed">
+                  <p className="text-slate-300 text-xs sm:text-sm mt-3 sm:mt-4 leading-relaxed">
                     {member.desc}
                   </p>
                 </motion.div>
