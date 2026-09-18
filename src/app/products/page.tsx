@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 import FadeIn from "@/components/FadeIn";
 import { productsData } from "@/data/productsData";
 
@@ -23,7 +23,7 @@ export default function ProductsPage() {
               Our Products
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 sm:mb-6">
-              Premium <span className="gradient-text">Products</span> We Use
+              Premium <span className="gradient-text">Products</span> Used
             </h1>
             <p className="text-slate-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto px-2">
               We partner with the world&apos;s leading automotive brands to ensure
@@ -108,6 +108,41 @@ export default function ProductsPage() {
               </FadeIn>
             );
           })}
+        </div>
+      </section>
+
+      {/* 3. Pricing Disclaimer & Direct Consultation CTA */}
+      <section className="pb-16 sm:pb-20 md:pb-24">
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
+          <div className="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-[#0d1f4d] via-[#102a6b] to-[#0d1f4d] border border-sky-400/30 p-6 sm:p-8 md:p-12 text-center shadow-2xl shadow-navy-950/80 max-w-5xl mx-auto">
+            <span className="inline-block px-3 sm:px-4 py-1.5 rounded-full bg-sky-400/20 text-sky-300 text-xs sm:text-sm font-semibold mb-4">
+              Transparent Pricing & Authenticity Guaranteed
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-4">
+              Need a Custom Package or Specific Product?
+            </h2>
+            <p className="text-slate-200 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8">
+              Prices shown are starting estimates for standard vehicles. Exact quotes depend on vehicle model, dimensions, and custom specifications. All our materials are 100% genuine with official manufacturer warranties.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <a
+                href="https://wa.me/971586368849?text=Hello%20Pure%20Care!%20I%20would%20like%20a%20custom%20pricing%20quote%20for%20products%20and%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-6 sm:px-8 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm sm:text-base shadow-lg shadow-emerald-600/30 hover:scale-[1.02] transition-all"
+              >
+                <FaWhatsapp className="text-xl" />
+                Chat on WhatsApp
+              </a>
+              <a
+                href="tel:+971586368849"
+                className="inline-flex items-center gap-2.5 px-6 sm:px-8 py-3.5 rounded-xl bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 border border-sky-400/40 font-bold text-sm sm:text-base hover:scale-[1.02] transition-all"
+              >
+                <FaPhoneAlt className="text-base" />
+                Call +971 58 636 8849
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </>

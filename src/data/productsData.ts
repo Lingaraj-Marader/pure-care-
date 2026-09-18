@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import { FaStar, FaShieldAlt } from "react-icons/fa";
+import { FaStar, FaShieldAlt, FaTabletAlt } from "react-icons/fa";
 import { MdLayers, MdColorLens, MdLocalCarWash, MdWeekend } from "react-icons/md";
 
 export interface ProductItem {
@@ -21,7 +21,7 @@ export const productsData: ProductCategory[] = [
   {
     title: "Window Tinting Films",
     icon: MdLayers,
-    image: "/products/window-tinting-films.png",
+    image: "/services/Car-Tinting.jpg",
     description:
       "Premium quality window tinting films providing maximum UV protection, heat rejection, and glare reduction in the UAE climate.",
     color: "from-blue-primary to-blue-dark",
@@ -37,23 +37,23 @@ export const productsData: ProductCategory[] = [
         price: "Starting from AED 249",
       },
       {
-        name: "3M Crystalline Series",
-        desc: "Multi-layer optical film technology for ultimate cabin comfort",
-        price: "Starting from AED 699",
-      },
-      {
         name: "SunTek CXP Carbon",
         desc: "Carbon-infused film with superior optical clarity and non-fading finish",
-        price: "Starting from AED 450",
+        price: "Starting from AED 499",
+      },
+      {
+        name: "3M Crystalline Series",
+        desc: "Multi-layer optical film technology for ultimate cabin comfort and heat rejection",
+        price: "Starting from AED 999",
       },
     ],
   },
   {
     title: "PPF (Paint Protection Film)",
     icon: FaShieldAlt,
-    image: "/products/ppf.png",
+    image: "/showcase/ppf-installation.jpg",
     description:
-      "Self-healing paint protection films shielding your vehicle against rock chips, road grit, and scratches.",
+      "Self-healing paint protection films shielding your vehicle against rock chips, road grit, and scratches in extreme conditions.",
     color: "from-emerald-500 to-emerald-700",
     products: [
       {
@@ -63,25 +63,25 @@ export const productsData: ProductCategory[] = [
       },
       {
         name: "Ray Shield PPF",
-        desc: "Heavy-duty invisible shield engineered for extreme desert conditions",
-        price: "Starting from AED 2,999",
-      },
-      {
-        name: "XPEL Ultimate Plus",
-        desc: "Industry-standard self-healing protective barrier with crystal clarity",
+        desc: "Heavy-duty invisible shield engineered for extreme UAE desert conditions",
         price: "Starting from AED 3,499",
       },
       {
         name: "3M Scotchgard Pro",
-        desc: "Durable clear polyurethane film with high stain and weather resistance",
-        price: "Starting from AED 3,200",
+        desc: "Official 3M multi-layer self-healing film with high stain and weather resistance",
+        price: "Starting from AED 5,499",
+      },
+      {
+        name: "XPEL Ultimate Plus",
+        desc: "Industry-standard self-healing protective barrier with crystal optical clarity",
+        price: "Starting from AED 5,999",
       },
     ],
   },
   {
     title: "Ceramic Coating Products",
     icon: FaStar,
-    image: "/products/1.png",
+    image: "/products/car-detailing-products.jpg",
     description:
       "Professional-grade ceramic coatings delivering hydrophobic barriers, mirror reflections, and long-lasting protection.",
     color: "from-red-primary to-red-dark",
@@ -111,7 +111,7 @@ export const productsData: ProductCategory[] = [
   {
     title: "Car Detailing (3mm)",
     icon: MdLocalCarWash,
-    image: "/products/5.png",
+    image: "/showcase/2.png",
     description:
       "Precision 3-stage car detailing treatments that revitalize your vehicle inside and out.",
     color: "from-yellow-500 to-orange-500",
@@ -141,7 +141,7 @@ export const productsData: ProductCategory[] = [
   {
     title: "Seat Upholstery & Accessories",
     icon: MdWeekend,
-    image: "/products/7.png",
+    image: "/services/custom-seat-stitching.jpg",
     description:
       "Custom seat covers, premium floor mats, and interior styling tailored for luxury and durability.",
     color: "from-amber-500 to-amber-700",
@@ -171,7 +171,7 @@ export const productsData: ProductCategory[] = [
   {
     title: "Vinyl Wraps",
     icon: MdColorLens,
-    image: "/products/vinyl-wraps.png",
+    image: "/services/Wrapping.jpg",
     description:
       "High-quality vinyl wraps in gloss, matte, satin, and specialty finishes for full vehicle customization.",
     color: "from-purple-500 to-purple-700",
@@ -195,6 +195,36 @@ export const productsData: ProductCategory[] = [
         name: "Chrome & Special Effects",
         desc: "Mirror chrome, metallic flakes, and color-shifting exotic films",
         price: "Starting from AED 4,500",
+      },
+    ],
+  },
+  {
+    title: "Android Screens & Car Electronics",
+    icon: FaTabletAlt,
+    image: "/services/android-screen-fitting.jpg",
+    description:
+      "High-definition Android touchscreen multimedia systems, wireless Apple CarPlay, 4K dashcams, and 360° surround camera installations.",
+    color: "from-cyan-500 to-blue-700",
+    products: [
+      {
+        name: "Android Touchscreen Infotainment",
+        desc: "High-definition IPS display, GPS navigation, and split-screen capability",
+        price: "Starting from AED 599",
+      },
+      {
+        name: "Wireless Apple CarPlay / Android Auto",
+        desc: "Plug-and-play integration retaining factory controls and steering functions",
+        price: "Starting from AED 449",
+      },
+      {
+        name: "4K Dual Dashcam with 24/7 Surveillance",
+        desc: "Front and rear night-vision cameras with parking shock sensor",
+        price: "Starting from AED 399",
+      },
+      {
+        name: "360° Bird's-Eye Surround Camera",
+        desc: "Four HD cameras with dynamic steering guidelines and seamless view",
+        price: "Starting from AED 1,199",
       },
     ],
   },

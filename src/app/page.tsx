@@ -14,6 +14,7 @@ import {
   FaTag,
   FaClock,
   FaMapMarkerAlt,
+  FaTabletAlt,
 } from "react-icons/fa";
 import {
   MdDirectionsCar,
@@ -78,7 +79,7 @@ const homeProducts = [
   {
     title: "Window Tinting Films",
     icon: MdLayers,
-    image: "/products/window-tinting-films.png",
+    image: "/services/Car-Tinting.jpg",
     items: ["Ray Shield Window Tinting", "AutoCool Window Tinting", "3M Crystalline"],
     color: "from-blue-primary to-blue-dark",
     hoverBorder: "hover:border-red-primary/50",
@@ -88,18 +89,18 @@ const homeProducts = [
   {
     title: "PPF (Paint Protection Film)",
     icon: FaShieldAlt,
-    image: "/products/ppf.png",
-    items: ["Onyx PPF", "Ray Shield PPF", "XPEL Ultimate Plus"],
+    image: "/showcase/ppf-installation.jpg",
+    items: ["Onyx PPF", "Ray Shield PPF", "3M Scotchgard Pro", "XPEL Ultimate Plus"],
     color: "from-emerald-500 to-emerald-700",
     hoverBorder: "hover:border-red-primary/50",
     hoverText: "group-hover:text-red-primary",
     price: "From AED 2,999",
   },
   {
-    title: "Ceramic Coating (Onyx/Tactium/Sonax)",
+    title: "Ceramic Coating Products",
     icon: FaStar,
-    image: "/services/Ceramic-Coating.jpg",
-    items: ["Onyx Ceramic", "Tactium Ceramic", "Sonax Ceramic"],
+    image: "/products/car-detailing-products.jpg",
+    items: ["Onyx Ceramic", "Tactium Ceramic", "Sonax Ceramic", "Gtechniq"],
     color: "from-red-primary to-red-dark",
     hoverBorder: "hover:border-red-primary/50",
     hoverText: "group-hover:text-red-primary",
@@ -108,7 +109,7 @@ const homeProducts = [
   {
     title: "Car Detailing (3mm)",
     icon: MdLocalCarWash,
-    image: "/services/Car-Detailing.jpg",
+    image: "/showcase/2.png",
     items: [
       "3mm Multi-Stage Detailing",
       "Deep Interior Decontamination",
@@ -122,7 +123,7 @@ const homeProducts = [
   {
     title: "Seat Upholstery & Accessories",
     icon: MdAirlineSeatReclineExtra,
-    image: "/services/Seat-Covers.jpg",
+    image: "/services/custom-seat-stitching.jpg",
     items: ["Custom Seat Stitching", "Ready-Made Covers", "3D/5D Floor Mats"],
     color: "from-amber-500 to-amber-700",
     hoverBorder: "hover:border-red-primary/50",
@@ -130,18 +131,18 @@ const homeProducts = [
     price: "From AED 249",
   },
   {
-    title: "Vinyl Wraps",
-    icon: MdColorLens,
-    image: "/products/vinyl-wraps.png",
+    title: "Android Screens & Electronics",
+    icon: FaTabletAlt,
+    image: "/services/android-screen-fitting.jpg",
     items: [
-      "3M 2080 Series",
-      "Avery Dennison Supreme",
-      "Chrome & Specialty Wraps",
+      "Android Touchscreen Displays",
+      "Apple CarPlay & Android Auto",
+      "4K Dashcams & 360° Cameras",
     ],
-    color: "from-purple-500 to-purple-700",
+    color: "from-cyan-500 to-blue-700",
     hoverBorder: "hover:border-red-primary/50",
     hoverText: "group-hover:text-red-primary",
-    price: "From AED 2,500",
+    price: "From AED 399",
   },
 ];
 
@@ -433,10 +434,10 @@ export default function HomePage() {
         <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
           <FadeIn className="text-center mb-6 sm:mb-8 md:mb-10">
             <span className="text-sky-400 text-xs sm:text-sm font-semibold tracking-widest uppercase">
-              What We Use
+              Products Used
             </span>
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white mt-2 sm:mt-3 mb-3 sm:mb-4">
-              Premium <span className="gradient-text">Products</span>
+              Premium <span className="gradient-text">Products</span> Used
             </h2>
             <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto px-2">
               We partner with the world&apos;s leading automotive brands to

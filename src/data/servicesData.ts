@@ -14,6 +14,8 @@ import {
   FaBroom,
   FaSun,
   FaMagic,
+  FaTabletAlt,
+  FaCamera,
 } from "react-icons/fa";
 import {
   MdLocalCarWash,
@@ -440,6 +442,45 @@ export const categories: ServiceCategory[] = [
         name: "Car Sanitization & Disinfection",
         blurb: "Eliminates bacteria, allergens and stale odours, leaving your cabin fresh, hygienic and family-safe.",
         image: `${a}/odor/1.png`,
+      },
+      {
+        icon: FaTabletAlt,
+        name: "Android Screen Fitting & Apple CarPlay",
+        blurb: "Custom Android touch displays, wireless Apple CarPlay, GPS navigation, and camera integration.",
+        image: "/services/android-screen-fitting.jpg",
+        slug: "android-screen-fitting",
+        description:
+          "Upgrade your vehicle's dashboard with a high-definition Android touchscreen multimedia system. Featuring seamless wireless Apple CarPlay and Android Auto integration, crystal-clear GPS navigation, Bluetooth connectivity, steering wheel control retention, and reverse/360° camera compatibility. Professional OEM-fit installation with clean plug-and-play wiring to protect your vehicle's factory electrical system.",
+        features: [
+          "Wireless Apple CarPlay & Android Auto",
+          "High-definition IPS capacitive touch display",
+          "GPS navigation & multimedia streaming apps",
+          "Reverse camera & steering control integration",
+          "OEM-fit dash kit & clean plug-and-play installation",
+        ],
+        gallery: [
+          "/services/android-screen-fitting.jpg",
+          "/gallery/purecare-showcase-3.jpg",
+        ],
+      },
+      {
+        icon: FaCamera,
+        name: "Dashcam & 360° Surveillance Camera",
+        blurb: "Front and rear 4K dual dashcams with 24/7 parking surveillance and 360° bird's-eye camera systems.",
+        image: "/services/Car-Accessories.png",
+        slug: "dashcam-surveillance-camera",
+        description:
+          "Protect your vehicle on UAE roads with front and rear ultra-HD 4K dash cameras and 360-degree bird's-eye parking systems. Features motion detection, night vision, G-sensor incident locking, and seamless concealed wiring.",
+        features: [
+          "Ultra-HD 4K front & rear recording",
+          "24/7 parking mode with motion sensor",
+          "Night vision & HDR technology",
+          "Concealed wiring for clean factory look",
+        ],
+        gallery: [
+          "/services/Car-Accessories.png",
+          "/services/Car-Detailing.jpg",
+        ],
       },
     ],
   },
