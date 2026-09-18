@@ -40,15 +40,15 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    title: "Top 5 Benefits of Professional Car Tinting in Middle East Climate",
+    title: "Top 5 Benefits of Professional Car Tinting in the UAE",
     excerpt:
-      "Living in the Middle East climate means dealing with extreme heat. Discover how professional window tinting can protect you, your passengers, and your vehicle's interior from the harsh desert sun.",
+      "Living in the UAE means dealing with extreme heat. Discover how professional window tinting can protect you, your passengers, and your vehicle's interior from the harsh desert sun.",
     category: "Car Tinting",
     date: "March 5, 2026",
     readTime: "6 min read",
     color: "from-cyan-500 to-cyan-700",
     content: [
-      "In the Middle East climate's scorching conditions, car tinting isn't just a luxury — it's a necessity. Professional window tinting provides crucial benefits that every car owner should consider.",
+      "In the UAE's scorching conditions, car tinting isn't just a luxury — it's a necessity. Professional window tinting provides crucial benefits that every car owner should consider.",
       "1. UV Protection: Premium tint films block up to 99% of harmful UV rays, protecting your skin and your car's interior from fading and cracking.",
       "2. Heat Reduction: Quality tinting can reduce interior temperatures by up to 60%, making your car comfortable even in peak summer heat and reducing AC load.",
       "3. Glare Reduction: Tinted windows significantly reduce sun glare, making driving safer and more comfortable, especially during sunrise and sunset.",

@@ -45,16 +45,16 @@ export const missionItems: MissionItem[] = [
     color: "from-blue-primary to-blue-dark",
   },
   {
-    icon: FaShieldAlt,
-    title: "Protect",
-    desc: "We shield what we've restored — ceramic coating, PPF and UV protection built to stand up to the Middle East climate's relentless heat and desert grit.",
-    color: "from-red-primary to-red-dark",
-  },
-  {
     icon: MdAutoFixHigh,
     title: "Restore",
-    desc: "We bring your vehicle back to its best — correcting paint, lifting embedded dirt and reviving every surface the Middle East climate's sun, heat and dust have worn down.",
+    desc: "We bring your vehicle back to its best — correcting paint, lifting embedded dirt and reviving every surface worn down by the harsh UAE sun, heat and dust.",
     color: "from-emerald-500 to-emerald-700",
+  },
+  {
+    icon: FaShieldAlt,
+    title: "Protect",
+    desc: "We shield what we've restored — ceramic coating, PPF and UV protection built to stand up to the UAE's relentless heat and desert grit.",
+    color: "from-red-primary to-red-dark",
   },
 ];
 
@@ -85,7 +85,7 @@ export const timeline: TimelineItem[] = [
   {
     year: "2014",
     title: "The Beginning",
-    desc: "Pure Care was founded with a vision to provide premium auto care tailored for the Middle East climate.",
+    desc: "Pure Care was founded with a vision to provide premium auto care tailored for the UAE climate.",
   },
   {
     year: "2016",
@@ -95,7 +95,7 @@ export const timeline: TimelineItem[] = [
   {
     year: "2019",
     title: "Growing Reputation",
-    desc: "Became one of the most trusted auto care providers in the Middle East climate with thousands of satisfied customers.",
+    desc: "Became one of the most trusted auto care providers in the UAE with thousands of satisfied customers.",
   },
   {
     year: "2022",

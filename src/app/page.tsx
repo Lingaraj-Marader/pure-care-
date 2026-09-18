@@ -68,7 +68,7 @@ const homeServices = [
 ];
 
 const stats = [
-  { value: "1000+", label: "Cars Serviced" },
+  { value: "10000+", label: "Cars Serviced" },
   { value: "15+", label: "Services" },
   { value: "10000+", label: "Happy Clients" },
   { value: "10+", label: "Years Experience" },
@@ -165,9 +165,9 @@ const homeBlogs = [
     color: "from-blue-primary to-blue-dark",
   },
   {
-    title: "Top 5 Benefits of Professional Car Tinting in Middle East Climate",
+    title: "Top 5 Benefits of Professional Car Tinting in the UAE",
     excerpt:
-      "Living in the Middle East climate means dealing with extreme heat. Discover how professional window tinting can protect you and your vehicle's interior.",
+      "Living in the UAE means dealing with extreme heat. Discover how professional window tinting can protect you and your vehicle's interior.",
     category: "Car Tinting",
     date: "March 5, 2026",
     readTime: "6 min read",
@@ -223,7 +223,7 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-sky-500/15 border border-sky-400/30 text-sky-300 text-xs sm:text-sm font-semibold mb-4 sm:mb-5 shadow-sm"
           >
-            Middle East Climate&apos;s Premium Pure Care
+            UAE&apos;S PREMIUM PURECARE
           </motion.span>
 
           <motion.h1
@@ -299,12 +299,12 @@ export default function HomePage() {
                 About Pure Care
               </span>
               <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white mt-2 sm:mt-3 mb-4 sm:mb-6 leading-tight">
-                Middle East Climate&apos;s Trusted{" "}
+                UAE&apos;s Trusted{" "}
                 <span className="gradient-text-blue">Pure Care</span> Experts
               </h2>
               <p className="text-slate-300 text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed">
                 Pure Care Auto Accessories TR. L.L.C is a leading car care
-                service provider built for the Middle East climate. We specialize in transforming
+                service provider built for the UAE climate. We specialize in transforming
                 and protecting vehicles with our comprehensive range of services
                 including car tinting, wrapping, polishing, ceramic coating,
                 PPF, and much more.
@@ -355,7 +355,7 @@ export default function HomePage() {
                     />
                     <div className="mt-2 sm:mt-4 space-y-1 sm:space-y-1.5">
                       <p className="text-sky-700 text-xs sm:text-sm flex items-center justify-center gap-1.5 font-bold tracking-wide">
-                        <FaMapMarkerAlt className="text-sky-600" /> Middle East Climate
+                        <FaMapMarkerAlt className="text-sky-600" /> Sharjah, UAE
                       </p>
                       <p className="text-slate-500 text-xs sm:text-sm font-semibold">
                         Since 2014
@@ -563,7 +563,7 @@ export default function HomePage() {
             </h2>
             <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto px-2">
               Expert tips and guides to help you protect and maintain your
-              vehicle in the Middle East climate.
+              vehicle in the UAE climate.
             </p>
           </FadeIn>
 

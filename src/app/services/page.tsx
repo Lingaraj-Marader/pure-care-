@@ -35,7 +35,7 @@ export default function ServicesPage() {
               Five comprehensive auto care categories — exterior detailing, interior
               detailing, paint protection film (PPF), seat upholstery, and additional
               detailing services — engineered to transform, protect and maintain
-              your vehicle in the Middle East climate.
+              your vehicle in the UAE.
             </p>
           </motion.div>
 

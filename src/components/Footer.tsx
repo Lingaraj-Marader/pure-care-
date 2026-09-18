@@ -65,7 +65,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-slate-300 text-sm leading-relaxed max-w-xs">
-              Premium car care and auto accessories services tailored for the Middle East climate.
+              Premium car care and auto accessories services tailored for the UAE climate.
               Transform your vehicle with our expert team and top-quality products.
             </p>
             <div className="flex gap-3 pt-2">

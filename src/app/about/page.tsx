@@ -36,7 +36,7 @@ export default function AboutPage() {
               <span className="gradient-text">Pure Care</span>
             </h1>
             <p className="text-slate-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto px-2">
-              From a small workshop to the Middle East climate&apos;s most trusted
+              From a small workshop to the UAE&apos;s most trusted
               auto care provider, discover the journey, values, and people behind
               Pure Care Auto Accessories.
             </p>
@@ -54,7 +54,7 @@ export default function AboutPage() {
               </h2>
               <p className="text-slate-300 text-sm sm:text-base mb-3 sm:mb-4 leading-relaxed">
                 Pure Care Auto Accessories TR. L.L.C is a premier car care and
-                auto accessories company engineered for the Middle East climate.
+                auto accessories company engineered for the UAE climate.
                 We have been serving car enthusiasts and everyday vehicle owners
                 with top-notch auto care services for over a decade.
               </p>
@@ -68,12 +68,12 @@ export default function AboutPage() {
                 We believe every vehicle deserves premium care, regardless of
                 make or model. Our team of skilled technicians is trained to
                 deliver flawless results every single time, making us the
-                preferred choice for car owners across the Middle East climate.
+                preferred choice for car owners across the UAE.
               </p>
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 {[
                   "12+ Services",
-                  "1000+ Cars Serviced",
+                  "10000+ Cars Serviced",
                   "10+ Years Experience",
                   "10000+ Happy Clients",
                 ].map((item) => (
@@ -89,15 +89,39 @@ export default function AboutPage() {
             </FadeIn>
 
             <FadeIn direction="right">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-sky-500/20 to-blue-600/20 rounded-2xl sm:rounded-3xl blur-3xl" />
-                <div className="relative rounded-2xl sm:rounded-3xl bg-[#0a1638]/85 backdrop-blur-md border border-sky-500/25 shadow-2xl shadow-navy-950/70 p-6 sm:p-8 md:p-10">
-                  <div className="grid grid-cols-2 gap-4 sm:gap-6">
+              <div className="relative space-y-4 sm:space-y-6">
+                <div className="absolute inset-0 bg-gradient-to-br from-sky-500/20 to-blue-600/20 rounded-2xl sm:rounded-3xl blur-3xl pointer-events-none" />
+
+                {/* Pure Care Official Logo Card on Clean White / Light Background */}
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-br from-white via-slate-50 to-sky-50/90 border-2 border-sky-300/60 shadow-[0_20px_60px_-15px_rgba(14,165,233,0.3)] p-6 sm:p-8 flex flex-col items-center justify-center text-center"
+                >
+                  <Image
+                    src="/purecare-logo.png"
+                    alt="Pure Care Auto Accessories - Clean | Restore | Protect"
+                    width={1386}
+                    height={536}
+                    className="w-56 sm:w-68 md:w-76 h-auto object-contain drop-shadow-sm mb-3"
+                    priority
+                  />
+                  <span className="inline-block px-3 py-1 rounded-full bg-sky-100 border border-sky-300 text-sky-800 text-xs font-extrabold uppercase tracking-wider">
+                    UAE&apos;s Premium Pure Care
+                  </span>
+                  <p className="text-slate-600 text-xs font-semibold mt-2 flex items-center justify-center gap-1.5">
+                    <FaMapMarkerAlt className="text-sky-600" /> Sharjah, UAE • Since 2014
+                  </p>
+                </motion.div>
+
+                {/* Performance Stats Card */}
+                <div className="relative rounded-2xl sm:rounded-3xl bg-[#0a1638]/85 backdrop-blur-md border border-sky-500/25 shadow-2xl shadow-navy-950/70 p-5 sm:p-6">
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4">
                     {[
-                      { icon: FaCarSide, value: "1000+", label: "Cars Serviced" },
+                      { icon: FaCarSide, value: "10000+", label: "Cars Serviced" },
                       { icon: MdMiscellaneousServices, value: "12+", label: "Services" },
                       { icon: FaSmile, value: "10000+", label: "Happy Clients" },
-                      { icon: FaAward, value: "10+", label: "Years" },
+                      { icon: FaAward, value: "10+", label: "Years Experience" },
                     ].map((st, idx) => (
                       <motion.div
                         key={st.label}
@@ -107,7 +131,7 @@ export default function AboutPage() {
                         transition={{ delay: 0.1 * idx, type: "spring" }}
                         className="text-center p-3 sm:p-4 rounded-xl bg-[#060c20]/60 border border-sky-500/15"
                       >
-                        <st.icon className="text-xl sm:text-2xl text-sky-400 mx-auto mb-2 sm:mb-3" />
+                        <st.icon className="text-xl sm:text-2xl text-sky-400 mx-auto mb-1.5 sm:mb-2" />
                         <div className="text-2xl sm:text-3xl font-extrabold text-white mb-0.5 sm:mb-1 drop-shadow-sm">
                           {st.value}
                         </div>
@@ -133,12 +157,11 @@ export default function AboutPage() {
               Our Mission
             </span>
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white mt-2 sm:mt-3 mb-3 sm:mb-4">
-              Clean. <span className="gradient-text">Protect.</span> Restore.
+              Clean. <span className="gradient-text">Restore.</span> Protect.
             </h2>
             <p className="text-slate-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2">
               Three pillars define everything we do at Pure Care — clean,
-              protect, and restore every vehicle to perfection in the Middle
-              East climate.
+              restore, and protect every vehicle to perfection in the UAE.
             </p>
           </FadeIn>
 
@@ -175,8 +198,8 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
               <div className="md:col-span-2 relative aspect-[16/10] md:aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden border border-sky-500/25 shadow-xl shadow-navy-950/70 group">
                 <Image
-                  src="/gallery/purecare-showcase-2.jpg"
-                  alt="Pure Care Auto — State of the art facility"
+                  src="/showcase/2.png"
+                  alt="Pure Care Auto — State of the art facility in Sharjah, UAE"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 100vw, 66vw"

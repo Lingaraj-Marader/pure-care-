@@ -12,6 +12,8 @@ import {
   FaFacebookF,
   FaLinkedinIn,
   FaTiktok,
+  FaPhoneAlt,
+  FaEnvelope,
 } from "react-icons/fa";
 import { categories } from "@/data/servicesData";
 
@@ -312,6 +314,15 @@ export default function Navbar() {
               );
             })}
 
+            <a
+              href="tel:+971586368849"
+              className="hidden xl:inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold text-slate-700 hover:text-blue-600 rounded-full hover:bg-slate-100 transition-colors"
+              title="Call Pure Care"
+            >
+              <FaPhoneAlt className="text-blue-600 text-[11px]" />
+              <span>+971 58 636 8849</span>
+            </a>
+
             <Link
               href="/contact"
               prefetch={true}
@@ -475,7 +486,29 @@ export default function Navbar() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.04 * navLinks.length }}
-                className="pt-4 border-t border-slate-200 mt-3"
+                className="pt-4 border-t border-slate-200 mt-3 px-4 space-y-2"
+              >
+                <a
+                  href="tel:+971586368849"
+                  className="flex items-center gap-2.5 text-sm font-semibold text-slate-800 hover:text-blue-600"
+                >
+                  <FaPhoneAlt className="text-blue-600 text-xs shrink-0" />
+                  <span>+971 58 636 8849</span>
+                </a>
+                <a
+                  href="mailto:purecareautoacs@gmail.com"
+                  className="flex items-center gap-2.5 text-xs text-slate-500 hover:text-blue-600"
+                >
+                  <FaEnvelope className="text-blue-600 text-xs shrink-0" />
+                  <span>purecareautoacs@gmail.com</span>
+                </a>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.04 * (navLinks.length + 1) }}
+                className="pt-3 border-t border-slate-100"
               >
                 <p className="text-slate-500 text-xs uppercase tracking-widest mb-3 px-4 font-semibold">
                   Follow Us

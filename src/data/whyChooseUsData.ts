@@ -105,7 +105,7 @@ export const strengths: StrengthItem[] = [
 ];
 
 export const stats: StatItem[] = [
-  { value: "1000+", label: "Vehicles Serviced" },
+  { value: "10000+", label: "Vehicles Serviced" },
   { value: "10+", label: "Years Experience" },
   { value: "12+", label: "Specialized Services" },
   { value: "10000+", label: "Happy Customers" },
