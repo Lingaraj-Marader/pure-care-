@@ -337,7 +337,7 @@ export default function ContactPage() {
                     Pure Care Auto Accessories
                   </h3>
                   <p className="text-sky-300 text-xs sm:text-sm mb-3 sm:mb-4">
-                    TR. L.L.C — Clean. Protect. Restore.
+                    TR. L.L.C — Clean · Restore · Protect
                   </p>
                   <div className="space-y-1.5 sm:space-y-2">
                     <a
@@ -345,14 +345,21 @@ export default function ContactPage() {
                       className="flex items-center gap-2 text-slate-200 text-xs sm:text-sm hover:text-sky-300 transition-colors min-h-[36px] sm:min-h-0"
                     >
                       <FaPhoneAlt className="text-sky-400 shrink-0" />
-                      +971 58 636 8849
+                      +971 58 636 8849 (Siyad)
+                    </a>
+                    <a
+                      href="tel:+971506553018"
+                      className="flex items-center gap-2 text-slate-200 text-xs sm:text-sm hover:text-sky-300 transition-colors min-h-[36px] sm:min-h-0"
+                    >
+                      <FaPhoneAlt className="text-sky-400 shrink-0" />
+                      +971 50 655 3018 (Dayanand)
                     </a>
                     <a
                       href="tel:+971521652323"
                       className="flex items-center gap-2 text-slate-200 text-xs sm:text-sm hover:text-sky-300 transition-colors min-h-[36px] sm:min-h-0"
                     >
                       <FaPhoneAlt className="text-sky-400 shrink-0" />
-                      +971 52 165 2323
+                      +971 52 165 2323 (Shop)
                     </a>
                     <a
                       href="mailto:purecareautoacs@gmail.com"

@@ -80,8 +80,8 @@ export const strengths: StrengthItem[] = [
   },
   {
     icon: FaClock,
-    title: "Timely Delivery",
-    desc: "We respect your time. All services are completed within the promised timeframe without compromising on quality or attention to detail.",
+    title: "Pickup & Delivery Service",
+    desc: "Convenient doorstep vehicle pickup and safe return in showroom condition across the UAE. (*Terms & conditions applicable).",
     color: "from-amber-500 to-amber-700",
     hoverBorder: "hover:border-red-primary/50",
     hoverText: "group-hover:text-red-primary",
@@ -163,7 +163,75 @@ export const processSteps: ProcessStep[] = [
   },
   {
     step: "05",
-    title: "Delivery",
-    desc: "Your vehicle is returned in pristine condition with care instructions and warranty documentation for your service.",
+    title: "Pickup & Delivery",
+    desc: "Doorstep vehicle pickup and return in pristine showroom condition with care instructions and warranty documentation. (*Note: Terms & conditions applicable).",
+  },
+];
+
+export interface MaintenancePackage {
+  year: string;
+  badge: string;
+  discount: string;
+  title: string;
+  desc: string;
+  color: string;
+  borderHover: string;
+  tagline: string;
+  features: string[];
+  popular?: boolean;
+}
+
+export const maintenancePackages: MaintenancePackage[] = [
+  {
+    year: "1st Year",
+    badge: "Foundation Protection",
+    discount: "100% Standard Value",
+    title: "Complete Vehicle Protection",
+    tagline: "Baseline Ceramic or PPF Armor",
+    desc: "Full comprehensive treatment engineered to withstand the extreme UAE heat, UV radiation, and harsh desert sand.",
+    color: "from-blue-500 to-blue-700",
+    borderHover: "hover:border-blue-400/60 hover:shadow-blue-500/20",
+    features: [
+      "Multi-stage machine paint correction & decontamination",
+      "Full Ceramic Coating or precision PPF application",
+      "Interior deep steam cleaning & leather nourishment",
+      "Nano-ceramic window tinting with 99% UV heat rejection",
+      "1-Year official warranty certification & support",
+    ],
+  },
+  {
+    year: "2nd Year",
+    badge: "Loyalty Renewal",
+    discount: "15% Discount",
+    title: "Annual Maintenance Contract",
+    tagline: "Hydrophobic Boost & Interior Revitalization",
+    desc: "Dedicated 2nd-year maintenance for returning clients under Siyad's care, renewing gloss and hydrophobic defenses at an exclusive rate.",
+    color: "from-emerald-500 to-teal-700",
+    borderHover: "hover:border-emerald-400/60 hover:shadow-emerald-500/25",
+    popular: true,
+    features: [
+      "15% Discount on complete renewal contract",
+      "Ceramic coating hydrophobic booster replenishment",
+      "PPF edge inspection, cleaning & seal rejuvenation",
+      "Deep cabin sanitization & AC vent anti-bacterial fogging",
+      "Doorstep pickup & delivery available (T&C apply)",
+    ],
+  },
+  {
+    year: "3rd Year",
+    badge: "Elite Preservation",
+    discount: "25% Discount",
+    title: "Multi-Year Preservation Program",
+    tagline: "Total Rejuvenation & Diamond Quartz Seal",
+    desc: "Our premier loyalty privilege offering maximum savings for lasting vehicle heritage and flawless showroom resale value in the UAE.",
+    color: "from-purple-500 to-indigo-700",
+    borderHover: "hover:border-purple-400/60 hover:shadow-purple-500/25",
+    features: [
+      "25% Exclusive loyalty discount on full renewal",
+      "Complete surface re-leveling & multi-layer quartz seal",
+      "Deep leather restoration & fabric guard re-application",
+      "Headlight clarity restoration & glass rain-repellent",
+      "VIP priority scheduling & direct advisor support from Siyad",
+    ],
   },
 ];

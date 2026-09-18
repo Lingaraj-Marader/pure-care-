@@ -20,7 +20,11 @@ export const contactCards: ContactCard[] = [
   {
     icon: FaPhoneAlt,
     title: "Phone",
-    details: ["+971 58 636 8849", "+971 52 165 2323"],
+    details: [
+      "+971 58 636 8849 (Siyad)",
+      "+971 50 655 3018 (Dayanand)",
+      "+971 52 165 2323 (Shop)",
+    ],
     link: "tel:+971586368849",
     color: "from-blue-primary to-blue-dark",
     hoverBorder: "hover:border-red-primary/50",
@@ -29,7 +33,10 @@ export const contactCards: ContactCard[] = [
   {
     icon: FaWhatsapp,
     title: "WhatsApp",
-    details: ["+971 58 636 8849", "+971 52 165 2323"],
+    details: [
+      "+971 58 636 8849 (Siyad)",
+      "+971 50 655 3018 (Dayanand)",
+    ],
     link: "https://wa.me/971586368849",
     color: "from-green-500 to-green-600",
     hoverBorder: "hover:border-green-500/40",
@@ -57,11 +64,7 @@ export const contactCards: ContactCard[] = [
 
 export const businessHours: BusinessHour[] = [
   {
-    day: "Saturday - Thursday",
-    time: "8:00 AM - 10:00 PM",
-  },
-  {
-    day: "Friday",
-    time: "2:00 PM - 10:00 PM",
+    day: "Monday – Sunday (7 Days a Week)",
+    time: "9:00 AM – 10:00 PM",
   },
 ];

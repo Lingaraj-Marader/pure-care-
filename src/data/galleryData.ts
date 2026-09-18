@@ -160,4 +160,16 @@ export const galleryItems: GalleryItem[] = [
     category: "Additional Detailing Services",
     type: "image",
   },
+  {
+    src: "/services/android-screen-fitting.jpg",
+    title: "Android Screen Fitting & Apple CarPlay Integration",
+    category: "Additional Detailing Services",
+    type: "image",
+  },
+  {
+    src: "/products/car-detailing-products.jpg",
+    title: "Professional Studio Detailing & Ceramic Polish Suite",
+    category: "Exterior Detailing",
+    type: "image",
+  },
 ];

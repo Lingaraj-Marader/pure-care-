@@ -482,6 +482,26 @@ export const categories: ServiceCategory[] = [
           "/services/Car-Detailing.jpg",
         ],
       },
+      {
+        icon: FaCar,
+        name: "Doorstep Pickup & Delivery",
+        blurb: "Convenient vehicle pickup and return in showroom condition across the UAE. *Note: Terms & conditions applicable.",
+        image: "/services/Car-Detailing.jpg",
+        slug: "pickup-and-delivery",
+        description:
+          "Enjoy seamless, stress-free vehicle care without leaving your home or office. Pure Care offers secure doorstep vehicle pickup and return across Sharjah, Dubai, and surrounding Emirates. Every vehicle is transported and handled with white-glove precision by our licensed, insured logistics team and returned in pristine showroom condition with all warranty documentation. (*Note: Terms and conditions applicable based on service package and location).",
+        features: [
+          "Doorstep vehicle pickup and return at your preferred schedule",
+          "Fully insured and vetted automotive logistics personnel",
+          "Pre-collection vehicle condition digital checklist",
+          "Delivered in sealed showroom finish with warranty documentation",
+          "Available for detailing, PPF, tinting, and maintenance contracts",
+        ],
+        gallery: [
+          "/services/Car-Detailing.jpg",
+          "/gallery/purecare-showcase-2.jpg",
+        ],
+      },
     ],
   },
 ];

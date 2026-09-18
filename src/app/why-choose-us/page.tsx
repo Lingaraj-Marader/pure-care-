@@ -19,6 +19,7 @@ import {
   stats,
   testimonials,
   processSteps,
+  maintenancePackages,
 } from "@/data/whyChooseUsData";
 
 export default function WhyChooseUsPage() {
@@ -133,7 +134,7 @@ export default function WhyChooseUsPage() {
               Our <span className="gradient-text-blue">Process</span>
             </h2>
             <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto px-2">
-              From consultation to delivery, every step is designed to ensure
+              From consultation to vehicle pickup & delivery, every step is designed to ensure
               excellence.
             </p>
           </FadeIn>
@@ -159,6 +160,106 @@ export default function WhyChooseUsPage() {
                 </FadeIn>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4.5. Custom Maintenance Packages (Multi-Year Protection Built for UAE Climate) */}
+      <section className="py-8 sm:py-12 md:py-16 relative">
+        <div className="section-divider mb-8 sm:mb-10 md:mb-14" />
+        <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-14">
+          <FadeIn className="text-center mb-8 sm:mb-10 md:mb-12">
+            <span className="text-emerald-400 text-xs sm:text-sm font-semibold tracking-widest uppercase">
+              Exclusive Loyalty Care
+            </span>
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white mt-2 sm:mt-3 mb-3 sm:mb-4">
+              Custom <span className="gradient-text">Maintenance Packages</span>
+            </h2>
+            <p className="text-slate-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto px-2">
+              Multi-year protection engineered for the UAE climate. Protect your investment year after year with our renewal privileges and increasing savings.
+            </p>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+            {maintenancePackages.map((pkg, idx) => (
+              <FadeIn key={pkg.year} delay={0.1 * idx}>
+                <motion.div
+                  whileHover={{ y: -8 }}
+                  className={`h-full flex flex-col justify-between p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-[#0a1638]/90 backdrop-blur-md border ${
+                    pkg.popular
+                      ? "border-emerald-400/60 shadow-2xl shadow-emerald-500/20 ring-1 ring-emerald-400/40"
+                      : "border-sky-500/20 shadow-xl shadow-navy-950/70"
+                  } transition-all relative overflow-hidden`}
+                >
+                  {pkg.popular && (
+                    <div className="absolute top-0 right-0 bg-gradient-to-l from-emerald-500 to-teal-600 text-white text-[11px] font-extrabold uppercase px-4 py-1 rounded-bl-xl shadow-md">
+                      Most Popular Renewal
+                    </div>
+                  )}
+
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-xs font-bold uppercase tracking-wider text-sky-400 bg-sky-500/15 border border-sky-400/30 px-3 py-1 rounded-full">
+                        {pkg.year}
+                      </span>
+                      <span className="text-sm font-extrabold text-emerald-400 bg-emerald-500/15 border border-emerald-400/30 px-3 py-1 rounded-full">
+                        {pkg.discount}
+                      </span>
+                    </div>
+
+                    <h3 className="text-xl sm:text-2xl font-extrabold text-white mb-1">
+                      {pkg.title}
+                    </h3>
+                    <p className="text-sky-300 text-xs sm:text-sm font-semibold mb-3">
+                      {pkg.tagline}
+                    </p>
+                    <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+                      {pkg.desc}
+                    </p>
+
+                    <div className="border-t border-sky-500/20 pt-4 mb-6">
+                      <p className="text-slate-400 text-xs uppercase font-semibold tracking-wider mb-3">
+                        Included in this package:
+                      </p>
+                      <ul className="space-y-2.5">
+                        {pkg.features.map((feat) => (
+                          <li
+                            key={feat}
+                            className="flex items-start gap-2 text-slate-200 text-xs sm:text-sm"
+                          >
+                            <FaCheckCircle className="text-emerald-400 shrink-0 text-xs mt-0.5" />
+                            <span>{feat}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="pt-2">
+                    <a
+                      href={`https://wa.me/971586368849?text=${encodeURIComponent(
+                        `Hi Pure Care & Siyad! I am interested in the ${pkg.year} Custom Maintenance Package (${pkg.title}). Please share full details and a quote for my vehicle.`
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-full py-3 px-4 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-md ${
+                        pkg.popular
+                          ? "bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white shadow-emerald-500/30"
+                          : "bg-sky-500/20 hover:bg-sky-500/30 text-sky-200 border border-sky-400/40"
+                      }`}
+                    >
+                      <FaWhatsapp className="text-base" /> Inquire for {pkg.year}
+                    </a>
+                  </div>
+                </motion.div>
+              </FadeIn>
+            ))}
+          </div>
+
+          <div className="text-center mt-6">
+            <p className="text-slate-400 text-xs italic">
+              *Note: Terms & conditions applicable. Doorstep pickup & delivery available on eligible packages across Sharjah & Dubai.
+            </p>
           </div>
         </div>
       </section>
@@ -309,7 +410,7 @@ export default function WhyChooseUsPage() {
                   "Genuine Products",
                   "Skilled Experts",
                   "Fair Pricing",
-                  "On-Time Delivery",
+                  "Pickup & Delivery Available*",
                   "Full Warranty",
                   "Free Consultation",
                 ].map((point) => (
@@ -322,6 +423,9 @@ export default function WhyChooseUsPage() {
                   </div>
                 ))}
               </div>
+              <p className="text-slate-400 text-xs italic text-center -mt-2 mb-6 sm:mb-8">
+                *Note: Pickup & delivery terms & conditions applicable.
+              </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <a
                   href="https://wa.me/971586368849"

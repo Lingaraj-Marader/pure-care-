@@ -14,20 +14,20 @@ const steps = [
     glow: "rgba(56, 189, 248, 0.25)",
   },
   {
+    word: "Restore",
+    label: "02. Restore",
+    color: "text-emerald-400",
+    bg: "bg-emerald-500/15",
+    border: "border-emerald-400/40",
+    glow: "rgba(16, 185, 129, 0.25)",
+  },
+  {
     word: "Protect",
-    label: "02. Protect",
+    label: "03. Protect",
     color: "text-red-primary",
     bg: "bg-red-primary/15",
     border: "border-red-primary/40",
     glow: "rgba(223, 10, 22, 0.25)",
-  },
-  {
-    word: "Restore",
-    label: "03. Restore",
-    color: "text-cyan-400",
-    bg: "bg-cyan-500/15",
-    border: "border-cyan-400/40",
-    glow: "rgba(6, 182, 212, 0.25)",
   },
 ];
 
@@ -103,7 +103,7 @@ export default function Preloader() {
               </div>
             </motion.div>
 
-            {/* Serial Animated Words: Clean -> Protect -> Restore */}
+            {/* Serial Animated Words: Clean -> Restore -> Protect */}
             <div className="h-20 sm:h-24 md:h-28 flex items-center justify-center w-full overflow-hidden">
               <AnimatePresence mode="wait">
                 <motion.div

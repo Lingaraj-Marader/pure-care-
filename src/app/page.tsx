@@ -62,7 +62,7 @@ const homeServices = [
   {
     icon: MdAutoFixHigh,
     title: "Additional Detailing Services",
-    desc: "Engine bay cleaning, alloy wheel detailing, window polishing and full sanitization to finish every detail.",
+    desc: "Engine bay cleaning, alloy wheel detailing, window polishing, Android screens & pickup and delivery services.",
     image: "/services/Car-Detailing.jpg",
     link: "/services#additional",
   },

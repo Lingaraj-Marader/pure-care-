@@ -144,7 +144,16 @@ export default function Footer() {
                   className="flex items-center gap-3 text-slate-300 hover:text-sky-300 transition-colors text-sm min-h-[36px] sm:min-h-0"
                 >
                   <FaPhoneAlt className="text-sky-400 shrink-0" />
-                  +971 58 636 8849
+                  +971 58 636 8849 (Siyad)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+971506553018"
+                  className="flex items-center gap-3 text-slate-300 hover:text-sky-300 transition-colors text-sm min-h-[36px] sm:min-h-0"
+                >
+                  <FaPhoneAlt className="text-sky-400 shrink-0" />
+                  +971 50 655 3018 (Dayanand)
                 </a>
               </li>
               <li>
@@ -153,7 +162,7 @@ export default function Footer() {
                   className="flex items-center gap-3 text-slate-300 hover:text-sky-300 transition-colors text-sm min-h-[36px] sm:min-h-0"
                 >
                   <FaPhoneAlt className="text-sky-400 shrink-0" />
-                  +971 52 165 2323
+                  +971 52 165 2323 (Shop)
                 </a>
               </li>
               <li>
@@ -184,7 +193,7 @@ export default function Footer() {
             </a>
           </p>
           <p className="text-sky-400/80 text-xs text-center font-medium tracking-wider uppercase">
-            Clean. Protect. Restore.
+            Clean · Restore · Protect
           </p>
         </div>
       </div>
